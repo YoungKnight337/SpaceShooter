@@ -1,6 +1,5 @@
 // SpaceShooter.cpp : This file contains the 'main' function. Program execution begins and ends there.
 #include "raylib.h"
-
 #include <iostream>
 
 int main()
