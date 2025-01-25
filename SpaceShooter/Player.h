@@ -5,7 +5,9 @@ class Player
 {
 private:
 	int lives;
+	int score;
 	float speed;
+	float firerate;
 public:
 	Player();
 	~Player();
