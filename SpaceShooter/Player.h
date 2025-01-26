@@ -8,13 +8,14 @@ private:
 	int score;
 	float speed;
 	float firerate;
+	Vector2 position;
+	Color color;
+
 public:
 	Player();
 	~Player();
 	void Draw();
 	void Update();
-	void MoveLeft();
-	void MoveRight();
 	void Shoot();
 };
 

@@ -10,19 +10,11 @@ Player::~Player()
 
 }
 
-void Player::MoveLeft()
-{
-
-}
-
-void Player::MoveRight()
-{
-
-}
 
 void Player::Shoot()
 {
-
+	if (IsKeyDown(KEY_SPACE))
+		;
 }
 
 void Player::Draw()
@@ -32,5 +24,8 @@ void Player::Draw()
 
 void Player::Update()
 {
-
+	if (IsKeyDown(KEY_LEFT))
+		position.x -= 5;
+	if (IsKeyDown(KEY_RIGHT))
+		position.x += 5;
 }

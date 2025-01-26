@@ -27,6 +27,15 @@
     <ClCompile Include="Projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Octopus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Squid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Crab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -36,6 +45,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Octopus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Squid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Crab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
