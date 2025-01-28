@@ -1,11 +1,13 @@
 #include "raylib.h"
 #include "Player.h"
+#include "Alien.h"
+#include "Projectile.h"
 
 int main()
 {
 
-    constexpr int SCREEN_WIDTH = 800;
-    constexpr int SCREEN_HEIGHT = 600;
+    constexpr int SCREEN_WIDTH = 750;
+    constexpr int SCREEN_HEIGHT = 700;
     static constexpr int FRAME_RATE = 60;
 
     

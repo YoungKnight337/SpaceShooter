@@ -5,8 +5,10 @@ class Alien
 {
 private:
 	int value;
-	Vector2 postion;
+	int type;
+	Vector2 position;
 	Color color;
+	Rectangle model;
 
 public:
 	Alien();
@@ -14,5 +16,6 @@ public:
 	void Draw();
 	void Update();
 	void Shoot();
+	void GetType();
 };
 

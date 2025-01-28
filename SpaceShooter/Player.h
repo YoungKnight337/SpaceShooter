@@ -7,9 +7,9 @@ private:
 	int lives;
 	int score;
 	float speed;
-	float firerate;
 	Vector2 position;
 	Color color;
+	Rectangle model;
 
 public:
 	Player();

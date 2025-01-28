@@ -19,7 +19,7 @@ void Player::Shoot()
 
 void Player::Draw()
 {
-
+	DrawRectangle(position.x, position.y, 10, 10, GREEN);
 }
 
 void Player::Update()

@@ -27,13 +27,7 @@
     <ClCompile Include="Projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Octopus.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Squid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Crab.cpp">
+    <ClCompile Include="AlienManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,19 +35,10 @@
     <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Alien.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Projectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Octopus.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Squid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Crab.h">
+    <ClInclude Include="AlienManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
