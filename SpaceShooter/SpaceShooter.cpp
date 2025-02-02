@@ -1,6 +1,6 @@
 #include "raylib.h"
 #include "Player.h"
-#include "Alien.h"
+#include "AlienManager.h"
 #include "Projectile.h"
 
 int main()
@@ -8,12 +8,15 @@ int main()
 
     constexpr int SCREEN_WIDTH = 750;
     constexpr int SCREEN_HEIGHT = 700;
-    static constexpr int FRAME_RATE = 60;
+    constexpr int FRAME_RATE = 60;
 
     
 
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Space Shooter");
     SetTargetFPS(FRAME_RATE);
+
+    Player player;
+    AlienManager spawner;
 
     while (!WindowShouldClose())
     {
@@ -23,7 +26,8 @@ int main()
         ClearBackground(BLACK);
 
         //Draw
-
+        player.Draw();
+        
         EndDrawing();
     }
 

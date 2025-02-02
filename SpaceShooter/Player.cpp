@@ -2,7 +2,8 @@
 
 Player::Player()
 {
-
+	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
+	position.y = static_cast<float>(GetScreenHeight()) * 7 / 8.f;
 }
 
 Player::~Player()
@@ -19,7 +20,7 @@ void Player::Shoot()
 
 void Player::Draw()
 {
-	DrawRectangle(position.x, position.y, 10, 10, GREEN);
+	DrawRectangle(position.x, position.y, width, height, color);
 }
 
 void Player::Update()
@@ -28,4 +29,9 @@ void Player::Update()
 		position.x -= 5;
 	if (IsKeyDown(KEY_RIGHT))
 		position.x += 5;
+}
+
+void Player::GetRect()
+{
+
 }

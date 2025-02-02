@@ -4,5 +4,8 @@
 
 class AlienManager
 {
+private:
+
+public:
 };
 

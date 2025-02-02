@@ -5,17 +5,18 @@ class Alien
 {
 private:
 	int value;
-	int type;
+	int width;
+	int height;
 	Vector2 position;
 	Color color;
 	Rectangle model;
 
 public:
-	Alien();
+	Alien(int value, int width, int height, Vector2 position, Color color, Rectangle model);
 	~Alien();
 	void Draw();
 	void Update();
 	void Shoot();
-	void GetType();
+	void GetRect();
 };
 

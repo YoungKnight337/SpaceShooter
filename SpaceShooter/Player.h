@@ -4,6 +4,8 @@
 class Player
 {
 private:
+	int width;
+	int height;
 	int lives;
 	int score;
 	float speed;
@@ -17,5 +19,6 @@ public:
 	void Draw();
 	void Update();
 	void Shoot();
+	void GetRect();
 };
 
