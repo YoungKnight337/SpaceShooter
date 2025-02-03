@@ -4,11 +4,14 @@
 class Projectile
 {
 private:
+	int width;
+	int height;
 	float speed;
+	bool active;
 	Rectangle rect;
 	Color color;
 public:
-	Projectile();
+	Projectile(int width, int height,float speed, bool active);
 	~Projectile();
 	void Draw();
 	void Update();

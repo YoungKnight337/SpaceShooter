@@ -7,12 +7,13 @@ private:
 	int value;
 	int width;
 	int height;
+	bool active;
 	Vector2 position;
 	Color color;
 	Rectangle model;
 
 public:
-	Alien(int value, int width, int height, Vector2 position, Color color, Rectangle model);
+	Alien(int value, int width, int height, bool active, Vector2 position, Color color, Rectangle model);
 	~Alien();
 	void Draw();
 	void Update();
