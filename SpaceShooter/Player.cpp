@@ -31,6 +31,19 @@ void Player::Update()
 		position.x += 5;
 }
 
+
+void Player::LimitMovement()
+{
+	if (position.x <= 0)
+	{
+		position.x = 0;
+	}
+	if (position.x + width >= GetScreenWidth())
+	{
+		position.x = GetScreenWidth() - width;
+	}
+}
+
 void Player::GetRect()
 {
 

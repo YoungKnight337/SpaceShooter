@@ -20,5 +20,6 @@ public:
 	void Update();
 	void Shoot();
 	void GetRect();
+	void LimitMovement();
 };
 
