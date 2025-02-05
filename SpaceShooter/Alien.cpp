@@ -1,6 +1,6 @@
 #include "Alien.h"
 
-Alien::Alien(int value, int width, int height, bool active, Vector2 position, Color color, Rectangle model)
+Alien::Alien(int value, int width, int height, bool active, Vector2 position, Color color)
 {
 
 }
@@ -25,7 +25,7 @@ void Alien::Shoot()
 
 }
 
-void Alien::GetRect()
+Rectangle Alien::GetRect()
 {
-
+	return{ position.x,position.y, static_cast<float>(width),static_cast<float>(height) };
 }

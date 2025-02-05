@@ -12,12 +12,6 @@ Player::~Player()
 }
 
 
-void Player::Shoot()
-{
-	if (IsKeyDown(KEY_SPACE))
-		;
-}
-
 void Player::Draw()
 {
 	DrawRectangle(position.x, position.y, width, height, color);
@@ -44,7 +38,13 @@ void Player::LimitMovement()
 	}
 }
 
-void Player::GetRect()
+void Player::Shoot(Projectile& laser)
 {
+	if (IsKeyDown(KEY_SPACE))
+		;
+}
 
+Rectangle Player::GetRect()
+{
+	return{ position.x, position.y,static_cast<float>(width),static_cast<float>(height) };
 }

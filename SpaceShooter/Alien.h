@@ -10,14 +10,12 @@ private:
 	bool active;
 	Vector2 position;
 	Color color;
-	Rectangle model;
-
 public:
-	Alien(int value, int width, int height, bool active, Vector2 position, Color color, Rectangle model);
+	Alien(int value, int width, int height, bool active, Vector2 position, Color color);
 	~Alien();
 	void Draw();
 	void Update();
 	void Shoot();
-	void GetRect();
+	Rectangle GetRect();
 };
 

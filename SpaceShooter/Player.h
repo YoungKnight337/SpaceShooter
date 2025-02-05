@@ -1,6 +1,9 @@
 #pragma once
 #include "raylib.h"
 
+
+class Projectile;
+
 class Player
 {
 private:
@@ -11,15 +14,16 @@ private:
 	float speed;
 	Vector2 position;
 	Color color;
-	Rectangle model;
+	
 
 public:
 	Player();
 	~Player();
 	void Draw();
 	void Update();
-	void Shoot();
-	void GetRect();
+	void Shoot(Projectile &laser);
 	void LimitMovement();
+	Rectangle GetRect();
+	
 };
 
