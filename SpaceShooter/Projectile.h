@@ -8,13 +8,14 @@ private:
 	int height;
 	float speed;
 	bool active;
-	Rectangle rect;
 	Color color;
+	Vector2 position;
 public:
 	Projectile(int width, int height,float speed, bool active);
 	~Projectile();
 	void Draw();
 	void Update();
+	Rectangle GetRect();
 
 };
 

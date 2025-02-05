@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player()
+Player::Player(int width, int height, int lives, float speed)
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) * 7 / 8.f;
