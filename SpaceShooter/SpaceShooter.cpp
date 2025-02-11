@@ -15,7 +15,7 @@ int main()
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Space Shooter");
     SetTargetFPS(FRAME_RATE);
 
-    Player player;
+    Player player(10,10,3,5.0f,WHITE);
     AlienManager spawner;
 
     while (!WindowShouldClose())

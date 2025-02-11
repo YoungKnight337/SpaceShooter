@@ -17,7 +17,7 @@ private:
 	
 
 public:
-	Player(int width,int height, int lives, float speed);
+	Player(int width,int height, int lives, float speed,Color color);
 	~Player();
 	void Draw();
 	void Update();
