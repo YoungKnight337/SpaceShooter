@@ -11,7 +11,8 @@ private:
 	Vector2 position;
 	Color color;
 public:
-	Alien(int value, int width, int height, bool active, Vector2 position, Color color);
+	Alien();
+	Alien(int value, int width, int height, bool active, Color color);
 	~Alien();
 	void Draw();
 	void Update();

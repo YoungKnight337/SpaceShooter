@@ -14,13 +14,20 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 {
 	std::vector<Alien>alien_row;
 
-	for (int i; i < a; i++)
+	for (int i = 0; i < a; i++)
 	{
-		for (int j; j < b; j++)
+		for (int j = 0; j < b; j++)
 		{
-
+			if (i == 0)
+				Alien(10, 10, 10, true,WHITE);
+			if (i == 1 || i == 2)
+				Alien(10, 10, 10, true, GREEN);
+			if (i == 3)
+				Alien(10, 10, 10, true, BLUE);
+			
+			alien_row.push_back(alien);
 		}
-		alien_row.push_back(alien);
+		alien_row.push_back(alien_row);
 	}
 }
 

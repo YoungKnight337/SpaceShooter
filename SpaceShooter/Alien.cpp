@@ -1,6 +1,10 @@
 #include "Alien.h"
 
-Alien::Alien(int value, int width, int height, bool active, Vector2 position, Color color)
+Alien::Alien()
+{
+
+}
+Alien::Alien(int value, int width, int height, bool active, Color color)
 {
 
 }

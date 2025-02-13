@@ -1,10 +1,13 @@
 #include "raylib.h"
 #include "Player.h"
+#include "Alien.h"
 #include "AlienManager.h"
 #include "Projectile.h"
 
 int main()
 {
+    constexpr int ALIEN_ROW = 5;
+    constexpr int ALIEN_COL = 11;
 
     constexpr int SCREEN_WIDTH = 750;
     constexpr int SCREEN_HEIGHT = 700;
@@ -16,7 +19,10 @@ int main()
     SetTargetFPS(FRAME_RATE);
 
     Player player(10,10,3,5.0f,WHITE);
+    Alien alien;
     AlienManager spawner;
+
+    spawner.Initialize(alien, ALIEN_ROW, ALIEN_COL);
 
     while (!WindowShouldClose())
     {
