@@ -26,7 +26,7 @@ void  Alien::Update()
 
 void Alien::Shoot()
 {
-
+	//Projectile( -, -, -, RED)
 }
 
 Rectangle Alien::GetRect()

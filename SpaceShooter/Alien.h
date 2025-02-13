@@ -1,6 +1,8 @@
 #pragma once
 #include "raylib.h"
 
+class Projectile;
+
 class Alien
 {
 private:
