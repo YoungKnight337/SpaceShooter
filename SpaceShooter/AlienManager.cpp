@@ -12,14 +12,15 @@ AlienManager::~AlienManager()
 
 void AlienManager::Initialize(Alien& alien, int a, int b)
 {
-	std::vector<Alien>alien_row;
 
 	for (int i = 0; i < a; i++)
 	{
+		std::vector<Alien>alien_row;
+
 		for (int j = 0; j < b; j++)
 		{
 			if (i == 0)
-				Alien(10, 10, 10, true,WHITE);
+				Alien(10, 10, 10, true, WHITE);
 			if (i == 1 || i == 2)
 				Alien(10, 10, 10, true, GREEN);
 			if (i == 3)

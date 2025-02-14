@@ -12,7 +12,7 @@ Projectile::~Projectile()
 
 void Projectile::Draw()
 {
-
+	DrawRectangle();
 }
 
 void Projectile::Update()

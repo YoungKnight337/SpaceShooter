@@ -27,6 +27,9 @@ int main()
     while (!WindowShouldClose())
     {
         //Update
+        player.Update();
+        spawner.Update();
+
 
         BeginDrawing();
         ClearBackground(BLACK);

@@ -21,7 +21,10 @@ void Alien::Draw()
 
 void  Alien::Update()
 {
+	if (CheckCollisionRecs(GetRect(),Projectile.GetRect()))
+	{
 
+	}
 }
 
 void Alien::Shoot()

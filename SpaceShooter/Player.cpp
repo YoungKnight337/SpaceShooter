@@ -17,12 +17,14 @@ void Player::Draw()
 	DrawRectangle(position.x, position.y, width, height, color);
 }
 
-void Player::Update()
+void Player::Update(Projectile &laser)
 {
 	if (IsKeyDown(KEY_LEFT))
 		position.x -= 5;
 	if (IsKeyDown(KEY_RIGHT))
 		position.x += 5;
+	if (IsKeyDown(KEY_SPACE))
+		Shoot(laser);
 }
 
 
@@ -40,8 +42,7 @@ void Player::LimitMovement()
 
 void Player::Shoot(Projectile& laser)
 {
-	if (IsKeyDown(KEY_SPACE))
-		;
+	
 }
 
 Rectangle Player::GetRect()
