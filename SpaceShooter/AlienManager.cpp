@@ -39,10 +39,15 @@ void AlienManager::Draw(int a, int b)
 
 void AlienManager::Update()
 {
-
+	MoveAliens();
 }
 
 void AlienManager::MoveAliens()
 {
-	//Moves Colection of Aliens
+	//Moves Collection of Aliens
+	//Control
+	//Moves down
+	//	position.x += 5;
+	//Moves down
+	//	position.x -= 5;
 }
