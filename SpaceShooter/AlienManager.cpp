@@ -41,3 +41,8 @@ void AlienManager::Update()
 {
 
 }
+
+void AlienManager::MoveAliens()
+{
+
+}
