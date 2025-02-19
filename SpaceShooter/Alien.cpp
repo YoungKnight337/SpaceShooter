@@ -29,7 +29,14 @@ void  Alien::Update()
 
 void Alien::Shoot()
 {
-	//Projectile( -, -, -, RED)
+	// Timing seems to be random
+	// Make sure that no alien is in the way of line of fire
+	//	If No Alien
+	//		Open Fire
+	// Otherwise
+	//		Dont Shoot
+	// 
+	// Projectile( -, -, -, RED)
 }
 
 Rectangle Alien::GetRect()
