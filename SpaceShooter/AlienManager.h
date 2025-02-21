@@ -15,6 +15,6 @@ public:
 	void Initialize(Alien &alien, int a, int b);
 	void Draw(int a, int b);
 	void Update();
-	void MoveAliens()
+	void MoveAliens();
 };
 

@@ -1,6 +1,6 @@
 #include "Projectile.h"
 
-Projectile::Projectile(int width, int height, float speed, bool active)
+Projectile::Projectile(int width, int height, float speed, bool active, Color color)
 {
 
 }
@@ -12,7 +12,7 @@ Projectile::~Projectile()
 
 void Projectile::Draw()
 {
-	DrawRectangle();
+	DrawRectangle(position.x,position.y,width,height,color);
 }
 
 void Projectile::Update()

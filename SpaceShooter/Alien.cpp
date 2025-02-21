@@ -19,9 +19,9 @@ void Alien::Draw()
 }
 
 
-void  Alien::Update()
+void  Alien::Update(Player& player)
 {
-	if (CheckCollisionRecs(GetRect(),Projectile.GetRect()))
+	if (CheckCollisionRecs(GetRect(),player.Projectile.GetRect()))
 	{
 
 	}

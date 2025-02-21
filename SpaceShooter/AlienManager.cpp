@@ -28,7 +28,7 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 			
 			alien_row.push_back(alien);
 		}
-		alien_row.push_back(alien_row);
+		//alien_row.push_back(alien_row);
 	}
 }
 
@@ -39,6 +39,14 @@ void AlienManager::Draw(int a, int b)
 
 void AlienManager::Update()
 {
+
+	for (std::vector<Alien>& alien_row : aliens)
+	{
+		for (Alien& alien : alien_row)
+		{
+			alien.Update();
+		}
+	}
 	MoveAliens();
 }
 

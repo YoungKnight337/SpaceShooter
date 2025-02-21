@@ -18,7 +18,7 @@ public:
 	Alien(int value, int width, int height, bool active, Color color);
 	~Alien();
 	void Draw();
-	void Update();
+	void Update(Player& player);
 	void Shoot();
 	Rectangle GetRect();
 };
