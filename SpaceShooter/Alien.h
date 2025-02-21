@@ -19,7 +19,7 @@ public:
 	~Alien();
 	void Draw();
 	void Update(Player& player);
-	void Shoot();
+	void Shoot(Projectile& laser);
 	Rectangle GetRect();
 };
 

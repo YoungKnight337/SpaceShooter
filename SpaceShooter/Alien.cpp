@@ -23,11 +23,11 @@ void  Alien::Update(Player& player)
 {
 	if (CheckCollisionRecs(GetRect(),player.Projectile.GetRect()))
 	{
-
+		active == false;
 	}
 }
 
-void Alien::Shoot()
+void Alien::Shoot(Projectile& laser)
 {
 	// Timing seems to be random
 	// Make sure that no alien is in the way of line of fire
