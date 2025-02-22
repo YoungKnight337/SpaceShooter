@@ -20,11 +20,12 @@ void Player::Draw()
 void Player::Update(Projectile &laser)
 {
 	if (IsKeyDown(KEY_LEFT))
-		position.x -= 5;
+		position.x -= 7;
 	if (IsKeyDown(KEY_RIGHT))
-		position.x += 5;
+		position.x += 7;
 	if (IsKeyDown(KEY_SPACE))
 		Shoot(laser);
+	LimitMovement();
 }
 
 
