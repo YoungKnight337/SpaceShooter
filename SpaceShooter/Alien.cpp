@@ -39,6 +39,11 @@ void Alien::Shoot(Projectile& laser)
 	// Projectile( -, -, -, RED)
 }
 
+void CheckCollision(Projectile& laser)
+{
+	if()
+}
+
 Rectangle Alien::GetRect()
 {
 	return{ position.x,position.y, static_cast<float>(width),static_cast<float>(height) };

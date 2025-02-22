@@ -20,6 +20,7 @@ public:
 	void Draw();
 	void Update(Player& player);
 	void Shoot(Projectile& laser);
+	void CheckCollision(Projectile& laser);
 	Rectangle GetRect();
 };
 

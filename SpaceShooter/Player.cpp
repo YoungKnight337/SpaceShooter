@@ -46,6 +46,11 @@ void Player::Shoot(Projectile& laser)
 	
 }
 
+void CheckCollision(Projectile& laser)
+{
+
+}
+
 Rectangle Player::GetRect()
 {
 	return{ position.x, position.y,static_cast<float>(width),static_cast<float>(height) };

@@ -1,7 +1,7 @@
 #pragma once
 #include "raylib.h"
 
-
+class Alien;
 class Projectile;
 
 class Player
@@ -22,6 +22,7 @@ public:
 	void Draw();
 	void Update(Projectile&laser);
 	void Shoot(Projectile &laser);
+	void CheckCollision(Projectile& laser);
 	void LimitMovement();
 	Rectangle GetRect();
 	
