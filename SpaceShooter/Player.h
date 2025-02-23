@@ -1,5 +1,6 @@
 #pragma once
 #include "raylib.h"
+#include "Projectile.h"
 
 class Alien;
 class Projectile;
@@ -12,12 +13,13 @@ private:
 	int lives;
 	int score;
 	float speed;
+	bool active;
 	Vector2 position;
 	Color color;
 	
 
 public:
-	Player(int width,int height, int lives, float speed,Color color);
+	Player(int width,int height, int lives, float speed,bool active, Color color);
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);

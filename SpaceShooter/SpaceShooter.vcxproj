@@ -135,6 +135,7 @@
     <ClCompile Include="SpaceShooter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Alien.h" />
     <ClInclude Include="AlienManager.h" />
     <ClInclude Include="Block.h" />
     <ClInclude Include="Player.h" />

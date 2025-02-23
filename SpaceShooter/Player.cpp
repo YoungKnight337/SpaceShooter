@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(int width, int height, int lives, float speed, Color color)
+Player::Player(int width, int height, int lives, float speed, bool active, Color color)
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) * 7 / 8.f;
@@ -46,9 +46,12 @@ void Player::Shoot(Projectile& laser)
 	
 }
 
-void CheckCollision(Projectile& laser)
+void Player::CheckCollision(Projectile & laser)
 {
-
+		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
+		{
+			active == false;
+		}
 }
 
 Rectangle Player::GetRect()
