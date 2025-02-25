@@ -21,13 +21,14 @@ int main()
     Player player(10,10,3,5.0f,true,WHITE);
     Alien alien;
     AlienManager spawner;
+    Projectile laser(3,3);
 
     spawner.Initialize(alien, ALIEN_ROW, ALIEN_COL);
 
     while (!WindowShouldClose())
     {
         //Update
-        player.Update();
+        player.Update(laser);
         spawner.Update();
 
 

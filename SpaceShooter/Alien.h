@@ -1,4 +1,5 @@
 #pragma once
+#include "vector"
 #include "raylib.h"
 #include "Projectile.h"
 #include "Player.h"
@@ -13,6 +14,7 @@ private:
 	int width;
 	int height;
 	bool active;
+	std::vector<Projectile>laser;
 	Vector2 position;
 	Color color;
 public:
