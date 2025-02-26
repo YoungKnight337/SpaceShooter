@@ -34,7 +34,13 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 
 void AlienManager::Draw(int a, int b)
 {
-
+	for (std::vector<Alien> alien_row : aliens)
+	{
+		for(Alien alien: alien_row)
+		{ 
+			alien.Draw();
+		}
+	}
 }
 
 void AlienManager::Update()

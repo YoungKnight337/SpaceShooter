@@ -14,7 +14,8 @@ Player::~Player()
 
 void Player::Draw()
 {
-	DrawRectangle(position.x, position.y, width, height, color);
+	if (active == true)
+		DrawRectangle(position.x, position.y, width, height, color);
 }
 
 void Player::Update(Projectile &laser)

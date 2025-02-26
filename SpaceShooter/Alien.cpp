@@ -15,16 +15,14 @@ Alien::~Alien()
 
 void Alien::Draw()
 {
-	DrawRectangle(position.x, position.y, width, height, color);
+	if(active==true)
+		DrawRectangle(position.x, position.y, width, height, color);
 }
 
 
-void  Alien::Update(Player& player)
+void  Alien::Update(Projectile& laser)
 {
-	if (CheckCollisionRecs(GetRect(),player.Projectile.GetRect()))
-	{
-		active == false;
-	}
+	CheckCollision(laser);
 }
 
 void Alien::Shoot(Projectile& laser)

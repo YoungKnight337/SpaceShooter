@@ -22,7 +22,7 @@ public:
 	Alien(int value, int width, int height, bool active, Color color);
 	~Alien();
 	void Draw();
-	void Update(Player& player);
+	void Update(Projectile& laser);
 	void Shoot(Projectile& laser);
 	void CheckCollision(Projectile& laser);
 	Rectangle GetRect();
