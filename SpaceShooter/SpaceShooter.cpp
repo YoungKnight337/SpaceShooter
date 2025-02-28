@@ -21,7 +21,8 @@ int main()
     Player player(10,10,3,5.0f,true,WHITE);
     Alien alien;
     AlienManager spawner;
-    Projectile laser(3,3);
+    Projectile laser(5,5,5.0f,true,GREEN);
+    Projectile beam(5, 5, 5.0f, true, RED);
 
     spawner.Initialize(alien, ALIEN_ROW, ALIEN_COL);
 
