@@ -17,7 +17,7 @@ public:
 	~Projectile();
 	void Draw();
 	void Update();
-	void Hit();
+	void Hit(Player &ship, Alien &alien);
 	Rectangle GetRect();
 
 };

@@ -20,16 +20,16 @@ void Projectile::Update()
 
 }
 
-void Projectile::Hit()
+void Projectile::Hit(Player& ship, Alien& alien)
 {
-	if (active == true)
-	{
+	if(active == true)
+	{ 
 
-		if (CheckCollisionRecs(GetRect(), player.GetRect()))
+		if (CheckCollisionRecs(GetRect(), ship.GetRect()))
 		{
 			active == false;
 		}
-		else if (CheckCollisionRecs(GetRect(), alien.GetRect()))
+		else if(CheckCollisionRecs(GetRect(), alien.GetRect()))
 		{
 			active == false;
 		}
