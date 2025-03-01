@@ -17,15 +17,17 @@ void Projectile::Draw()
 
 void Projectile::Update()
 {
-
+	//Move
+	//Hit
 }
 
 void Projectile::Move()
 {
-	//If active is true and origin is ship
-	//Move up
-	//If active is true and origin is alien
-	//Move down
+	//If active is true
+	//	If origin is ship
+	//		Move up
+	//	If origin is alien
+	//		Move down
 }
 void Projectile::Hit(Player& ship, Alien& alien)
 {
