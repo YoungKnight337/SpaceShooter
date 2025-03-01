@@ -49,10 +49,13 @@ void Player::Shoot(Projectile& laser)
 
 void Player::CheckCollision(Projectile & laser)
 {
+	if (active == true)
+	{
 		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
 		{
 			active == false;
 		}
+	}
 }
 
 Rectangle Player::GetRect()

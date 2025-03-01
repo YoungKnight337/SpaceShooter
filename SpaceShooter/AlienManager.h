@@ -1,9 +1,11 @@
 #pragma once
 #include "raylib.h"
-#include "Alien.h"
 #include "vector"
+#include "Alien.h"
+#include "Projectile.h"
 
 class Alien;
+class Projectile;
 
 class AlienManager
 {
@@ -14,7 +16,7 @@ public:
 	~AlienManager();
 	void Initialize(Alien &alien, int a, int b);
 	void Draw(int a, int b);
-	void Update();
+	void Update(Projectile &laser);
 	void MoveAliens();
 };
 

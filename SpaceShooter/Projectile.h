@@ -1,5 +1,7 @@
 #pragma once
 #include "raylib.h"
+#include "Alien.h"
+#include "Player.h"
 
 class Projectile
 {
@@ -15,6 +17,7 @@ public:
 	~Projectile();
 	void Draw();
 	void Update();
+	void Hit();
 	Rectangle GetRect();
 
 };

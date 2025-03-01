@@ -39,9 +39,12 @@ void Alien::Shoot(Projectile& laser)
 
 void Alien::CheckCollision(Projectile& laser)
 {
-	if (CheckCollisionRecs(GetRect(), laser.GetRect()))
+	if (active == true)
 	{
-		active == false;
+		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
+		{
+			active == false;
+		}
 	}
 }
 
