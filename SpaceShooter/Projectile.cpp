@@ -22,7 +22,10 @@ void Projectile::Update()
 
 void Projectile::Move()
 {
-
+	//If active is true and origin is ship
+	//Move up
+	//If active is true and origin is alien
+	//Move down
 }
 void Projectile::Hit(Player& ship, Alien& alien)
 {
