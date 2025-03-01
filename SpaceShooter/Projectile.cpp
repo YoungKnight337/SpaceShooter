@@ -18,18 +18,18 @@ void Projectile::Draw()
 void Projectile::Update()
 {
 	//Move
-	//Hit
+	//CheckCollision
 }
 
 void Projectile::Move()
 {
-	//If active is true
+	//if(active == true){ }
 	//	If origin is ship
 	//		Move up
 	//	If origin is alien
 	//		Move down
 }
-void Projectile::Hit(Player& ship, Alien& alien)
+void Projectile::CheckCollision(Player& ship, Alien& alien)
 {
 	if(active == true)
 	{ 
