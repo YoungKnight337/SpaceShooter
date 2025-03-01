@@ -18,6 +18,7 @@ public:
 	void Draw();
 	void Update();
 	void Hit(Player &ship, Alien &alien);
+	void Move();
 	Rectangle GetRect();
 
 };

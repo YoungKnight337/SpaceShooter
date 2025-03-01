@@ -20,6 +20,10 @@ void Projectile::Update()
 
 }
 
+void Projectile::Move()
+{
+
+}
 void Projectile::Hit(Player& ship, Alien& alien)
 {
 	if(active == true)
