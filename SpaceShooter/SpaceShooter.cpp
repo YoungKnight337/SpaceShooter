@@ -18,15 +18,15 @@ int main()
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Space Shooter");
     SetTargetFPS(FRAME_RATE);
 
-    Player player(10,10,3,5.0f,true,WHITE);
+    Player player(20,20,3, 5.0f, true, WHITE);
     //Alien alien;
     //AlienManager spawner;
-    Projectile laser(5,5,5.0f,true,GREEN);
+    Projectile laser(5,5,5.0f,false,GREEN);
     //Projectile beam(5, 5, 5.0f, true, RED);
 
     //spawner.Initialize(alien, ALIEN_ROW, ALIEN_COL);
 
-    while (!WindowShouldClose())
+    while (WindowShouldClose()==false)
     {
         //Update
         player.Update(laser);

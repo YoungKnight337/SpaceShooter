@@ -21,6 +21,7 @@ private:
 	
 
 public:
+	Player();
 	Player(int width,int height, int lives, float speed,bool active, Color color);
 	~Player();
 	void Draw();

@@ -1,9 +1,16 @@
 #include "Player.h"
 
-Player::Player(int width, int height, int lives, float speed, bool active, Color color)
+
+Player::Player()
+	:position{ position.x, position.y }, width{ 20 }, height{ 20 }, lives{ 3 }, speed{ 5.0f }, active{ true }, color{ WHITE }
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
-	position.y = static_cast<float>(GetScreenHeight()) * 7 / 8.f;
+	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
+}
+Player::Player(int width, int height, int lives, float speed, bool active, Color color)
+	: position{ position }, width{ width }, height{ height }, lives{ lives }, speed{ speed }, active{ active }, color { color}
+{
+
 }
 
 Player::~Player()
@@ -26,6 +33,7 @@ void Player::Update(Projectile &laser)
 		position.x += 7;
 	if (IsKeyDown(KEY_SPACE))
 		Shoot(laser);
+
 	LimitMovement();
 }
 
@@ -60,5 +68,5 @@ void Player::CheckCollision(Projectile & laser)
 
 Rectangle Player::GetRect()
 {
-	return{ position.x, position.y,static_cast<float>(width),static_cast<float>(height) };
+	return{ position.x, position.y, static_cast<float>(width),static_cast<float>(height) };
 }

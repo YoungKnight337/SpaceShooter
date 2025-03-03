@@ -12,7 +12,8 @@ Projectile::~Projectile()
 
 void Projectile::Draw()
 {
-	DrawRectangle(position.x,position.y,width,height,color);
+	if(active==true)
+		DrawRectangle(position.x,position.y,width,height,color);
 }
 
 void Projectile::Update()
@@ -25,9 +26,9 @@ void Projectile::Move()
 {
 	//if(active == true){ }
 	//	If origin is ship
-	//		Move up
+	//		Move up position.y += speed.y;
 	//	If origin is alien
-	//		Move down
+	//		Move down position.y -= speed.y;
 }
 void Projectile::CheckCollision(Player& ship, Alien& alien)
 {
