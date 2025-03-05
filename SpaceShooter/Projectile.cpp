@@ -1,6 +1,12 @@
 #include "Projectile.h"
 
+Projectile::Projectile()
+	:width{10},height{10},speed{5.0f},active{false},color{}
+{
+
+}
 Projectile::Projectile(int width, int height, float speed, bool active, Color color)
+	:width{width}, height{height}, speed{speed}, active{active}, color{color}
 {
 
 }
@@ -48,5 +54,5 @@ void Projectile::CheckCollision(Player& ship, Alien& alien)
 
 Rectangle Projectile::GetRect()
 {
-	return{ position.x,position.y,static_cast<float>(width),static_cast<float>(height) };
+	return{position.x,position.y,static_cast<float>(width),static_cast<float>(height) };
 }

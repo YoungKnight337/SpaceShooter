@@ -13,7 +13,8 @@ private:
 	Color color;
 	Vector2 position;
 public:
-	Projectile(int width, int height, float speed, bool active,Color color);
+	Projectile();
+	Projectile(int width, int height, float speed, bool active, Color color);
 	~Projectile();
 	void Draw();
 	void Update();
