@@ -20,11 +20,11 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 		for (int j = 0; j < b; j++)
 		{
 			if (i == 0)
-				Alien(10, 10, 10, true, WHITE);
+				Alien octpus(10, 10, 10, true, WHITE);
 			if (i == 1 || i == 2)
-				Alien(10, 10, 10, true, GREEN);
+				Alien squid(10, 10, 10, true, GREEN);
 			if (i == 3)
-				Alien(10, 10, 10, true, BLUE);
+				Alien crab(10, 10, 10, true, BLUE);
 			
 			alien_row.push_back(alien);
 		}
