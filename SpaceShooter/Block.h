@@ -18,6 +18,6 @@ public:
 	void Draw();
 	void Update();
 	void CheckCollision(Projectile& laser);
-	void GetRect();
+	Rectangle GetRect();
 };
 

@@ -24,11 +24,12 @@ void Block::CheckCollision(Projectile& laser)
 {
 	if(CheckCollisionRecs(GetRect(), laser.GetRect()))
 	{
-	
+		//Destroy block
+		//Destroy laser
 	}
 }
 
-void Block::GetRect()
+Rectangle Block::GetRect() 
 {
-	return { width, height, position.x, position.y };
+	return {position.x, position.y, static_cast<float>(width), static_cast<float>(height)};
 }
