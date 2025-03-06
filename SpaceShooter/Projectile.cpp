@@ -22,19 +22,21 @@ void Projectile::Draw()
 		DrawRectangle(position.x,position.y,width,height,color);
 }
 
-void Projectile::Update()
+void Projectile::Update(Player& ship, Alien& alien)
 {
-	//Move
-	//CheckCollision
+	Move(ship, alien);
+	CheckCollision(ship,alien);
 }
 
-void Projectile::Move()
+void Projectile::Move(Player& ship, Alien& alien)
 {
-	//if(active == true){ }
+	//if(active == true)
+	// { 
 	//	If origin is ship
-	//		Move up position.y += speed.y;
+	//		position.y += speed.y;
 	//	If origin is alien
-	//		Move down position.y -= speed.y;
+	//		position.y -= speed.y;
+	// }
 }
 void Projectile::CheckCollision(Player& ship, Alien& alien)
 {
