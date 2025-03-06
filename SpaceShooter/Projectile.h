@@ -20,6 +20,7 @@ public:
 	void Update();
 	void CheckCollision(Player &ship, Alien &alien);
 	void Move();
+	bool CheckStatus() const { return active; }
 	Rectangle GetRect();
 
 };

@@ -52,6 +52,7 @@ void Projectile::CheckCollision(Player& ship, Alien& alien)
 	}
 }
 
+
 Rectangle Projectile::GetRect()
 {
 	return{position.x,position.y,static_cast<float>(width),static_cast<float>(height) };
