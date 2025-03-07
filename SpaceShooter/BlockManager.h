@@ -9,10 +9,9 @@ private:
 public:
 	BlockManager();
 	~BlockManager();
-	void Initialize();
-	void Draw();
-	void Update(Projectile& laser);
-	void CheckCollision(Projectile& laser);
-	void AddBlock(Vector2 position, int width, int height, Color color);
+	void Initialize(Block& block, int a, int b);
+	void Draw(int a, int b);
+	void Update(Projectile& laser, int a, int b);
+	
 };
 
