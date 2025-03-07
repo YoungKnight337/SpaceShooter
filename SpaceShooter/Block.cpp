@@ -12,12 +12,12 @@ Block::~Block()
 
 void Block::Draw()
 {
-
+	DrawRectangle(position.x, position.y, width, height, color);
 }
 
-void Block::Update()
+void Block::Update(Projectile& laser)
 {
-
+	CheckCollision(laser);
 }
 
 void Block::CheckCollision(Projectile& laser)

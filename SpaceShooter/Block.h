@@ -16,7 +16,7 @@ public:
 	Block();
 	~Block();
 	void Draw();
-	void Update();
+	void Update(Projectile& laser);
 	void CheckCollision(Projectile& laser);
 	Rectangle GetRect();
 };
