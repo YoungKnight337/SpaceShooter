@@ -130,6 +130,7 @@
     <ClCompile Include="Alien.cpp" />
     <ClCompile Include="AlienManager.cpp" />
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="BlockManager.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="SpaceShooter.cpp" />
@@ -138,6 +139,7 @@
     <ClInclude Include="Alien.h" />
     <ClInclude Include="AlienManager.h" />
     <ClInclude Include="Block.h" />
+    <ClInclude Include="BlockManager.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Projectile.h" />
   </ItemGroup>
