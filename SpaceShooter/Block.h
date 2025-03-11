@@ -15,6 +15,7 @@ private:
 public:
 	Block();
 	~Block();
+	int GetHeight() const { return height; };
 	void Draw();
 	void Update(Projectile& laser);
 	void CheckCollision(Projectile& laser);

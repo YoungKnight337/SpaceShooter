@@ -5,12 +5,12 @@
 class BlockManager
 {
 private:
-	std::vector<Block> block;
+	std::vector<Block> blocks;
 public:
 	BlockManager();
 	~BlockManager();
-	void Initialize(Block& block, int a, int b);
-	void Draw(int a, int b);
+	void Initialize(Block& block, int a);
+	void Draw(int a);
 	void Update(Projectile& laser, int a, int b);
 	
 };
