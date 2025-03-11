@@ -12,7 +12,8 @@ Block::~Block()
 
 void Block::Draw()
 {
-	DrawRectangle(position.x, position.y, width, height, color);
+	if(active == true)
+		DrawRectangle(position.x, position.y, width, height, color);
 }
 
 void Block::Update(Projectile& laser)

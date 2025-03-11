@@ -9,8 +9,9 @@ class Block
 private:
 	int width;
 	int height;
-	Vector2 positon;
+	Vector2 position;
 	Color color;
+	bool active;
 
 public:
 	Block();

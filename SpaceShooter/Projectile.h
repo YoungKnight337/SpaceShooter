@@ -3,6 +3,9 @@
 #include "Alien.h"
 #include "Player.h"
 
+class Player;
+class Alien;
+
 class Projectile
 {
 private:
