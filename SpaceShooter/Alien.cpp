@@ -1,10 +1,12 @@
 #include "Alien.h"
 
 Alien::Alien()
+	:value{ 10 }, width{ 20 }, height{ 20 }, active{true}, color{WHITE}
 {
 
 }
 Alien::Alien(int value, int width, int height, bool active, Color color)
+	:value{value}, width{width}, height{height}, active{active}, color{color}
 {
 
 }

@@ -18,16 +18,16 @@ void BlockManager::Initialize(Block& block, int a)
 	{
 		std::vector<Block> blocks;
 
-		//block.position.x = j * (block.GetWidth() + 10) + j;
-		block.position.y = i * (block.GetHeight() + 10) + i;
-
-		blocks.push_back(blocks);
+		blocks.position.y = i * (block.GetHeight() + 10) + i;
+		
+		blocks.push_back(block);
 	}
+
 }
 
 void BlockManager::Draw(int a)
 {
-	for (std::vector<Block> blocks : blocks)
+	for (std::vector<Block> blocks : block)
 	{
 		for (Block block : blocks)
 		{
