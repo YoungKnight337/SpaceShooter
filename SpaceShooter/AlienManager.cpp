@@ -58,8 +58,6 @@ void AlienManager::Update(Projectile& laser)
 
 void AlienManager::MoveAliens()
 {
-	//Control
-	//Moves down
 	for(int i = 0; i < alien.size(); i++)
 	{
 		position.x += 5;
