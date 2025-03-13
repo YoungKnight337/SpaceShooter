@@ -60,13 +60,13 @@ void AlienManager::MoveAliens()
 {
 	//Control
 	//Moves down
-	// for(int i = 0; i < alien.size(); i++)
-	// {
-	//		position.x += 5;
-	//		if (position.x >= GetScreenWidth())
-	//			position.y +=5;
-	//		position.x -= 5;
-	//		if (position.x <= 0)
-	//			position.y -= 5;
-	// }
+	for(int i = 0; i < alien.size(); i++)
+	{
+		position.x += 5;
+		if(position.x >= GetScreenWidth())
+			position.y -=5;
+		position.x -= 5;
+		if (position.x <= 0)
+			position.y -= 5;
+	}
 }
