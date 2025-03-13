@@ -27,15 +27,14 @@ int main()
     AlienManager spawner;
     Projectile laser(5,5,5.0f,false,GREEN);
     Projectile beam(5, 5, 5.0f, true, RED);
-    BlockManager row();
-
-    //spawner.Initialize(alien, ALIEN_ROW, ALIEN_COL);
+    BlockManager row;
 
     while (WindowShouldClose()==false)
     {
         //Update
         player.Update(beam);
-        spawner.Update(beam, ALIEN_ROW, ALIEN_COL);
+        spawner.Update(laser, ALIEN_ROW, ALIEN_COL);
+        row.Update(beam, BLOCK_ROW);
 
 
         BeginDrawing();
