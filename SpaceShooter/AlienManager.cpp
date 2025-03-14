@@ -58,11 +58,11 @@ void AlienManager::Update(Projectile& laser)
 
 void AlienManager::MoveAliens()
 {
-	for(int i = 0; i < alien.size(); i++)
+	for(auto& alien : aliens)
 	{
-		position.x += 5;
-		if(position.x >= GetScreenWidth())
-			position.y -=5;
+		alien.position.x += 5;
+		if(alien.position.x >= GetScreenWidth())
+			alien.position.y -=5;
 		position.x -= 5;
 		if (position.x <= 0)
 			position.y -= 5;
