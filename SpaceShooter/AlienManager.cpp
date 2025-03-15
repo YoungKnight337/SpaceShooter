@@ -60,13 +60,21 @@ void AlienManager::MoveAliens()
 {
 	for(auto& alien : aliens)
 	{
-		alien.position.x += 5;
-		if (alien.position.x >= GetScreenWidth()|| alien.position.x <= 0)
+		//MoveRight()
+		if (alien.position.x >= GetScreenWidth() || alien.position.x >= 0)
 		{
 			alien.position.y -= 5;
-			//alien.position.x -= 5;
 		}
-			//alien.position.x += 5;
-			//alien.position.x -= 5;
+		//MoveLeft()
+		
+		//MoveRight()
+		//{
+		//	alien.position.x += 5;
+		// }
+
+		//MoveLeft()
+		//{
+		//	alien.position.x -= 5;
+		//}
 	}
 }

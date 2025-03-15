@@ -13,6 +13,7 @@ private:
 	int value;
 	int width;
 	int height;
+	int speed;
 	bool active;
 	std::vector<Projectile>laser;
 	Vector2 position;
