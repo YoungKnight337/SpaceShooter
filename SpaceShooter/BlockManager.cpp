@@ -18,7 +18,7 @@ void BlockManager::Initialize(Block& block, int a)
 	{
 		std::vector<Block> blocks;
 
-		blocks.position.y = i * (block.GetHeight() + 10) + i;
+		block.position.y = i * (block.GetHeight() + 10) + i;
 		
 		blocks.push_back(block);
 	}

@@ -5,6 +5,11 @@ AlienManager::AlienManager()
 
 }
 
+AlienManager::AlienManager(float speed, Vector2 position)
+{
+
+}
+
 AlienManager::~AlienManager()
 {
 
@@ -65,6 +70,7 @@ void AlienManager::MoveRight()
 {
 	position.x += speed;
 }
+
 void AlienManager::MoveAliens(Alien& alien)
 {
 	for (auto& alien : aliens)

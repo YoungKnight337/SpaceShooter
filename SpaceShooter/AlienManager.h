@@ -16,6 +16,7 @@ private:
 
 public:
 	AlienManager();
+	AlienManager(float speed, Vector2 position);
 	~AlienManager();
 	void Initialize(Alien &alien, int a, int b);
 	void Draw(int a, int b);
