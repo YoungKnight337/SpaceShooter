@@ -10,7 +10,10 @@ class Projectile;
 class AlienManager
 {
 private:
+	float speed;
+	Vector2 position;
 	std::vector<std::vector<Alien>>aliens;
+
 public:
 	AlienManager();
 	~AlienManager();
