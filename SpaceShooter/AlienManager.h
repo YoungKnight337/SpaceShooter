@@ -16,7 +16,7 @@ public:
 	~AlienManager();
 	void Initialize(Alien &alien, int a, int b);
 	void Draw(int a, int b);
-	void Update(Projectile &laser);
-	void MoveAliens();
+	void Update(Projectile& laser, Alien& alien);
+	void MoveAliens(Alien& alien);
 };
 

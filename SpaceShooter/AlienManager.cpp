@@ -43,27 +43,35 @@ void AlienManager::Draw(int a, int b)
 	}
 }
 
-void AlienManager::Update(Projectile& laser)
+void AlienManager::Update(Projectile& laser, Alien& alien)
 {
 
-	for (std::vector<Alien>& alien_row : aliens)
-	{
-		for (Alien& alien : alien_row)
+		for (std::vector<Alien>& alien_row : aliens)
 		{
-			alien.Update(laser);
+			for (Alien& alien : alien_row)
+			{
+				alien.Update(laser);
+			}
 		}
-	}
-	MoveAliens();
+		MoveAliens(alien);
 }
 
-void AlienManager::MoveAliens()
+void AlienManager::MoveAliens(Alien& alien)
 {
-	for(auto& alien : aliens)
+	for (auto& alien : aliens)
 	{
 		alien.MoveRight();
-		if (alien.position.x >= GetScreenWidth() || alien.position.x >= 0)
+		if (alien.position.x >= GetScreenWidth())
 		{
 			alien.position.y -= 5;
 		}
-
+		alien.MoveLeft();
+		if (alien.position.x >= 0)
+		{
+			alien.position.y -= 5;
+		}
+	}
 }
+
+
+

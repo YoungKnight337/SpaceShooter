@@ -29,12 +29,12 @@ void  Alien::Update(Projectile& laser)
 
 void Alien::MoveLeft()
 {
-	position.x -= 5;
+	position.x -= speed;
 }
 
 void Alien::MoveRight()
 {
-	position.x += 5;
+	position.x += speed;
 }
 void Alien::Shoot(Projectile& laser)
 {
