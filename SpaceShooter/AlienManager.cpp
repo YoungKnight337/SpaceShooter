@@ -56,12 +56,12 @@ void AlienManager::Update(Projectile& laser, Alien& alien)
 		MoveAliens(alien);
 }
 
-void Alien::MoveLeft()
+void AlienManager::MoveLeft()
 {
 	position.x -= speed;
 }
 
-void Alien::MoveRight()
+void AlienManager::MoveRight()
 {
 	position.x += speed;
 }
