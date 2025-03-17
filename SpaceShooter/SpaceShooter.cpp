@@ -23,7 +23,7 @@ int main()
     SetTargetFPS(FRAME_RATE);
 
     Player player;
-    //Alien alien;
+    Alien alien;
     AlienManager spawner;
     Projectile laser(5,5,5.0f,false,GREEN);
     Projectile beam(5, 5, 5.0f, true, RED);
@@ -33,7 +33,7 @@ int main()
     {
         //Update
         player.Update(beam);
-        spawner.Update(laser, ALIEN_ROW, ALIEN_COL);
+        spawner.Update(laser,alien);
         row.Update(beam, BLOCK_ROW);
 
 

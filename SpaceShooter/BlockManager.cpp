@@ -10,6 +10,8 @@ BlockManager::~BlockManager()
 
 }
 
+
+//Need to fix Blocks need to be initialized in a a typical array/vector positioning vertically is all the same but the horizontal positioning is seperate.
 void BlockManager::Initialize(Block& block, int a)
 {
 	int initialDownPosition = 50;
@@ -25,7 +27,7 @@ void BlockManager::Initialize(Block& block, int a)
 
 }
 
-void BlockManager::Draw(int a)
+void BlockManager::Draw(Block& block, int a)
 {
 	for (std::vector<Block> blocks : block)
 	{
@@ -36,7 +38,7 @@ void BlockManager::Draw(int a)
 	}
 }
 
-void BlockManager::Update(Projectile& laser, int a, int b)
+void BlockManager::Update(Projectile& laser, int a)
 {
 
 }

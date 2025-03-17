@@ -13,8 +13,8 @@ public:
 	BlockManager();
 	~BlockManager();
 	void Initialize(Block& block, int a);
-	void Draw(int a);
-	void Update(Projectile& laser, int a, int b);
+	void Draw(Block& block, int a);
+	void Update(Projectile& laser, int a);
 	
 };
 
