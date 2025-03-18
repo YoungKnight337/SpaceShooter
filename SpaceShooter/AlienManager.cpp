@@ -1,11 +1,13 @@
 #include "AlienManager.h"
 
 AlienManager::AlienManager()
+	:speed{ speed }, position{ position }
 {
 
 }
 
 AlienManager::AlienManager(float speed, Vector2 position)
+	:speed{speed}, position{position}
 {
 
 }
