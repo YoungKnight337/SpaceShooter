@@ -26,16 +26,16 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 		{
 			if (i == 0)
 				Alien octpus (10, 10, 10, true, WHITE);
-				//position.x =;
-				//position.y =;
+				//position.x = j * (block.GetWidth() + 10) + j; 
+				//position.y = i * (block.GetHeight() + 10) + i;
 			if (i == 1 || i == 2)
 				Alien squid (10, 10, 10, true, GREEN);
-				//position.x =;
-				//position.y =;
+				//position.x = j * (block.GetWidth() + 10) + j;
+				//position.y = i * (block.GetHeight() + 10) + i;
 			if (i == 3)
 				Alien crab (10, 10, 10, true, BLUE);
-				//position.x =;
-				//position.y =;
+				//position.x = j * (block.GetWidth() + 10) + j ;
+				//position.y = i * (block.GetHeight() + 10) + i;
 			
 			alien_row.push_back(alien);
 		}
