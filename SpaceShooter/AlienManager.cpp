@@ -67,27 +67,25 @@ void AlienManager::Update(Projectile& laser, Alien& alien)
 		MoveAliens(alien);
 }
 
-void AlienManager::MoveLeft()
+void AlienManager::Move()
 {
-	position.x -= speed;
+	if(position.x >= 0)
+		position.x -= speed;
+	if (position.x >= GetScreenWidth())
+		position.x += speed;
 }
 
-void AlienManager::MoveRight()
+/*void AlienManager::MoveRight()
 {
 	position.x += speed;
 }
-
+*/
 void AlienManager::MoveAliens(Alien& alien)
 {
 	for (auto& alien : aliens)
 	{
-		MoveRight();
-		if (position.x >= GetScreenWidth())
-		{
-			position.y -= 5;
-		}
-		MoveLeft();
-		if (position.x >= 0)
+		Move();
+		if (position.x >= GetScreenWidth() || position.x >= 0)
 		{
 			position.y -= 5;
 		}
