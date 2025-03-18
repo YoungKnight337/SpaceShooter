@@ -27,15 +27,6 @@ void  Alien::Update(Projectile& laser)
 	CheckCollision(laser);
 }
 
-void Alien::MoveLeft()
-{
-	position.x -= speed;
-}
-
-void Alien::MoveRight()
-{
-	position.x += speed;
-}
 void Alien::Shoot(Projectile& laser)
 {
 	// Timing seems to be random
