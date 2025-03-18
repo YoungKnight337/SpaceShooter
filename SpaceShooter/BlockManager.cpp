@@ -30,13 +30,10 @@ void BlockManager::Initialize(Block& block, int a)
 
 void BlockManager::Draw(Block& block, int a)
 {
-	for (std::vector<Block> blocks : block)
-	{
 		for (Block block : blocks)
 		{
 			block.Draw();
 		}
-	}
 }
 
 void BlockManager::Update(Projectile& laser, int a)

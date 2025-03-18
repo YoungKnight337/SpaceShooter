@@ -20,7 +20,7 @@ private:
 	Color color;
 	
 
-public:
+public:	
 	Player();
 	Player(int width,int height, int lives, float speed,bool active, Color color);
 	~Player();
