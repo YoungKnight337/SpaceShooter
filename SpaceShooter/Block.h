@@ -9,12 +9,14 @@ class Block
 private:
 	int width;
 	int height;
+	bool active;
 	Vector2 position;
 	Color color;
-	bool active;
+	
 
 public:
 	Block();
+	Block(int width, int height, Color color);
 	~Block();
 	int GetHeight() const { return height; };
 	void Draw();

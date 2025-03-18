@@ -1,6 +1,13 @@
 #include "Block.h"
 
 Block::Block()
+	:width(20), height(20), color(GREEN)
+{
+
+}
+
+Block::Block(int width, int height, Color color)
+	: width(width), height(height), color(color)
 {
 
 }
