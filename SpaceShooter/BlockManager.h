@@ -8,6 +8,7 @@ class Block;
 class BlockManager
 {
 private:
+	Vector2 position;
 	std::vector<Block> blocks;
 public:
 	BlockManager();
