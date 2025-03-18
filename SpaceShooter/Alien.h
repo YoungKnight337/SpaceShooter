@@ -27,6 +27,8 @@ public:
 	void MoveRight();
 	void Shoot(Projectile& laser);
 	void CheckCollision(Projectile& laser);
+	int GetHeight() const { return height; };
+	int GetWidth() const { return width; };
 	Rectangle GetRect();
 };
 

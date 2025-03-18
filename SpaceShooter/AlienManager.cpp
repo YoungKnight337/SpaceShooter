@@ -26,16 +26,16 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 		{
 			if (i == 0)
 				Alien octpus (10, 10, 10, true, WHITE);
-				//position.x = j * (block.GetWidth() + 10) + j; 
-				//position.y = i * (block.GetHeight() + 10) + i;
+				position.x = j * (alien.GetWidth() + 10) + j; 
+				position.y = i * (alien.GetHeight() + 10) + i;
 			if (i == 1 || i == 2)
 				Alien squid (10, 10, 10, true, GREEN);
-				//position.x = j * (block.GetWidth() + 10) + j;
-				//position.y = i * (block.GetHeight() + 10) + i;
+				position.x = j * (alien.GetWidth() + 10) + j;
+				position.y = i * (alien.GetHeight() + 10) + i;
 			if (i == 3)
 				Alien crab (10, 10, 10, true, BLUE);
-				//position.x = j * (block.GetWidth() + 10) + j ;
-				//position.y = i * (block.GetHeight() + 10) + i;
+				position.x = j * (alien.GetWidth() + 10) + j ;
+				position.y = i * (alien.GetHeight() + 10) + i;
 			
 			alien_row.push_back(alien);
 		}
@@ -70,9 +70,9 @@ void AlienManager::Update(Projectile& laser, Alien& alien)
 void AlienManager::Move()
 {
 	if(position.x >= 0)
-		position.x -= speed;
-	if (position.x >= GetScreenWidth())
 		position.x += speed;
+	if (position.x >= GetScreenWidth())
+		position.x -= speed;
 }
 
 /*void AlienManager::MoveRight()
