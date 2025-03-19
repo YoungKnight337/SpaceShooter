@@ -21,7 +21,7 @@ void BlockManager::Initialize(Block& block, int a)
 		std::vector<Block> blocks;
 
 		position.y = i * (block.GetHeight() + 10) + i;
-		block.position.x = ;
+		block.position.x = (block.GetWidth());
 		
 		blocks.push_back(block);
 	}
