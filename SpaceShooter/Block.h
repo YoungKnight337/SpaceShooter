@@ -11,11 +11,11 @@ private:
 	int width;
 	int height;
 	bool active;
-	Vector2 position;
 	Color color;
 	
 
 public:
+	Vector2 position;
 	Block();
 	Block(int health, int width, int height, Vector2 position, Color color);
 	~Block();
