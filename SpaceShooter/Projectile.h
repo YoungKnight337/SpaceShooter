@@ -2,9 +2,11 @@
 #include "raylib.h"
 #include "Alien.h"
 #include "Player.h"
+#include "Block.h"
 
 class Player;
 class Alien;
+class Block;
 
 class Projectile
 {
@@ -21,7 +23,7 @@ public:
 	~Projectile();
 	void Draw();
 	void Update(Player& ship, Alien& alien);
-	void CheckCollision(Player &ship, Alien &alien);
+	void CheckCollision(Player &ship, Alien &alien, Block& block);
 	void Move(Player& ship, Alien& alien);
 	bool CheckStatus() const { return active; }
 	Rectangle GetRect();

@@ -32,8 +32,7 @@ void Block::CheckCollision(Projectile& laser)
 {
 	if(CheckCollisionRecs(GetRect(), laser.GetRect()))
 	{
-		//Destroy block
-		//Destroy laser
+		active == false;
 	}
 }
 

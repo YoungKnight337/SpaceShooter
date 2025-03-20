@@ -38,7 +38,7 @@ void Projectile::Move(Player& ship, Alien& alien)
 	//		position.y -= speed.y;
 	// }
 }
-void Projectile::CheckCollision(Player& ship, Alien& alien)
+void Projectile::CheckCollision(Player& ship, Alien& alien, Block& block)
 {
 	if(active == true)
 	{ 
@@ -49,6 +49,10 @@ void Projectile::CheckCollision(Player& ship, Alien& alien)
 		}
 		else if(CheckCollisionRecs(GetRect(), alien.GetRect()))
 		{
+			active == false;
+		}
+		else if(CheckCollisionRecs(GetRect(), block.GetRect()))
+		{ 
 			active == false;
 		}
 	}
