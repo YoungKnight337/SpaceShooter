@@ -17,9 +17,10 @@ private:
 
 public:
 	Block();
-	Block(int health, int width, int height, Color color);
+	Block(int health, int width, int height, Vector2 position, Color color);
 	~Block();
 	int GetHeight() const { return height; };
+	int GetWidth() const { return width; };
 	void Draw();
 	void Update(Projectile& laser);
 	void CheckCollision(Projectile& laser);

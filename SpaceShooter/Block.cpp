@@ -1,13 +1,13 @@
 #include "Block.h"
 
 Block::Block()
-	:health(100), width(60), height(30), color(GREEN)
+	:health(100), width(60), height(30), position{position.x, position.y}, color(GREEN)
 {
 
 }
 
-Block::Block(int health, int width, int height, Color color)
-	: health(health), width(width), height(height), color(color)
+Block::Block(int health, int width, int height, Vector2 position, Color color)
+	:health(health), width(width), height(height), position{position},color(color)
 {
 
 }
