@@ -7,6 +7,7 @@ class Projectile;
 class Block
 {
 private:
+	int health;
 	int width;
 	int height;
 	bool active;
@@ -16,7 +17,7 @@ private:
 
 public:
 	Block();
-	Block(int width, int height, Color color);
+	Block(int health, int width, int height, Color color);
 	~Block();
 	int GetHeight() const { return height; };
 	void Draw();
