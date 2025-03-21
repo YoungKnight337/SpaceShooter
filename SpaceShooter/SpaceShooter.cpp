@@ -27,6 +27,7 @@ int main()
     AlienManager spawner;
     Projectile laser(5,5,5.0f,false,GREEN);
     Projectile beam(5, 5, 5.0f, true, RED);
+    Block block;
     BlockManager row;
 
     while (WindowShouldClose()==false)
@@ -42,6 +43,7 @@ int main()
 
         //Draw
         player.Draw();
+        row.Draw(block, BLOCK_ROW);
         
         EndDrawing();
     }
