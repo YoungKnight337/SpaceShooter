@@ -22,7 +22,7 @@ public:
 	Projectile(int width, int height, float speed, bool active, Color color);
 	~Projectile();
 	void Draw();
-	void Update(Player& ship, Alien& alien);
+	void Update(Player& ship, Alien& alien, Block& block);
 	void CheckCollision(Player &ship, Alien &alien, Block& block);
 	void Move(Player& ship, Alien& alien);
 	bool CheckStatus() const { return active; }

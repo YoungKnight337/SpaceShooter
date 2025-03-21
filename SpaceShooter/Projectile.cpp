@@ -22,10 +22,10 @@ void Projectile::Draw()
 		DrawRectangle(position.x,position.y,width,height,color);
 }
 
-void Projectile::Update(Player& ship, Alien& alien)
+void Projectile::Update(Player& ship, Alien& alien, Block& block)
 {
 	Move(ship, alien);
-	CheckCollision(ship,alien);
+	CheckCollision(ship,alien,block);
 }
 
 void Projectile::Move(Player& ship, Alien& alien)

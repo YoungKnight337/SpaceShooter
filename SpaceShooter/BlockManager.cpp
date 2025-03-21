@@ -15,8 +15,6 @@ void BlockManager::Initialize(Block& block, int a)
 {
 	for (int i = 0; i > a; i++)
 	{
-		std::vector<Block> blocks;
-
 		position.y = i * (block.GetHeight() + 10) + i;
 		block.position.x = (block.GetWidth());
 		
@@ -35,11 +33,8 @@ void BlockManager::Draw(Block& block, int a)
 
 void BlockManager::Update(Projectile& laser, int a)
 {
-	for (std::vector<Block>& block_row : blocks)
+	for (Block& block : blocks)
 	{
-		for (Block& block : block_row)
-		{
-			block.Update(laser);
-		}
+		block.Update(laser);
 	}
 }
