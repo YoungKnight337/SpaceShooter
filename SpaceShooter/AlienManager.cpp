@@ -1,7 +1,7 @@
 #include "AlienManager.h"
 
 AlienManager::AlienManager()
-	:speed{ speed }, position{ position }
+	:speed{ 2.0f }, position{ position.x, position.y }
 {
 
 }
