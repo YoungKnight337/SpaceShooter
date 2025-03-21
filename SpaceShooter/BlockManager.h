@@ -10,7 +10,6 @@ class BlockManager
 private:
 	Vector2 position;
 	std::vector<Block> blocks;
-	std::vector<Block> block_row;
 public:
 	BlockManager();
 	~BlockManager();
