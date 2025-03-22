@@ -26,13 +26,17 @@ void Block::Draw()
 void Block::Update(Projectile& laser)
 {
 	CheckCollision(laser);
+	Destroy();
 }
 
 void Block::CheckCollision(Projectile& laser)
 {
-	if(CheckCollisionRecs(GetRect(), laser.GetRect()))
+	if (active == true)
 	{
-		health -= 10;
+		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
+		{
+			health -= 10;
+		}
 	}
 }
 
