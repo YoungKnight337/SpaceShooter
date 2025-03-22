@@ -23,10 +23,13 @@ int main()
     SetTargetFPS(FRAME_RATE);
 
     Player player;
+    
     Alien alien;
     AlienManager spawner;
+    
     Projectile laser(5,5,5.0f,false,GREEN);
     Projectile beam(5, 5, 5.0f, true, RED);
+    
     Block block;
     BlockManager row;
 
@@ -43,6 +46,7 @@ int main()
 
         //Draw
         player.Draw();
+        spawner.Draw(ALIEN_ROW,ALIEN_COL);
         row.Draw(block, BLOCK_ROW);
         
         EndDrawing();
