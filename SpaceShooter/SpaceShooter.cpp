@@ -30,6 +30,7 @@ int main()
     Block block;
     BlockManager row;
 
+    row.Initialize(block, BLOCK_ROW);
     while (WindowShouldClose()==false)
     {
         //Update
