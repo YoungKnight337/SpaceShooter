@@ -16,9 +16,6 @@ int main()
     constexpr int SCREEN_HEIGHT = 700;
     constexpr int FRAME_RATE = 60;
 
-   
-    
-
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Space Shooter");
     SetTargetFPS(FRAME_RATE);
 
@@ -27,7 +24,7 @@ int main()
     Alien alien;
     AlienManager spawner;
     
-    Projectile laser(5,5,5.0f,false,GREEN);
+    Projectile laser(5, 5, 5.0f, false, GREEN);
     Projectile beam(5, 5, 5.0f, true, RED);
     
     Block block;

@@ -2,13 +2,14 @@
 
 
 Player::Player()
-	:position{ position.x, position.y }, width{ 20 }, height{ 20 }, lives{ 3 }, speed{ 5.0f }, active{ true }, color{ WHITE }
+	:position{ position.x, position.y }, width{ 20 }, height{ 20 }, lives{ 3 }, score{ 0 }, speed{ 5.0f }, active{ true }, color{ WHITE }
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
 }
-Player::Player(int width, int height, int lives, float speed, bool active, Color color)
-	: position{ position }, width{ width }, height{ height }, lives{ lives }, speed{ speed }, active{ active }, color { color}
+Player::Player(int width, int height, int lives, int score, float speed, bool active, Color color)
+	:position{ position }, width{ width }, height{ height }, lives{ lives }, score{ score }, 
+	speed {speed }, active{ active }, color{ color }
 {
 
 }
