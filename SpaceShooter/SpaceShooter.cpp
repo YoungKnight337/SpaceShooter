@@ -3,6 +3,7 @@
 #include "Alien.h"
 #include "AlienManager.h"
 #include "Projectile.h"
+#include "Block.h"
 #include "BlockManager.h"
 
 int main()
