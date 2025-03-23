@@ -24,7 +24,6 @@ public:
 	void Draw();
 	void Update(Projectile& laser);
 	void CheckCollision(Projectile& laser);
-	void Destroy();
 	Rectangle GetRect();
 };
 

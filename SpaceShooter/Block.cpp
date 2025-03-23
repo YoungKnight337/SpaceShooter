@@ -26,7 +26,6 @@ void Block::Draw()
 void Block::Update(Projectile& laser)
 {
 	CheckCollision(laser);
-	Destroy();
 }
 
 void Block::CheckCollision(Projectile& laser)
@@ -37,19 +36,13 @@ void Block::CheckCollision(Projectile& laser)
 		{
 			health -= 10;
 		}
-	}
-}
-
-void Block::Destroy()
-{
-	if (active == true)
-	{
 		if (health <= 0)
 		{
 			active == false;
 		}
 	}
 }
+
 
 Rectangle Block::GetRect() 
 {
