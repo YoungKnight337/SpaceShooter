@@ -42,9 +42,12 @@ void Block::CheckCollision(Projectile& laser)
 
 void Block::Destroy()
 {
-	if (health <= 0)
+	if (active == true)
 	{
-		active == false;
+		if (health <= 0)
+		{
+			active == false;
+		}
 	}
 }
 
