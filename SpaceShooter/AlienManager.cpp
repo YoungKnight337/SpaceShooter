@@ -19,10 +19,10 @@ AlienManager::~AlienManager()
 
 void AlienManager::Initialize(Alien& alien, int a, int b)
 {
+	std::vector<Alien>alien_row;
 
 	for (int i = 0; i < a; i++)
 	{
-		std::vector<Alien>alien_row;
 
 		for (int j = 0; j < b; j++)
 		{
