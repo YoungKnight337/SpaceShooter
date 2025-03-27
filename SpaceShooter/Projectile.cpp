@@ -1,12 +1,12 @@
 #include "Projectile.h"
 
 Projectile::Projectile()
-	:width{10},height{10},speed{5.0f},active{false},color{}
+	:width{10},height{10},speed{5.0f},active{false},color{},position{position.x, position.y}
 {
 
 }
-Projectile::Projectile(int width, int height, float speed, bool active, Color color)
-	:width{width}, height{height}, speed{speed}, active{active}, color{color}
+Projectile::Projectile(int width, int height, float speed, bool active, Color color, Vector2 position)
+	:width{width}, height{height}, speed{speed}, active{active}, color{color}, position{position}
 {
 
 }
@@ -26,6 +26,16 @@ void Projectile::Update(Player& ship, Alien& alien, Block& block)
 {
 	Move(ship, alien);
 	CheckCollision(ship,alien,block);
+	Vanish();
+}
+
+void Projectile::Vanish()
+{
+	if (active == true)
+	{
+		if (position.y <= 0 || position.y <= GetScreenHeight())
+			active == false;
+	}
 }
 
 void Projectile::Move(Player& ship, Alien& alien)
