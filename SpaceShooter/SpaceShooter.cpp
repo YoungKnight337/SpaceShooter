@@ -28,8 +28,8 @@ int main()
    //Alien alien;
    //AlienManager spawner;
     
-    Projectile laser(5, 5, 5.0f, false, GREEN);
-    Projectile beam(5, 5, 5.0f, true, RED);
+    Projectile laser(5, 5, 5.0f, false, GREEN, 0.0);
+    Projectile beam(5, 5, 5.0f, false, RED, 0.0);
     
 
     row.Initialize(block, BLOCK_ROW);
