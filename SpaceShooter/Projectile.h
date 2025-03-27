@@ -19,7 +19,7 @@ private:
 	Vector2 position;
 public:
 	Projectile();
-	Projectile(int width, int height, float speed, bool active, Color color, Vector2 position);
+	Projectile(int width, int height, float speed, bool active, Color color);
 	~Projectile();
 	void Draw();
 	void Update(Player& ship, Alien& alien, Block& block);
