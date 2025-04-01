@@ -77,11 +77,6 @@ void AlienManager::Move()
 		position.x -= speed;
 }
 
-/*void AlienManager::MoveRight()
-{
-	position.x += speed;
-}
-*/
 void AlienManager::MoveAliens(Alien& alien)
 {
 	for (auto& alien : aliens)
