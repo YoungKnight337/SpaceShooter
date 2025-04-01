@@ -1,7 +1,7 @@
 #include "Block.h"
 
 Block::Block()
-	:health(100), width(60), height(30), active{ true }, position{position.x, position.y}, color(GREEN)
+	:health(100), width(60), height(60), active{ true }, position{position.x, position.y}, color(GREEN)
 {
 
 }

@@ -17,8 +17,8 @@ void BlockManager::Initialize(Block& block, int a)
 
 	for (int i = 0; i < a; i++)
 	{
-		block.position.y = i / (block.GetHeight() - 200);
-		block.position.x = i * (block.GetWidth() + 80);
+		block.position.y = 500;
+		block.position.x = i * (block.GetWidth() + 80) + 140;
 		
 		blocks.push_back(block);
 	}
