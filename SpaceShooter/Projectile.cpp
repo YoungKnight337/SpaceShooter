@@ -1,7 +1,7 @@
 #include "Projectile.h"
 
 Projectile::Projectile()
-	:width{},height{},speed{},active{},color{}
+	:width{4},height{15},speed{},active{},color{}
 {
 
 }
