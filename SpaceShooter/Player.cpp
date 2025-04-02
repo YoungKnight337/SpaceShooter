@@ -27,6 +27,8 @@ void Player::Draw()
 {
 	if (active == true)
 		DrawRectangle(position.x, position.y, width, height, color);
+
+		//DrawTriangle(p1, p2, p3, color);
 }
 
 void Player::Update(Projectile &laser)
