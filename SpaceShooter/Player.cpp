@@ -6,9 +6,9 @@ Player::Player()
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
-	p1 = { }
-	p2 = { }
-	p3 = { }
+	p1 = { position.x };
+	p2 = { position.x };
+	p3 = { position.x };
 }
 Player::Player(int lives, int score, float speed, bool active, Color color)
 	:position{ position }, width{ width }, height{ height }, lives{ lives }, score{ score }, 
