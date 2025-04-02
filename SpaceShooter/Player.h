@@ -15,8 +15,11 @@ private:
 	int score;
 	float speed;
 	bool active;
+	
 	std::vector<Projectile>laser;
+
 	Vector2 position;
+	Vector2 collider;
 	Color color;
 	
 

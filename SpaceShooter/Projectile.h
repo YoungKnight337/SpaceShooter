@@ -17,6 +17,7 @@ private:
 	bool active;
 	Color color;
 	Vector2 position;
+
 public:
 	Projectile();
 	Projectile(int width, int height, float speed, bool active, Color color);
