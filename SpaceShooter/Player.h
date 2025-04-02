@@ -9,8 +9,6 @@ class Projectile;
 class Player
 {
 private:
-	int width;
-	int height;
 	int lives;
 	int score;
 	float speed;
@@ -20,6 +18,9 @@ private:
 
 	Vector2 position;
 	Vector2 collider;
+	Vector2 p1;
+	Vector2 p2;
+	Vector2 p3;
 	Color color;
 	
 
