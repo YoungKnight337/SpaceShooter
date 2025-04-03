@@ -28,8 +28,8 @@ private:
 
 public:	
 	Player();
-	Player(int lives, int score, float speed, bool active, Color color);
-	//Player(int width,int height, int lives, int score, float speed,bool active, Color color);
+//layer(int lives, int score, float speed, bool active, Color color);
+	Player(int width,int height, int lives, int score, float speed,bool active, Color color);
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);
