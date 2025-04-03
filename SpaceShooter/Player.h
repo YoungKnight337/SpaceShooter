@@ -9,6 +9,8 @@ class Projectile;
 class Player
 {
 private:
+	int height;
+	int width;
 	int lives;
 	int score;
 	float speed;
@@ -27,6 +29,7 @@ private:
 public:	
 	Player();
 	Player(int width,int height, int lives, int score, float speed,bool active, Color color);
+	//Player(int width,int height, int lives, int score, float speed,bool active, Vector2 position, Color color);
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);

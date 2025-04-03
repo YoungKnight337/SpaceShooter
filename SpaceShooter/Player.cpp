@@ -11,11 +11,16 @@ Player::Player()
 	p3 = { position.x };
 }
 Player::Player(int lives, int score, float speed, bool active, Color color)
-	:position{ position }, width{ width }, height{ height }, lives{ lives }, score{ score }, 
-	speed {speed }, active{ active }, color{ color }
+	:lives{ lives }, score{ score }, speed{speed }, active{ active }, position{ position }, color{ color }
 {
 
 }
+
+//Player(int width,int height, int lives, int score, float speed,bool active, Color color);
+//	:position{ position }, width{ width }, height{ height }, lives{ lives }, score{ score }, 
+//	speed{ speed }, active{ active }, color{ color }
+//	{
+//	}
 
 Player::~Player()
 {
