@@ -6,9 +6,6 @@ Player::Player()
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
-	p1 = { position.x,position.y };
-	p2 = { position.x, };
-	p3 = { position.x, };
 }
 
 Player::Player(int height, int width, int lives, int score, float speed, bool active, Color color)
@@ -31,6 +28,10 @@ Player::~Player()
 
 void Player::Draw()
 {
+	p1 = { position.x,position.y + height / 2 };
+	p2 = { position.x - width / 2, position.y - height / 2 };
+	p3 = { position.x + width / 2, position.y - height / 2 };
+
 	if (active == true)
 		DrawTriangle(p1, p2, p3, color);
 //DrawRectangle(position.x, position.y, width, height, color);
