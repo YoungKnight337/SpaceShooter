@@ -28,14 +28,13 @@ Player::~Player()
 
 void Player::Draw()
 {
-	//(x,y+h/2),(x-w/2,y-h/2),(x+w/2,y-h/2)
+	//(x,y+h/2),(x-w/2,y-h/2),(x+w/2,y-h/2) = used here
 	//(x,y), (x + w / 2, y + h), (x + w, y)
 
 	p1 = { position.x, position.y + height / 2 };
 	p2 = { position.x + width / 2, position.y - height / 2 };
 	p3 = { position.x - width / 2, position.y - height / 2 };
-	
-	//{ position.x, position.y + height / 2 };
+
 
 	if (active == true)
 		DrawTriangle(p1, p2, p3, color);
