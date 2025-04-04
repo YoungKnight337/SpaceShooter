@@ -17,11 +17,6 @@ Player::Player(int height, int width, int lives, int score, float speed, bool ac
 	
 }
 
-//Player(int width,int height, int lives, int score, float speed,bool active, Color color);
-//	:position{ position }, width{ width }, height{ height }, lives{ lives }, score{ score }, 
-//	speed{ speed }, active{ active }, color{ color }
-//	{
-//	}
 
 Player::~Player()
 {
