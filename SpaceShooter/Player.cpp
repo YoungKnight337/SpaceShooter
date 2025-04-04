@@ -2,7 +2,7 @@
 
 
 Player::Player()
-	:height{ 60 }, width{ 60 }, lives{ 3 }, score{ 0 }, speed{ 5.0f }, active{ true }, position{ position.x, position.y }, color{ WHITE }
+	:height{ 35 }, width{ 35 }, lives{ 3 }, score{ 0 }, speed{ 5.0f }, active{ true }, position{ position.x, position.y }, color{ WHITE }
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
@@ -31,9 +31,11 @@ void Player::Draw()
 	//(x,y+h/2),(x-w/2,y-h/2),(x+w/2,y-h/2)
 	//(x,y), (x + w / 2, y + h), (x + w, y)
 
-	p1 = { position.x,position.y + height / 2 };
-	p2 = { position.x - width / 2, position.y - height / 2 };
-	p3 = { position.x + width / 2, position.y - height / 2 };
+	p1 = { position.x, position.y + height / 2 };
+	p2 = { position.x + width / 2, position.y - height / 2 };
+	p3 = { position.x - width / 2, position.y - height / 2 };
+	
+	//{ position.x, position.y + height / 2 };
 
 	if (active == true)
 		DrawTriangle(p1, p2, p3, color);
