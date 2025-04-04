@@ -8,7 +8,7 @@ Player::Player()
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
 }
 
-Player::Player(int height, int width, int lives, int score, float speed, bool active, Color color)
+Player::Player(int height, int width, int lives, int score, float speed, bool active,  Vector2 collider, Color color)
 	:height{ height }, width{ width }, lives{ lives }, score{ score }, speed{ speed }, active{ active }, position{ position }, color{ color }
 {
 	
@@ -38,9 +38,6 @@ void Player::Draw()
 
 	if (active == true)
 		DrawTriangle(p1, p2, p3, color);
-//DrawRectangle(position.x, position.y, width, height, color);
-
-		//DrawTriangle(p1, p2, p3, color);
 }
 
 void Player::Update(Projectile &laser)
@@ -81,14 +78,17 @@ void Player::CheckCollision(Projectile & laser)
 {
 	if (active == true)
 	{
+		/*
 		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
 		{
 			active == false;
 		}
+		*/
 	}
 }
 
-Rectangle Player::GetRect()
+/*Rectangle Player::GetRect()
 {
 	return{ position.x, position.y, static_cast<float>(width),static_cast<float>(height) };
 }
+*/
