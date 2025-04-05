@@ -40,13 +40,13 @@ void Projectile::Vanish()
 
 void Projectile::Move(Player& ship, Alien& alien)
 {
-	//if(active == true)
-	// { 
-	//	If origin is ship
-	//		position.y += speed.y;
-	//	If origin is alien
-	//		position.y -= speed.y;
-	// }
+	if(active == true)
+	{ 
+		if(PLAYER)
+			position.y += static_cast<int>(speed.y);
+		if(ENEMY)
+			position.y -= static_cast<int>(speed.y);
+	}
 }
 void Projectile::CheckCollision(Player& ship, Alien& alien, Block& block)
 {
