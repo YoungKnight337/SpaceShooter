@@ -6,11 +6,11 @@ Player::Player()
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
-	collider = { };
+	collider = {position.x, };
 
 }
 
-Player::Player(int height, int width, int lives, int score, float speed, bool active,  Vector2 collider, Color color)
+Player::Player(int height, int width, int lives, int score, float speed, bool active,  Vector3 collider, Color color)
 	:height{ height }, width{ width }, lives{ lives }, score{ score }, speed{ speed }, active{ active }, position{ position }, collider{ collider }, 
 	color {color}
 {

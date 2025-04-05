@@ -19,7 +19,7 @@ private:
 	std::vector<Projectile>laser;
 
 	Vector2 position;
-	Vector2 collider;
+	Vector3 collider;
 	Vector2 p1;
 	Vector2 p2;
 	Vector2 p3;
@@ -29,7 +29,7 @@ private:
 public:	
 	Player();
 //layer(int lives, int score, float speed, bool active, Color color);
-	Player(int width,int height, int lives, int score, float speed,bool active, Vector2 collider, Color color);
+	Player(int width,int height, int lives, int score, float speed,bool active, Vector3 collider, Color color);
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);
