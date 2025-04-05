@@ -17,7 +17,11 @@ private:
 	bool active;
 	Color color;
 	Vector2 position;
-
+	enum type
+	{
+		ENEMY,
+		PLAYER
+	};
 public:
 	Projectile();
 	Projectile(int width, int height, float speed, bool active, Color color);
