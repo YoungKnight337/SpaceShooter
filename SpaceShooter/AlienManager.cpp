@@ -84,7 +84,7 @@ void AlienManager::MoveAliens(Alien& alien)
 		Move();
 		if (position.x >= GetScreenWidth() || position.x >= 0)
 		{
-			position.y -= 5;
+			position.y -= 4;
 		}
 	}
 }
