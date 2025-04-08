@@ -43,9 +43,9 @@ void Projectile::Move(Player& ship, Alien& alien)
 	if(active == true)
 	{ 
 		if(PLAYER)
-			position.y += static_cast<int>(speed.y);
+			position.y += speed.y;
 		if(ENEMY)
-			position.y -= static_cast<int>(speed.y);
+			position.y -= speed.y;
 	}
 }
 void Projectile::CheckCollision(Player& ship, Alien& alien, Block& block)
