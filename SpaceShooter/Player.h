@@ -13,6 +13,7 @@ private:
 	int width;
 	int lives;
 	int score;
+	float rotation;
 	float speed;
 	bool active;
 	
@@ -29,7 +30,7 @@ private:
 public:	
 	Player();
 //layer(int lives, int score, float speed, bool active, Color color);
-	Player(int width,int height, int lives, int score, float speed,bool active, Vector3 collider, Color color);
+	Player(int width,int height, int lives, int score, float rotation, float speed,bool active, Vector3 collider, Color color);
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);

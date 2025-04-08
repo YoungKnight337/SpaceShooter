@@ -22,6 +22,8 @@ private:
 		ENEMY,
 		PLAYER
 	};
+
+
 public:
 	Projectile();
 	Projectile(int width, int height, float speed, bool active, Color color);

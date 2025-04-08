@@ -2,17 +2,18 @@
 
 
 Player::Player()
-	:height{ 35 }, width{ 35 }, lives{ 3 }, score{ 0 }, speed{ 5.0f }, active{ true }, position{ position.x, position.y }, collider{ collider }, color{ WHITE }
+	:height{ 35 }, width{ 35 }, lives{ 3 }, score{ 0 }, rotation{ 0 }, 
+	speed {5.0f}, active{ true }, position{ position.x, position.y }, collider{ collider }, color{ WHITE }
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
-	collider = {position.x, };
+	collider = {position.x, position.y - 2.0f ,12};
 
 }
 
-Player::Player(int height, int width, int lives, int score, float speed, bool active,  Vector3 collider, Color color)
-	:height{ height }, width{ width }, lives{ lives }, score{ score }, speed{ speed }, active{ active }, position{ position }, collider{ collider }, 
-	color {color}
+Player::Player(int height, int width, int lives, int score, float rotation, float speed, bool active,  Vector3 collider, Color color)
+	:height{ height }, width{ width }, lives{ lives }, score{ score }, rotation{ rotation },
+	speed {speed}, active{ active }, position{ position }, collider{ collider }, color {color}
 {
 	
 }
