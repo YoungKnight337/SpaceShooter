@@ -80,12 +80,12 @@ void Player::CheckCollision(Projectile & laser)
 {
 	if (active == true)
 	{
-		/*
-		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
+		
+		if (CheckCollisionRecs((Vector2){ collider.x collider.y }, collider.z, laser.GetRect()))
 		{
 			active == false;
 		}
-		*/
+		
 	}
 }
 
