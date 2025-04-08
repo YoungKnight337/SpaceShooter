@@ -7,7 +7,7 @@ Player::Player()
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
-	collider = {position.x, position.y - 2.0f ,12};
+	collider = {position.x, position.y - 2.0f , 12};
 
 }
 
