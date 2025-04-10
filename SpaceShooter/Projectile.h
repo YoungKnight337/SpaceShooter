@@ -13,7 +13,8 @@ class Projectile
 private:
 	int width;
 	int height;
-	float speed;
+	float speed_x;
+	float speed_y;
 	bool active;
 	Color color;
 	Vector2 position;
@@ -26,7 +27,7 @@ private:
 
 public:
 	Projectile();
-	Projectile(int width, int height, float speed, bool active, Color color);
+	Projectile(int width, int height, float speed_x, float speed_y, bool active, Color color);
 	~Projectile();
 	void Draw();
 	void Update(Player& ship, Alien& alien, Block& block);
