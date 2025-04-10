@@ -76,7 +76,7 @@ void Player::Shoot(Projectile& laser)
 	}
 }
 
-void Player::CheckCollision(Projectile & laser)
+/*void Player::CheckCollision(Projectile& laser)
 {
 	if (active == true)
 	{
@@ -88,6 +88,8 @@ void Player::CheckCollision(Projectile & laser)
 		
 	}
 }
+*/
+
 
 /*Rectangle Player::GetRect()
 {
