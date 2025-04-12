@@ -28,7 +28,7 @@ Player::~Player()
 void Player::Draw()
 {
 	//Triangle Formula 1
-	//(x,y+h/2),(x-w/2,y-h/2),(x+w/2,y-h/2) = used here
+	//(x,y+h/2),(x-w/2,y-h/2),(x+w/2,y-h/2) used for function 
 	
 	//Triangle Formula 2
 	//(x,y), (x + w / 2, y + h), (x + w, y)
