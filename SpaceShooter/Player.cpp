@@ -52,6 +52,7 @@ void Player::Update(Projectile &laser)
 		Shoot(laser);
 
 	LimitMovement();
+	//CheckCollision(laser);	
 }
 
 
