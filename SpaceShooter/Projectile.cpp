@@ -68,8 +68,7 @@ void Projectile::CheckCollision(Player& ship, Alien& alien, Block& block)
 		{
 			active == false;
 		}
-
-		if(CheckCollisionRecs(GetRect(), alien.GetRect()))
+		else if(CheckCollisionRecs(GetRect(), alien.GetRect()))
 		{
 			active == false;
 		}
