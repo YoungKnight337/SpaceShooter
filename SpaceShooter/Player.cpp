@@ -52,7 +52,7 @@ void Player::Update(Projectile &laser)
 		Shoot(laser);
 
 	LimitMovement();
-	//CheckCollision(laser);	
+	CheckCollision(laser);	
 }
 
 
@@ -76,24 +76,23 @@ void Player::Shoot(Projectile& laser)
 		laser.GetRect() = { position.x + width / 2, position.y };
 	}
 }
-
-/*void Player::CheckCollision(Projectile& laser)
+//SCREW IT USING RECTANGLE COLLDIER
+void Player::CheckCollision(Projectile& laser)
 {
 	if (active == true)
 	{
 		
-		if (CheckCollisionRecs((Vector3){collider.x, collider.y, collider.z}, laser.GetRect()))
+		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
 		{
 			active == false;
 		}
 		
 	}
 }
-*/
 
 
-/*Rectangle Player::GetRect()
+
+Rectangle Player::GetRect()
 {
 	return{ position.x, position.y, static_cast<float>(width),static_cast<float>(height) };
 }
-*/

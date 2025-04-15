@@ -29,6 +29,7 @@ void  Alien::Update(Projectile& laser)
 
 void Alien::Shoot(Projectile& laser)
 {
+	// Consider the vextor data structure in "Alien.h"
 	// Timing seems to be random
 	// Make sure that no alien is in the way of line of fire
 	//	If No Alien
