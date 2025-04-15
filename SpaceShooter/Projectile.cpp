@@ -5,6 +5,10 @@ Projectile::Projectile()
 {
 	// position.x = player.position.x + player.width / 4;
 	// position.y = player.position.y;
+
+	// position.x = alien.position.x - alien.width / 4;
+	// position.y = alien.position.y;
+	//
 }
 Projectile::Projectile(int width, int height, float speed_x,float speed_y, bool active, Color color)
 	:width{ width }, height{ height }, speed_x{ speed_x }, speed_y{ speed_y }, active {active}, color{ color }
