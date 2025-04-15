@@ -22,13 +22,12 @@ void Projectile::Draw()
 	{
 		if (PLAYER)
 		{
-			color = WHITE;
+			DrawRectangle(position.x, position.y, width, height, WHITE);
 		}
 		if (ENEMY)
 		{
-			color = RED;
+			DrawRectangle(position.x, position.y, width, height, RED);
 		}
-		DrawRectangle(position.x, position.y, width, height, color);
 	}
 
 }
