@@ -18,8 +18,19 @@ Projectile::~Projectile()
 
 void Projectile::Draw()
 {
-	if(active==true)
-		DrawRectangle(position.x,position.y,width,height,color);
+	if (active == true)
+	{
+		if (PLAYER)
+		{
+			color = WHITE;
+		}
+		if (ENEMY)
+		{
+			color = RED;
+		}
+		DrawRectangle(position.x, position.y, width, height, color);
+	}
+
 }
 
 void Projectile::Update(Player& ship, Alien& alien, Block& block)
