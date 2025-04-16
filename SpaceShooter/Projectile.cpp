@@ -3,6 +3,7 @@
 Projectile::Projectile()
 	:width{ 4 }, height{ 15 }, speed_x{}, speed_y{}, active{}, color{}
 {
+	/*
 	if (PLAYER)
 	{
 		position.x = player.position.x + player.width / 4;
@@ -13,7 +14,7 @@ Projectile::Projectile()
 		position.x = alien.position.x + alien.width / 4;
 		position.y = alien.position.y + alien.height;	
 	}
-
+	*/
 }
 Projectile::Projectile(int width, int height, float speed_x,float speed_y, bool active, Color color)
 	:width{ width }, height{ height }, speed_x{ speed_x }, speed_y{ speed_y }, active {active}, color{ color }
