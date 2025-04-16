@@ -13,7 +13,12 @@ private:
 	float speed;
 	Vector2 position;
 	std::vector<std::vector<Alien>>aliens;
-
+	enum types
+	{
+		SQUID,
+		OCTOPUS,
+		CRAB
+	};
 public:
 	AlienManager();
 	AlienManager(float speed, Vector2 position);
