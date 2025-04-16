@@ -17,6 +17,12 @@ private:
 	std::vector<Projectile>laser;
 	Vector2 position;
 	Color color;
+	enum types
+	{
+		SQUID,
+		OCTOPUS,
+		CRAB
+	};
 public:
 	Alien();
 	Alien(int value, int width, int height, bool active, Color color);
