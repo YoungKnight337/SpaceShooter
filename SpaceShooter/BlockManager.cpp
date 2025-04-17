@@ -41,6 +41,3 @@ void BlockManager::Update(Projectile& laser, int a)
 	}
 }
 
-//Printed Four Blocks but not being positioning properly.
-//block.position.y = i / (block.GetHeight() - 200);
-//block.position.x = i * (block.GetWidth() + 80) - i;
