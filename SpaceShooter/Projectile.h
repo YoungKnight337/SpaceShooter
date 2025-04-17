@@ -30,7 +30,7 @@ public:
 	Projectile(int width, int height, float speed_x, float speed_y, bool active, Color color);
 	~Projectile();
 	void Initialize(Player player, Alien alien);
-	void Draw();
+	void Draw(Player player, Alien alien);
 	void Update(Player& ship, Alien& alien, Block& block);
 	void CheckCollision(Player &ship, Alien &alien, Block& block);
 	void Vanish();

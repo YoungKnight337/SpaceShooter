@@ -31,17 +31,17 @@ void Projectile::Initialize(Player player, Alien alien)
 
 }
 
-void Projectile::Draw()
+void Projectile::Draw(Player player, Alien alien)
 {
 	if (active == true)
 	{
 		if (PLAYER)
 		{
-			DrawRectangle(position.x, position.y, width, height, WHITE);
+			DrawRectangle(player.GetPosition().x, player.GetPosition().y, width, height, WHITE);
 		}
 		if (ENEMY)
 		{
-			DrawRectangle(position.x, position.y, width, height, RED);
+			DrawRectangle(alien.GetRect().x, alien.GetRect().y, width, height, RED);
 		}
 	}
 
