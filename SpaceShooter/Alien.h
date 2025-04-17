@@ -31,6 +31,7 @@ public:
 	void Update(Projectile& laser);
 	void Shoot(Projectile& laser);
 	void CheckCollision(Projectile& laser);
+	void GetPosition();
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	Rectangle GetRect();

@@ -36,6 +36,7 @@ public:
 	void Shoot(Projectile &laser);
 	void CheckCollision(Projectile& laser);
 	void LimitMovement();
+	void GetPosition();
 	Rectangle GetRect();
 	
 };

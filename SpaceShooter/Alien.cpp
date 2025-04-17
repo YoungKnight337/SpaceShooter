@@ -13,6 +13,7 @@ Alien::Alien(int value, int width, int height, bool active, Color color)
 
 Alien::~Alien()
 {
+
 }
 
 void Alien::Draw()
