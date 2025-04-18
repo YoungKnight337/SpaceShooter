@@ -23,11 +23,12 @@ void Projectile::Initialize(Player player, Alien alien)
 		position.x = player.GetPosition().x + player.GetRect().width / 4;
 		position.y = player.GetPosition().y;
 	}
-	if (ENEMY)
+	/*if (ENEMY)
 	{
 		position.x = alien.GetRect().x + alien.GetRect().width / 4;
 		position.y = alien.GetRect().y + alien.GetRect().height;
 	}
+	*/
 
 }
 
@@ -39,10 +40,11 @@ void Projectile::Draw(Player player, Alien alien)
 		{
 			DrawRectangle(player.GetPosition().x, player.GetPosition().y, width, height, WHITE);
 		}
-		if (ENEMY)
+		/*if (ENEMY)
 		{
 			DrawRectangle(alien.GetRect().x, alien.GetRect().y, width, height, RED);
 		}
+		*/
 	}
 
 }
@@ -69,8 +71,9 @@ void Projectile::Move(Player& ship, Alien& alien)
 	{ 
 		if(PLAYER)
 			position.y += static_cast<int>(speed_y); //Move Up
-		if(ENEMY)
+		/*if (ENEMY)
 			position.y -= static_cast<int>(speed_y); //Move Down
+		*/
 	}
 }
 void Projectile::CheckCollision(Player& ship, Alien& alien, Block& block)
