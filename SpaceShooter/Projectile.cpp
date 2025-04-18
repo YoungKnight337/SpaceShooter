@@ -16,7 +16,7 @@ Projectile::~Projectile()
 
 }
 
-void Projectile::Initialize(Player player, Alien alien)
+void Projectile::Initialize(Player player)
 {
 	if (active == true)
 	{
@@ -36,7 +36,7 @@ void Projectile::Initialize(Player player, Alien alien)
 
 }
 
-void Projectile::Draw(Player player, Alien alien)
+void Projectile::Draw(Player player)
 {
 	if (active == true)
 	{
@@ -69,7 +69,7 @@ void Projectile::Vanish()
 	}
 }
 
-void Projectile::Move(Player& ship, Alien& alien)
+void Projectile::Move(Player& ship)
 {
 	if(active == true)
 	{ 
