@@ -42,7 +42,7 @@ void Projectile::Draw(Player player)
 	{
 		if (PLAYER)
 		{
-			DrawRectangle(player.GetPosition().x, player.GetPosition().y, width, height, WHITE);
+			DrawRectangle(position.x, position.y, width, height, WHITE);
 		}
 		/*if (ENEMY)
 		{
