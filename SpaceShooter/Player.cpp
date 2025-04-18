@@ -73,7 +73,7 @@ void Player::Shoot(Projectile& laser)
 	if (active == true)
 	{
 		laser.CheckStatus() == true;
-		laser.Initialize(*this)
+		laser.Initialize(*this);
 		//laser.GetRect() = { position.x + width / 2, position.y };
 	}
 }
