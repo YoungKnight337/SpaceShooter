@@ -18,17 +18,21 @@ Projectile::~Projectile()
 
 void Projectile::Initialize(Player player, Alien alien)
 {
-	if (PLAYER)
+	if (active == true)
 	{
-		position.x = player.GetPosition().x + player.GetRect().width / 4;
-		position.y = player.GetPosition().y;
+		if (PLAYER)
+		{
+			position.x = player.GetPosition().x + player.GetRect().width / 4;
+			position.y = player.GetPosition().y;
+		}
+		/*if (ENEMY)
+		{
+			position.x = alien.GetRect().x + alien.GetRect().width / 4;
+			position.y = alien.GetRect().y + alien.GetRect().height;
+		}
+		*/
 	}
-	/*if (ENEMY)
-	{
-		position.x = alien.GetRect().x + alien.GetRect().width / 4;
-		position.y = alien.GetRect().y + alien.GetRect().height;
-	}
-	*/
+	
 
 }
 
