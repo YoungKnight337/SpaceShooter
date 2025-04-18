@@ -16,13 +16,14 @@ private:
 	float speed_x;
 	float speed_y;
 	bool active;
-	Color color;
-	Vector2 position;
 	enum type
 	{
 		ENEMY,
 		PLAYER
 	};
+
+	Color color;
+	Vector2 position;
 
 
 public:
