@@ -34,7 +34,7 @@ public:
 	void Draw(Player player);
 	void Update(Player& ship, Alien& alien, Block& block);
 	void CheckCollision(Player &ship, Alien &alien, Block& block);
-	void Vanish();
+	void Destroy();
 	void Move(Player& ship);
 	bool CheckStatus() const { return active; }
 	Rectangle GetRect();

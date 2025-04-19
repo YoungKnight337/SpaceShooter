@@ -60,7 +60,7 @@ void Projectile::Update(Player& ship, Alien& alien, Block& block)
 	Vanish();
 }
 
-void Projectile::Vanish()
+void Projectile::Destroy()
 {
 	if (active == true)
 	{
