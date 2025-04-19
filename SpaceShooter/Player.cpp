@@ -70,9 +70,7 @@ void Player::LimitMovement()
 
 void Player::Shoot(Projectile& laser)
 {
-		if (laser.CheckStatus() == false)
-			laser.CheckStatus() == true;
-			laser.Initialize(*this);
+	laser.CheckStatus() == true;
 		//laser.GetRect() = { position.x + width / 2, position.y };
 }
 //SCREW IT USING RECTANGLE COLLDIER
