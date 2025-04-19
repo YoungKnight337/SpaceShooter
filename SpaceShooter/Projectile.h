@@ -16,11 +16,7 @@ private:
 	float speed_x;
 	float speed_y;
 	bool active;
-	enum type
-	{
-		ENEMY,
-		PLAYER
-	};
+
 
 	Color color;
 	Vector2 position;
@@ -37,6 +33,12 @@ public:
 	void Destroy();
 	void Move(Player& ship);
 	bool CheckStatus() const { return active; }
+	enum type
+	{
+		ENEMY = 1,
+		PLAYER = 2
+	};
+
 	Rectangle GetRect();
 
 };
