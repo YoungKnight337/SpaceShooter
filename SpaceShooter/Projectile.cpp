@@ -60,14 +60,6 @@ void Projectile::Update(Player& ship, Alien& alien, Block& block)
 	Destroy();
 }
 
-void Projectile::Destroy()
-{
-	if (active == true)
-	{
-		if (position.y <= 0 || position.y <= GetScreenHeight())
-			active == false;
-	}
-}
 
 void Projectile::Move(Player& ship)
 {
@@ -100,6 +92,14 @@ void Projectile::CheckCollision(Player& ship, Alien& alien, Block& block)
 	}
 }
 
+void Projectile::Destroy()
+{
+	if (active == true)
+	{
+		if (position.y <= 0 || position.y <= GetScreenHeight())
+			active == false;
+	}
+}
 
 Rectangle Projectile::GetRect()
 {
