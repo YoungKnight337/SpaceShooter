@@ -96,7 +96,7 @@ void Projectile::Destroy()
 {
 	if (active == true)
 	{
-		if (position.y <= 0 || position.y <= GetScreenHeight())
+		if (position.y > GetScreenHeight() - 100|| position.y <= 0)
 			active == false;
 	}
 }
