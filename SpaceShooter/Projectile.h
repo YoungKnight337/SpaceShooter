@@ -35,8 +35,8 @@ public:
 	bool CheckStatus() const { return active; }
 	enum type
 	{
-		ENEMY = 1,
-		PLAYER = 2
+		ENEMY,
+		PLAYER 
 	};
 
 	Rectangle GetRect();
