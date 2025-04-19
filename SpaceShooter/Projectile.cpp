@@ -57,7 +57,7 @@ void Projectile::Update(Player& ship, Alien& alien, Block& block)
 {
 	Move(ship);
 	CheckCollision(ship,alien,block);
-	Vanish();
+	Destroy();
 }
 
 void Projectile::Destroy()
