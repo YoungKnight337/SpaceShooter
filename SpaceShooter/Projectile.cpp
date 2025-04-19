@@ -20,7 +20,10 @@ void Projectile::Initialize(Player player)
 {
 	if (active == true)
 	{
-		if (PLAYER)
+		position.x = player.GetPosition().x + player.GetRect().width / 4;
+		position.y = player.GetPosition().y;
+
+		/*if (PLAYER)
 		{
 			position.x = player.GetPosition().x + player.GetRect().width / 4;
 			position.y = player.GetPosition().y;
@@ -40,9 +43,10 @@ void Projectile::Draw(Player player)
 {
 	if (active == true)
 	{
-		if (PLAYER)
+		DrawRectangle(position.x, position.y, width, height, WHITE);
+		/*if (PLAYER)
 		{
-			DrawRectangle(position.x, position.y, width, height, WHITE);
+			
 		}
 		/*if (ENEMY)
 		{
@@ -65,8 +69,8 @@ void Projectile::Move(Player& ship)
 {
 	if(active == true)
 	{ 
-		if(PLAYER)
-			position.y += static_cast<int>(speed_y); //Move Up
+		//if(PLAYER)
+		position.y += static_cast<int>(speed_y); //Move Up
 		/*if (ENEMY)
 			position.y -= static_cast<int>(speed_y); //Move Down
 		*/

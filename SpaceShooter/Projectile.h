@@ -33,12 +33,12 @@ public:
 	void Destroy();
 	void Move(Player& ship);
 	bool CheckStatus() const { return active; }
-	enum type
+	/*enum type
 	{
 		ENEMY,
 		PLAYER 
 	};
-
+	*/
 	Rectangle GetRect();
 
 };
