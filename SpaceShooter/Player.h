@@ -17,7 +17,7 @@ private:
 	float speed;
 	bool active;
 	
-	std::vector<Projectile>laser;
+	std::vector<Projectile>lasers;
 
 	Vector2 position;
 	Vector3 collider;
