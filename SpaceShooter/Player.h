@@ -33,7 +33,7 @@ public:
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);
-	void Shoot(Projectile &laser);
+	void Shoot(Projectile& laser);
 	void CheckCollision(Projectile& laser);
 	void LimitMovement();
 	Vector2 GetPosition() { return position; }
