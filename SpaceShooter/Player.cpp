@@ -70,9 +70,9 @@ void Player::LimitMovement()
 
 void Player::Shoot(Projectile& laser)
 {
-	if (active && laser.CheckStatus() == false)
+	if (active)
 	{
-		lasers.push_back(laser);
+		lasers.push_back(laser({position.x + width/4, position.y} , -6));
 		//laser.CheckStatus() == true;
 		//laser.Initialize(*this);
 	}
