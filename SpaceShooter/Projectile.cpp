@@ -18,9 +18,12 @@ Projectile::~Projectile()
 
 void Projectile::Initialize(Player player)
 {
-		active == true;
-		position.x = player.GetPosition().x + player.GetRect().width / 4;
-		position.y = player.GetPosition().y;
+		if(active == true)
+		{ 
+			position.x = player.GetPosition().x + player.GetRect().width / 4;
+			position.y = player.GetPosition().y;
+		}
+	
 
 		//player.GetPosition().x + player.GetRect().width / 4;
 		//position.y = player.GetPosition().y;

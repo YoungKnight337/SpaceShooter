@@ -70,7 +70,9 @@ void Player::LimitMovement()
 
 void Player::Shoot(Projectile& laser)
 {
+		laser.CheckStatus() == true;
 		laser.Initialize(*this);
+
 		//laser.GetRect() = { position.x + width / 2, 
 		//position.y };
 		//Projectile::type::PLAYER;

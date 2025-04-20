@@ -1,7 +1,7 @@
 #include "Alien.h"
 
 Alien::Alien()
-	:value{ 10 }, width{ 20 }, height{ 20 }, active{true}, color{WHITE}
+	:value{ 10 }, width{ 20 }, height{ 20 }, active{true}, color{}
 {
 
 }
