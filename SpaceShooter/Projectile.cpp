@@ -1,7 +1,7 @@
 #include "Projectile.h"
 
 Projectile::Projectile()
-	:width{ 4 }, height{ 15 }, speed_x{}, speed_y{}, active{}, color{}
+	:width{ 4 }, height{ 15 }, speed_x{}, speed_y{}, active{false}, color{}
 {
 
 }
@@ -18,11 +18,13 @@ Projectile::~Projectile()
 
 void Projectile::Initialize(Player player)
 {
-	if (active == true)
-	{
+		active == true;
 		position.x = player.GetPosition().x + player.GetRect().width / 4;
 		position.y = player.GetPosition().y;
 
+		//player.GetPosition().x + player.GetRect().width / 4;
+		//position.y = player.GetPosition().y;
+		
 		/*if (PLAYER)
 		{
 			position.x = player.GetPosition().x + player.GetRect().width / 4;
@@ -34,7 +36,6 @@ void Projectile::Initialize(Player player)
 			position.y = alien.GetRect().y + alien.GetRect().height;
 		}
 		*/
-	}
 	
 
 }
@@ -69,8 +70,8 @@ void Projectile::Move(Player& ship)
 {
 	if(active == true)
 	{ 
-		//if(PLAYER)
 		position.y += static_cast<int>(speed_y); //Move Up
+		//if(PLAYER)
 		/*if (ENEMY)
 			position.y -= static_cast<int>(speed_y); //Move Down
 		*/
