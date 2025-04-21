@@ -12,9 +12,6 @@ private:
 	int height;
 	int width;
 	int lives;
-	int score;
-	float rotation;
-	float speed;
 	bool active;
 
 	Vector2 position;
@@ -24,7 +21,7 @@ private:
 
 public:	
 	Player();
-	Player(int width,int height, int lives, int score, float rotation, float speed,bool active, Color color);
+	Player(int width,int height, int lives, bool active, Color color);
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);
