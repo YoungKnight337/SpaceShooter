@@ -1,12 +1,12 @@
 #include "Projectile.h"
 
 Projectile::Projectile()
-	:width{ 4 }, height{ 15 }, speed_x{}, speed_y{}, active{false}, color{}
+	:width{ 4 }, height{ 15 }, speed_x{}, speed_y{7}, active{false}
 {
 
 }
-Projectile::Projectile(int width, int height, float speed_x,float speed_y, bool active, Color color)
-	:width{ width }, height{ height }, speed_x{ speed_x }, speed_y{ speed_y }, active {active}, color{ color }
+Projectile::Projectile(int width, int height, float speed_x,float speed_y, bool active)
+	:width{ width }, height{ height }, speed_x{ speed_x }, speed_y{ speed_y }, active {active}
 {
 
 }
@@ -62,8 +62,7 @@ void Projectile::Draw(Player player)
 void Projectile::Update(Player& ship, Alien& alien, Block& block)
 {
 	Move(ship);
-	CheckCollision(ship,alien,block);
-	Destroy();
+	Destroy(ship,alien,block);
 }
 
 
@@ -78,7 +77,7 @@ void Projectile::Move(Player& ship)
 		*/
 	}
 }
-void Projectile::CheckCollision(Player& ship, Alien& alien, Block& block)
+void Projectile::Destroy(Player& ship, Alien& alien, Block& block)
 {
 	if(active == true)
 	{ 
@@ -95,17 +94,14 @@ void Projectile::CheckCollision(Player& ship, Alien& alien, Block& block)
 		{ 
 			active == false;
 		}
+		else if (position.y > GetScreenHeight() - 100 || position.y <= 0)
+		{
+			active == false;
+		}
 	}
 }
 
-void Projectile::Destroy()
-{
-	if (active == true)
-	{
-		if (position.y > GetScreenHeight() - 100|| position.y <= 0)
-			active == false;
-	}
-}
+
 
 Rectangle Projectile::GetRect()
 {

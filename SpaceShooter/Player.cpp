@@ -9,8 +9,7 @@ Player::Player()
 }
 
 Player::Player(int height, int width, int lives, bool active, Color color)
-	:height{ height }, width{ width }, lives{ lives },
-	active{ active }, color {color}
+	:height{ height }, width{ width }, lives{ lives }, active{ active }, color {color}
 {
 	
 }

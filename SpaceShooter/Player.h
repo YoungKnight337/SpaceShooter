@@ -14,7 +14,6 @@ private:
 	bool active;
 
 	Vector2 position;
-	Vector3 collider;
 	Color color;
 	
 
