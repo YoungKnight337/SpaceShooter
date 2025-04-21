@@ -3,17 +3,17 @@
 
 Player::Player()
 	:height{ 35 }, width{ 35 }, lives{ 3 }, score{ 0 }, rotation{ 0 }, 
-	speed {5.0f}, active{ true }, position{ position.x, position.y }, collider{ collider }, color{ WHITE }
+	speed {5.0f}, active{ true }, position{ position.x, position.y }, color{ WHITE }
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
-	collider = {position.x, position.y - 2.0f , 12};
+	//collider = {position.x, position.y - 2.0f , 12};
 
 }
 
-Player::Player(int height, int width, int lives, int score, float rotation, float speed, bool active,  Vector3 collider, Color color)
+Player::Player(int height, int width, int lives, int score, float rotation, float speed, bool active, Color color)
 	:height{ height }, width{ width }, lives{ lives }, score{ score }, rotation{ rotation },
-	speed {speed}, active{ active }, position{ position }, collider{ collider }, color {color}
+	speed {speed}, active{ active }, position{ position }, color {color}
 {
 	
 }
@@ -33,9 +33,9 @@ void Player::Draw()
 	//Triangle Formula 2
 	//(x,y), (x + w / 2, y + h), (x + w, y)
 
-	p1 = { position.x, position.y + height / 2 };
-	p2 = { position.x + width / 2, position.y - height / 2 };
-	p3 = { position.x - width / 2, position.y - height / 2 };
+	Vector2 p1 = { position.x, position.y + height / 2 };
+	Vector2 p2 = { position.x + width / 2, position.y - height / 2 };
+	Vector2 p3 = { position.x - width / 2, position.y - height / 2 };
 
 
 	if (active == true)
@@ -49,7 +49,7 @@ void Player::Update(Projectile &laser)
 	if (IsKeyDown(KEY_RIGHT))
 		position.x += 7;
 	if (IsKeyDown(KEY_SPACE))
-		Shoot(laser);
+		Shoot();
 
 	LimitMovement();
 	CheckCollision(laser);	
@@ -68,18 +68,13 @@ void Player::LimitMovement()
 	}
 }
 
-void Player::Shoot(Projectile& laser)
+void Player::Shoot()
 {
-	if (active)
-	{
-		lasers.push_back(laser({position.x + width/4, position.y} , -6));
-		//laser.CheckStatus() == true;
+	std::vector<Projectile>lasers;
+	if(Projectile().CheckStatus() == false)
+		lasers.push_back(Projectile());
+		
 		//laser.Initialize(*this);
-	}
-
-		//laser.GetRect() = { position.x + width / 2, 
-		//position.y };
-		//Projectile::type::PLAYER;
 }
 
 //SCREW IT USING RECTANGLE COLLDIER

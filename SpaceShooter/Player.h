@@ -16,24 +16,19 @@ private:
 	float rotation;
 	float speed;
 	bool active;
-	
-	std::vector<Projectile>lasers;
 
 	Vector2 position;
 	Vector3 collider;
-	Vector2 p1;
-	Vector2 p2;
-	Vector2 p3;
 	Color color;
 	
 
 public:	
 	Player();
-	Player(int width,int height, int lives, int score, float rotation, float speed,bool active, Vector3 collider, Color color);
+	Player(int width,int height, int lives, int score, float rotation, float speed,bool active, Color color);
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);
-	void Shoot(Projectile& laser);
+	void Shoot();
 	void CheckCollision(Projectile& laser);
 	void LimitMovement();
 	Vector2 GetPosition() { return position; }
