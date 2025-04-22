@@ -64,13 +64,14 @@ void Player::LimitMovement()
 	}
 }
 
-void Player::Shoot()
+void Player::Shoot() 
 {
 	std::vector<Projectile>lasers;
-	if(Projectile().CheckStatus() == false)
-		lasers.push_back(Projectile({position.x+width/4,position.y},6));
+	if (Projectile().CheckStatus() == false)
+	{
+		lasers.push_back(Projectile(4, 15, true, 7, { position.x + width / 4, position.y }));
+	}
 		
-		//laser.Initialize(*this);
 }
 
 //SCREW IT USING RECTANGLE COLLDIER

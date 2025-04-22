@@ -13,8 +13,7 @@ class Projectile
 private:
 	int width;
 	int height;
-	float speed_x;
-	float speed_y;
+	int speed;
 	bool active;
 
 	Vector2 position;
@@ -22,7 +21,7 @@ private:
 
 public:
 	Projectile();
-	Projectile(int width, int height, float speed_x, float speed_y, bool active);
+	Projectile(int width, int height, bool active, int speed, Vector2 position);
 	~Projectile();
 	void Initialize(Player player);
 	void Draw(Player player);

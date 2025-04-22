@@ -1,12 +1,12 @@
 #include "Projectile.h"
 
 Projectile::Projectile()
-	:width{ 4 }, height{ 15 }, speed_x{}, speed_y{7}, active{false}
+	:width{ }, height{ }, active{ false }, position{}, speed{}
 {
 
 }
-Projectile::Projectile(int width, int height, float speed_x,float speed_y, bool active)
-	:width{ width }, height{ height }, speed_x{ speed_x }, speed_y{ speed_y }, active {active}
+Projectile::Projectile(int width, int height, bool active, int speed, Vector2 position)
+	:width{ width }, height{ height }, active{ active }, position{position}, speed{speed}
 {
 
 }
@@ -70,7 +70,8 @@ void Projectile::Move(Player& ship)
 {
 	if(active == true)
 	{ 
-		position.y += static_cast<int>(speed_y); //Move Up
+		position.y += speed;
+		//static_cast<int>(speed_y); //Move Up
 		//if(PLAYER)
 		/*if (ENEMY)
 			position.y -= static_cast<int>(speed_y); //Move Down
