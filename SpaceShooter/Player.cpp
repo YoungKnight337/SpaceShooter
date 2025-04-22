@@ -38,7 +38,7 @@ void Player::Draw()
 		DrawTriangle(p1, p2, p3, color);
 }
 
-void Player::Update(Projectile &laser)
+void Player::Update(Projectile& laser)
 {
 	if (IsKeyDown(KEY_LEFT))
 		position.x -= 7;
@@ -68,7 +68,7 @@ void Player::Shoot()
 {
 	std::vector<Projectile>lasers;
 	if(Projectile().CheckStatus() == false)
-		lasers.push_back(Projectile());
+		lasers.push_back(Projectile({position.x+width/4,position.y},6));
 		
 		//laser.Initialize(*this);
 }
