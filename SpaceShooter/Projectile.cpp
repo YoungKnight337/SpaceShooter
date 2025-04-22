@@ -16,7 +16,7 @@ Projectile::~Projectile()
 
 }
 
-void Projectile::Initialize(Player player)
+/* void Projectile::Initialize(Player player)
 {
 
 	position.x = player.GetPosition().x + player.GetRect().width / 4;
@@ -36,10 +36,11 @@ void Projectile::Initialize(Player player)
 			position.x = alien.GetRect().x + alien.GetRect().width / 4;
 			position.y = alien.GetRect().y + alien.GetRect().height;
 		}
-		*/
+		
 	
 
 }
+*/
 
 void Projectile::Draw(Player player)
 {
