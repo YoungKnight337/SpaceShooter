@@ -23,7 +23,7 @@ public:
 	Projectile();
 	Projectile(int width, int height, bool active, int speed, Vector2 position);
 	~Projectile();
-	void Initialize(Player player);
+	//void Initialize(Player player);
 	void Draw(Player player);
 	void Update(Player& ship, Alien& alien, Block& block);
 	void Destroy(Player &ship, Alien &alien, Block& block);
