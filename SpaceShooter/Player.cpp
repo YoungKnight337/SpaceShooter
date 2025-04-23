@@ -2,16 +2,9 @@
 
 
 Player::Player()
-	:height{ 35 }, width{ 35 }, lives{ 3 }, active{ true }, color{ WHITE }
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
-}
-
-Player::Player(int height, int width, int lives, bool active, Color color)
-	:height{ height }, width{ width }, lives{ lives }, active{ active }, color {color}
-{
-	
 }
 
 
@@ -34,12 +27,13 @@ void Player::Draw()
 	Vector2 p3 = { position.x - width / 2, position.y - height / 2 };
 
 
-	if (active == true)
-		DrawTriangle(p1, p2, p3, color);
+	if (!active) return;
+	DrawTriangle(p1, p2, p3, color);
 }
 
 void Player::Update(Projectile& laser)
 {
+	if (!active) return;
 	if (IsKeyDown(KEY_LEFT))
 		position.x -= 7;
 	if (IsKeyDown(KEY_RIGHT))
@@ -77,15 +71,11 @@ void Player::Shoot()
 //SCREW IT USING RECTANGLE COLLDIER
 void Player::CheckCollision(Projectile& laser)
 {
-	if (active == true)
+	if (CheckCollisionRecs(GetRect(), laser.GetRect()))
 	{
-		
-		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
-		{
-			active == false;
-		}
-		
+		active = false;
 	}
+
 }
 
 

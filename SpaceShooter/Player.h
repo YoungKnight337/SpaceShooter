@@ -8,18 +8,17 @@ class Projectile;
 class Player
 {
 private:
-	int height;
-	int width;
-	int lives;
-	bool active;
+	int height = 35;
+	int width = 35;
+	bool active = true;
 
 	Vector2 position;
-	Color color;
+	Color color = WHITE;
 	
 
 public:	
 	Player();
-	Player(int width,int height, int lives, bool active, Color color);
+	Player(Vector2 position, bool active);
 	~Player();
 	void Draw();
 	void Update(Projectile&laser);
