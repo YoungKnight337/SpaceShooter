@@ -8,16 +8,16 @@ class Block
 {
 private:
 	int health;
-	int width;
-	int height;
+	int width = 60;
+	int height = 60;
 	bool active;
-	Color color;
+	Color color = GREEN;
 	
 
 public:
 	Vector2 position;
 	Block();
-	Block(int health, int width, int height, bool active, Vector2 position, Color color);
+	Block(int health,bool active, Vector2 position);
 	~Block();
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
