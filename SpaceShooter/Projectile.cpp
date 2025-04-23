@@ -5,8 +5,8 @@ Projectile::Projectile()
 {
 
 }
-Projectile::Projectile(int width, int height, bool active, int speed, Vector2 position)
-	:width{ width }, height{ height }, active{ active }, position{position}, speed{speed}
+Projectile::Projectile(bool active, int speed, Vector2 position)
+	:active{ active }, position{position}, speed{speed}
 {
 
 }
@@ -81,26 +81,24 @@ void Projectile::Move(Player& ship)
 }
 void Projectile::Destroy(Player& ship, Alien& alien, Block& block)
 {
-	if(active == true)
-	{ 
-	  
-		if (CheckCollisionRecs(GetRect(), ship.GetRect()))
-		{
-			active == false;
-		}
-		else if(CheckCollisionRecs(GetRect(), alien.GetRect()))
-		{
-			active == false;
-		}
-		else if(CheckCollisionRecs(GetRect(), block.GetRect()))
-		{ 
-			active == false;
-		}
-		else if (position.y > GetScreenHeight() - 100 || position.y <= 0)
-		{
-			active == false;
-		}
+	if (!active) return;
+	if (CheckCollisionRecs(GetRect(), ship.GetRect()))
+	{
+		active == false;
 	}
+	else if(CheckCollisionRecs(GetRect(), alien.GetRect()))
+	{
+		active == false;
+	}
+	else if(CheckCollisionRecs(GetRect(), block.GetRect()))
+	{ 
+		active == false;
+	}
+	else if (position.y > GetScreenHeight() - 100 || position.y <= 0)
+	{
+		active == false;
+	}
+
 }
 
 

@@ -11,8 +11,8 @@ class Block;
 class Projectile
 {
 private:
-	int width;
-	int height;
+	int width =4;
+	int height = 15;
 	int speed;
 	bool active;
 
@@ -21,7 +21,7 @@ private:
 
 public:
 	Projectile();
-	Projectile(int width, int height, bool active, int speed, Vector2 position);
+	Projectile(bool active, int speed, Vector2 position);
 	~Projectile();
 	//void Initialize(Player player);
 	void Draw(Player player);
