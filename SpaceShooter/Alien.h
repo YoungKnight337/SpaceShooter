@@ -11,8 +11,8 @@ class Alien
 {
 private:
 	int value;
-	int width;
-	int height;
+	int width = 20;
+	int height = 20;
 	bool active;
 	enum types
 	{
@@ -26,7 +26,7 @@ private:
 
 public:
 	Alien();
-	Alien(int value, int width, int height, bool active, Color color);
+	Alien(int value, bool active, Color color);
 	~Alien();
 	void Draw();
 	void Update(Projectile& laser);

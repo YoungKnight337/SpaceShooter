@@ -1,12 +1,12 @@
 #include "Alien.h"
 
 Alien::Alien()
-	:value{ 10 }, width{ 20 }, height{ 20 }, active{true}, color{}
+	:value{ }, active{true}, color{}
 {
 
 }
-Alien::Alien(int value, int width, int height, bool active, Color color)
-	:value{value}, width{width}, height{height}, active{active}, color{color}
+Alien::Alien(int value, bool active, Color color)
+	:value{value}, active{ active }, color{ color }
 {
 
 }
@@ -18,7 +18,7 @@ Alien::~Alien()
 
 void Alien::Draw()
 {
-	if(active==true)
+	if(active)
 		DrawRectangle(position.x, position.y, width, height, color);
 }
 
@@ -43,12 +43,10 @@ void Alien::Shoot(Projectile& laser)
 
 void Alien::CheckCollision(Projectile& laser)
 {
-	if (active == true)
+	if (!active) return;
+	if (CheckCollisionRecs(GetRect(), laser.GetRect()))
 	{
-		if (CheckCollisionRecs(GetRect(), laser.GetRect()))
-		{
-			active == false;
-		}
+		active == false;
 	}
 }
 
