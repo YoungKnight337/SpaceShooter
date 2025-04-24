@@ -94,7 +94,7 @@ void Projectile::Destroy(Player& ship, Alien& alien, Block& block)
 	{ 
 		active = false;
 	}
-	else if (position.y > GetScreenHeight() - 100 || position.y <= 0)
+	else if (position.y > GetScreenHeight() || position.y <= 0)
 	{
 		active = false;
 	}
