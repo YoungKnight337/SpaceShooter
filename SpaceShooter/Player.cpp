@@ -27,8 +27,8 @@ void Player::Draw()
 	Vector2 p3 = { position.x - width / 2, position.y - height / 2 };
 
 
-	if (!active) return;
-	DrawTriangle(p1, p2, p3, color);
+	if(active == true)
+		DrawTriangle(p1, p2, p3, color);
 }
 
 void Player::Update(Projectile& laser)
