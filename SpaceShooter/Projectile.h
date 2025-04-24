@@ -11,7 +11,7 @@ class Block;
 class Projectile
 {
 private:
-	int width =4;
+	int width = 4;
 	int height = 15;
 	int speed;
 	bool active;
@@ -23,16 +23,16 @@ public:
 	Projectile();
 	Projectile(bool active, int speed, Vector2 position);
 	~Projectile();
-	//void Initialize(Player player);
+	// void Projectile::Initialize(Player player)
 	void Draw(Player player);
 	void Update(Player& ship, Alien& alien, Block& block);
 	void Destroy(Player &ship, Alien &alien, Block& block);
-	void Move(Player& ship);
+	void Move();
 	bool CheckStatus() const { return active; }
 	/*enum type
 	{
-		ENEMY,
-		PLAYER 
+		ENEMY = 1,
+		PLAYER = 2
 	};
 	*/
 	Rectangle GetRect();

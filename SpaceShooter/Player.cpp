@@ -58,14 +58,13 @@ void Player::LimitMovement()
 	}
 }
 
+//Logic based from 3eyesTien
 void Player::Shoot() 
 {
 	std::vector<Projectile>lasers;
-	if (Projectile().CheckStatus() == false)
-	{
+	if(GetTime()-lastFireTime >= 0.35)
 		lasers.push_back(Projectile(true, 7, { position.x + width / 4, position.y }));
-	}
-		
+		lastFireTime = GetTime();
 }
 
 //SCREW IT USING RECTANGLE COLLDIER
