@@ -37,7 +37,7 @@ void Block::CheckCollision(Projectile& laser)
 	}
 	if (health <= 0)
 	{
-		active == false;
+		active = false;
 	}
 
 }
