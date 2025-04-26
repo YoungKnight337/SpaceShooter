@@ -46,7 +46,7 @@ void Projectile::Draw(Player player)
 {
 	if (active == true)
 	{
-		DrawRectangle(position.x, position.y, width, height, WHITE);
+		DrawRectangle(position.x, position.y, width, height, color);
 		/*if (PLAYER)
 		{
 			
