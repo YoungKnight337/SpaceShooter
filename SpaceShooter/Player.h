@@ -26,6 +26,7 @@ public:
 	void Shoot();
 	void CheckCollision(Projectile& laser);
 	void LimitMovement();
+	void Reset();
 	Vector2 GetPosition() { return position; }
 	Rectangle GetRect();
 	

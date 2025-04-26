@@ -79,9 +79,19 @@ void Player::CheckCollision(Projectile& laser)
 
 }
 
+void Player::Reset()
+{
+	if (!active)
+	{
+		position.x = static_cast<float>(GetScreenWidth()) / 2.f;
+		position.y = static_cast<float>(GetScreenHeight()) - 100.f;
+		active = true;
+	}
 
+}
 
 Rectangle Player::GetRect()
 {
 	return{ position.x, position.y, static_cast<float>(width),static_cast<float>(height) };
 }
+

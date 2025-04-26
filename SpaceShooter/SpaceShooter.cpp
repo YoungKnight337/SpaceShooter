@@ -36,7 +36,7 @@ int main()
     while (WindowShouldClose()==false)
     {
         //Update
-        player.Update(laser);
+        player.Update();
         //spawner.Update(laser,alien);
         row.Update(beam, BLOCK_ROW);
 
