@@ -31,7 +31,8 @@ void Player::Draw()
 		DrawTriangle(p1, p2, p3, color);
 }
 
-void Player::Update(Projectile& laser)
+//Projectile& laser
+void Player::Update()
 {
 	if (!active) return;
 	if (IsKeyDown(KEY_LEFT))
@@ -42,7 +43,7 @@ void Player::Update(Projectile& laser)
 		Shoot();
 
 	LimitMovement();
-	CheckCollision(laser);	
+	CheckCollision(beam);	
 }
 
 

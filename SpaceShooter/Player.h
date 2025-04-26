@@ -3,7 +3,7 @@
 #include "raylib.h"
 #include "Projectile.h"
 
-class Projectile;
+class Projectile beam;
 
 class Player
 {
@@ -22,7 +22,7 @@ public:
 	Player(Vector2 position, bool active);
 	~Player();
 	void Draw();
-	void Update(Projectile&laser);
+	void Update(); //Projectile& laser
 	void Shoot();
 	void CheckCollision(Projectile& laser);
 	void LimitMovement();
