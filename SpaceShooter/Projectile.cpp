@@ -1,12 +1,12 @@
 #include "Projectile.h"
 
 Projectile::Projectile()
-	:active{ false }, speed{}, position{position.x,position.y}
+	:active{ false }, speed{}, position{position.x,position.y}, color{ color }
 {
 
 }
-Projectile::Projectile(bool active, int speed, Vector2 position)
-	:active{ active }, speed{ speed }, position{ position }
+Projectile::Projectile(bool active, int speed, Vector2 position, Color color)
+	:active{ active }, speed{ speed }, position{ position }, color{color}
 {
 
 }

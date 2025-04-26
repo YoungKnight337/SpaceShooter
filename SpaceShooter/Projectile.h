@@ -15,13 +15,13 @@ private:
 	int height = 15;
 	int speed;
 	bool active;
-
+	Color color;
 	Vector2 position;
 
 
 public:
 	Projectile();
-	Projectile(bool active, int speed, Vector2 position);
+	Projectile(bool active, int speed, Vector2 position, Color color);
 	~Projectile();
 	// void Projectile::Initialize(Player player)
 	void Draw(Player player);
