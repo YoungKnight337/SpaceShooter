@@ -19,7 +19,7 @@ private:
 
 public:	
 	Player();
-	Player(Vector2 position, bool active);
+	//Player(Vector2 position, bool active);
 	~Player();
 	void Draw();
 	void Update(); //Projectile& laser

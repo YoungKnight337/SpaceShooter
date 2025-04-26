@@ -2,17 +2,12 @@
 
 
 Player::Player()
-	: position{position.x, position.y}, active{true}
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
 }
 
-Player::Player(Vector2 position, bool active)
-	: position(position), active(active)
-{
 
-}
 
 Player::~Player()
 {
