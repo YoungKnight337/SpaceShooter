@@ -14,7 +14,7 @@ private:
 	int width = 4;
 	int height = 15;
 	int speed;
-	bool active;
+	bool active = false;
 	Color color;
 	Vector2 position;
 
