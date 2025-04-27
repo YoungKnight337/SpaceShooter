@@ -44,7 +44,7 @@ void Player::Update()
 		Shoot();
 
 	LimitMovement();
-	CheckCollision(beam);	
+	CheckCollision();
 	//Reset();
 }
 
@@ -71,9 +71,9 @@ void Player::Shoot()
 }
 
 //SCREW IT USING RECTANGLE COLLDIER
-void Player::CheckCollision(Projectile& laser)
+void Player::CheckCollision()
 {
-	if (CheckCollisionRecs(GetRect(), laser.GetRect()))
+	if (CheckCollisionRecs(GetRect(), Projectile().GetRect()))
 	{
 		active = false;
 	}

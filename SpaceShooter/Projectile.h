@@ -24,9 +24,9 @@ public:
 	Projectile(bool active, int speed, Vector2 position, Color color);
 	~Projectile();
 	// void Projectile::Initialize(Player player)
-	void Draw(Player player);
-	void Update(Player& ship, Alien& alien, Block& block);
-	void Destroy(Player &ship, Alien &alien, Block& block);
+	void Draw();
+	void Update(Player& ship, Block& block);
+	void Destroy(Player &ship, Block& block);
 	void Move();
 	bool CheckStatus() const { return active; }
 	/*enum type

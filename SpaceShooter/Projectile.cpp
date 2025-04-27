@@ -42,7 +42,7 @@ Projectile::~Projectile()
 }
 */
 
-void Projectile::Draw(Player player)
+void Projectile::Draw()
 {
 	if (active == true)
 	{
@@ -60,10 +60,10 @@ void Projectile::Draw(Player player)
 
 }
 
-void Projectile::Update(Player& ship, Alien& alien, Block& block)
+void Projectile::Update(Player& ship, Block& block)
 {
 	Move();
-	Destroy(ship,alien,block);
+	Destroy(ship,block);
 }
 
 
@@ -79,17 +79,18 @@ void Projectile::Move()
 		*/
 	}
 }
-void Projectile::Destroy(Player& ship, Alien& alien, Block& block)
+void Projectile::Destroy(Player& ship, Block& block)
 {
 	if (!active) return;
 	if (CheckCollisionRecs(GetRect(), ship.GetRect()))
 	{
 		active = false;
 	}
-	else if(CheckCollisionRecs(GetRect(), alien.GetRect()))
+	/*else if (CheckCollisionRecs(GetRect(), alien.GetRect()))
 	{
 		active = false;
 	}
+	*/
 	else if(CheckCollisionRecs(GetRect(), block.GetRect()))
 	{ 
 		active = false;
