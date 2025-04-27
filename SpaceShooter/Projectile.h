@@ -25,8 +25,8 @@ public:
 	~Projectile();
 	// void Projectile::Initialize(Player player)
 	void Draw();
-	void Update(Player& ship, Block& block);
-	void Destroy(Player &ship, Block& block);
+	void Update();
+	void Destroy();
 	void Move();
 	bool CheckStatus() const { return active; }
 	/*enum type
