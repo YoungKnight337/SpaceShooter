@@ -5,6 +5,7 @@ Player::Player()
 {
 	position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 	position.y = static_cast<float>(GetScreenHeight()) - 100.f;
+	lastFireTime = 0;
 }
 
 
