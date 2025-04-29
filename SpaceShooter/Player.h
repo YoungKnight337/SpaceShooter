@@ -12,6 +12,7 @@ private:
 	int width = 35;
 	bool active = true;
 	double lastFireTime;
+	int lastFireTime = 0;
 
 	Vector2 position;
 	Color color = WHITE;
