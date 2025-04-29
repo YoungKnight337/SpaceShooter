@@ -65,9 +65,11 @@ void Player::LimitMovement()
 void Player::Shoot() 
 {
 	std::vector<Projectile>lasers;
-	if(GetTime() - lastFireTime >= 0.25)
-		lasers.push_back(Projectile(true, 7, { position.x + width / 4, position.y },WHITE));
+	if (GetTime() - lastFireTime >= 0.25)
+	{
+		lasers.push_back(Projectile(true, 7, { position.x + width / 4, position.y }, WHITE));
 		lastFireTime = GetTime();
+	}
 }
 
 //SCREW IT USING RECTANGLE COLLDIER
