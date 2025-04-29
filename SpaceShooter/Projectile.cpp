@@ -5,10 +5,11 @@ Projectile::Projectile()
 {
 
 }
+
 Projectile::Projectile(bool active, int speed, Vector2 position, Color color)
 	:active{ active }, speed{ speed }, position{ position }, color{color}
 {
-	active = true;
+	this ->active = active;
 	this->position = position;
 	this->speed = speed;
 	this->color = color;
