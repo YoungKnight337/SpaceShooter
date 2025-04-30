@@ -29,9 +29,7 @@ int main()
    //AlienManager spawner;
     
 
-    
-
-    row.Initialize(block, BLOCK_ROW);
+    BlockManager().Initialize(block, BLOCK_ROW);
     while (WindowShouldClose()==false)
     {
         //Update
