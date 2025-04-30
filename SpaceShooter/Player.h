@@ -10,9 +10,9 @@ class Player
 private:
 	int height = 35;
 	int width = 35;
+	int speed = 7;
 	bool active = true;
-	double lastFireTime;
-	int lastFireTime = 0;
+	double lastFireTime = 0;
 
 	Vector2 position;
 	Color color = WHITE;

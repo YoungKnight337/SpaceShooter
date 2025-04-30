@@ -8,8 +8,6 @@ Player::Player()
 	
 }
 
-
-
 Player::~Player()
 {
 
@@ -38,9 +36,9 @@ void Player::Update()
 {
 	if (!active) return;
 	if (IsKeyDown(KEY_LEFT))
-		position.x -= 7;
+		position.x -= speed;
 	if (IsKeyDown(KEY_RIGHT))
-		position.x += 7;
+		position.x += speed;
 	if (IsKeyDown(KEY_SPACE))
 		Shoot();
 
@@ -66,9 +64,9 @@ void Player::LimitMovement()
 void Player::Shoot() 
 {
 	std::vector<Projectile>lasers;
-	if (GetTime() - lastFireTime >= 0.25)
+	if (GetTime() - lastFireTime >= 0.35)
 	{
-		lasers.push_back(Projectile(true, 7, { position.x + width / 4, position.y }, WHITE));
+		lasers.push_back(Projectile(true, 7, { position.x + width / 2 - 2, position.y }, WHITE));
 		lastFireTime = GetTime();
 	}
 }
