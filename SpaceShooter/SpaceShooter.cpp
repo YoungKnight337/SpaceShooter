@@ -21,21 +21,22 @@ int main()
     SetTargetFPS(FRAME_RATE);
 
     
-
+    Player player;
     Block block;
     Projectile laser;
     Projectile beam;
+    BlockManager row;
    //Alien alien;
    //AlienManager spawner;
     
 
-    BlockManager().Initialize(block, BLOCK_ROW);
+    row.Initialize(block, BLOCK_ROW);
     while (WindowShouldClose()==false)
     {
         //Update
-        Player().Update();
+        player.Update();
         //spawner.Update(laser,alien);
-        BlockManager().Update(beam, BLOCK_ROW);
+        row.Update(beam, BLOCK_ROW);
         laser.Update();
 
 
@@ -43,9 +44,9 @@ int main()
         ClearBackground(BLACK);
 
         //Draw
-        Player().Draw();
+        player.Draw();
         //spawner.Draw(ALIEN_ROW,ALIEN_COL);
-        BlockManager().Draw(block, BLOCK_ROW);
+        row.Draw(block, BLOCK_ROW);
         
         EndDrawing();
     }
