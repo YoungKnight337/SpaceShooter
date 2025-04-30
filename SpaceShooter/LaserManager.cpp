@@ -14,3 +14,8 @@ void LaserManager::Update()
 {
 
 }
+
+void LaserManager::Draw()
+{
+
+}

@@ -10,6 +10,7 @@ public:
 	LaserManager();
 	~LaserManager();
 	void Update();
+	void Draw();
 
 };
 
