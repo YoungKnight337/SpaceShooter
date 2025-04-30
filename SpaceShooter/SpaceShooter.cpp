@@ -20,25 +20,24 @@ int main()
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Space Shooter");
     SetTargetFPS(FRAME_RATE);
 
-    Player player;
+    
 
     Block block;
-    BlockManager row;
-    
+    Projectile laser;
+    Projectile beam;
    //Alien alien;
    //AlienManager spawner;
     
-    Projectile laser;
-    Projectile beam;
+
     
 
     row.Initialize(block, BLOCK_ROW);
     while (WindowShouldClose()==false)
     {
         //Update
-        player.Update();
+        Player().Update();
         //spawner.Update(laser,alien);
-        row.Update(beam, BLOCK_ROW);
+        BlockManager().Update(beam, BLOCK_ROW);
         laser.Update();
 
 
@@ -46,9 +45,9 @@ int main()
         ClearBackground(BLACK);
 
         //Draw
-        player.Draw();
+        Player().Draw();
         //spawner.Draw(ALIEN_ROW,ALIEN_COL);
-        row.Draw(block, BLOCK_ROW);
+        BlockManager().Draw(block, BLOCK_ROW);
         
         EndDrawing();
     }
