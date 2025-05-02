@@ -12,16 +12,16 @@ LaserManager::~LaserManager()
 
 void LaserManager::Update()
 {
-	for(auto& Player : lasers)
+	for(auto& Projectile : player.lasers)
 	{ 
-		laser.Update();
+		Projectile.Update();
 	}
 }
 
 void LaserManager::Draw()
 {
-	for (auto &laser : laser)
+	for (auto& Projectile : player.laser)
 	{
-		laser.Draw();
+		Projectile.Draw();
 	}
 }
