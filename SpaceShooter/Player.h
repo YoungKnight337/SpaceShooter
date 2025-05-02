@@ -13,13 +13,13 @@ private:
 	int speed = 7;
 	bool active = true;
 	double lastFireTime = 0;
-	std::vector<Projectile>lasers;
 
 	Vector2 position;
 	Color color = WHITE;
 	
 
 public:	
+	std::vector<Projectile>lasers;
 	Player();
 	//Player(Vector2 position, bool active);
 	~Player();
