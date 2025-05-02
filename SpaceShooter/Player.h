@@ -5,7 +5,7 @@
 
 // Projectile;
 
-class Player
+class Player 
 {
 private:
 	int height = 35;
@@ -13,6 +13,7 @@ private:
 	int speed = 7;
 	bool active = true;
 	double lastFireTime = 0;
+	std::vector<Projectile>lasers;
 
 	Vector2 position;
 	Color color = WHITE;
