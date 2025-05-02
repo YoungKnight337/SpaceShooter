@@ -12,7 +12,7 @@ LaserManager::~LaserManager()
 
 void LaserManager::Update()
 {
-	for(auto& lasers : laser)
+	for(auto& Player : lasers)
 	{ 
 		laser.Update();
 	}
