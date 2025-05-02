@@ -2,7 +2,8 @@
 #include "raylib.h"
 #include "Projectile.h"
 
-class Player;
+class Player player;
+class Alien alien;
 
 class LaserManager
 {

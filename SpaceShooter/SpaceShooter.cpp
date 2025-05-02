@@ -5,6 +5,7 @@
 #include "Projectile.h"
 #include "Block.h"
 #include "BlockManager.h"
+#include "LaserManager.h"
 
 int main()
 {
@@ -26,6 +27,7 @@ int main()
     Projectile laser;
     Projectile beam;
     BlockManager row;
+    LaserManager laserManager;
    //Alien alien;
    //AlienManager spawner;
     
