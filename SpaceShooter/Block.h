@@ -22,8 +22,8 @@ public:
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	void Draw();
-	void Update(Projectile& laser);
-	void CheckCollision(Projectile& laser);
+	void Update();
+	void CheckCollision();
 	Rectangle GetRect();
 };
 

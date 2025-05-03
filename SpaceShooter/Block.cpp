@@ -23,15 +23,15 @@ void Block::Draw()
 		DrawRectangle(position.x, position.y, width, height, color);
 }
 
-void Block::Update(Projectile& laser)
+void Block::Update()
 {
 	CheckCollision(laser);
 }
 
-void Block::CheckCollision(Projectile& laser)
+void Block::CheckCollision()
 {
 	if (!active) return;
-	if (CheckCollisionRecs(GetRect(), laser.GetRect()))
+	if (CheckCollisionRecs(GetRect(),	Projectile().GetRect()))
 	{
 		health -= 10;
 	}

@@ -29,10 +29,10 @@ public:
 	Alien(int value, bool active, Color color);
 	~Alien();
 	void Draw();
-	void Update(Projectile& laser);
+	void Update();
 	void Shoot(Projectile& laser);
-	void CheckCollision(Projectile& laser);
-	void GetPosition();
+	void CheckCollision();
+	//void GetPosition();
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	Rectangle GetRect();

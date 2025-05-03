@@ -20,7 +20,7 @@ public:
 	~AlienManager();
 	void Initialize(Alien &alien, int a, int b);
 	void Draw(int a, int b);
-	void Update(Projectile& laser, Alien& alien);
+	void Update(Alien& alien);
 	void Move();
 	//void MoveRight();
 	void MoveAliens(Alien& alien);

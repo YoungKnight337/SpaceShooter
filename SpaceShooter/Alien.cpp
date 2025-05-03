@@ -23,9 +23,9 @@ void Alien::Draw()
 }
 
 
-void  Alien::Update(Projectile& laser)
+void  Alien::Update()
 {
-	CheckCollision(laser);
+	CheckCollision();
 }
 
 void Alien::Shoot(Projectile& laser)
@@ -41,10 +41,10 @@ void Alien::Shoot(Projectile& laser)
 	// Projectile( -, -, -, RED)
 }
 
-void Alien::CheckCollision(Projectile& laser)
+void Alien::CheckCollision()
 {
 	if (!active) return;
-	if (CheckCollisionRecs(GetRect(), laser.GetRect()))
+	if (CheckCollisionRecs(GetRect(), Projectile().GetRect()))
 	{
 		active == false;
 	}

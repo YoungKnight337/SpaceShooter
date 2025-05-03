@@ -33,11 +33,11 @@ void BlockManager::Draw(Block& block, int a)
 		}
 }
 
-void BlockManager::Update(Projectile& laser, int a)
+void BlockManager::Update(int a)
 {
 	for (Block& block : blocks)
 	{
-		block.Update(laser);
+		block.Update();
 	}
 }
 

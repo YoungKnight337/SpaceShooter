@@ -14,7 +14,7 @@ public:
 	~BlockManager();
 	void Initialize(Block& block, int a);
 	void Draw(Block& block, int a);
-	void Update(Projectile& laser, int a);
+	void Update(int a);
 	
 };
 
