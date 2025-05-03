@@ -3,7 +3,6 @@
 #include "Alien.h"
 #include "AlienManager.h"
 #include "Projectile.h"
-#include "LaserManager.h"
 #include "Block.h"
 #include "BlockManager.h"
 
@@ -51,7 +50,7 @@ int main()
         player.Draw();
         //spawner.Draw(ALIEN_ROW,ALIEN_COL);
         row.Draw(block, BLOCK_ROW);
-       // laserManager.Draw();
+       //laserManager.Draw();
         
         EndDrawing();
     }
