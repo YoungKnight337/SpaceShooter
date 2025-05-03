@@ -1,9 +1,8 @@
 #pragma once
 #include "raylib.h"
 #include "Projectile.h"
+#include "Player.h"
 
-class Player player;
-class Alien alien;
 
 class LaserManager
 {

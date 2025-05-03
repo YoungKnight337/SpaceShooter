@@ -19,7 +19,7 @@ private:
 	
 
 public:	
-	std::vector<Projectile>lasers;
+	std::vector<Projectile> lasers;
 	Player();
 	//Player(Vector2 position, bool active);
 	~Player();

@@ -1,15 +1,16 @@
 #include "raylib.h"
 #include "Player.h"
-#include "Alien.h"
-#include "AlienManager.h"
+//#include "Alien.h"
+//#include "AlienManager.h"
 #include "Block.h"
 #include "BlockManager.h"
+#include "LaserManager.h"
 
 
 int main()
 {
-    constexpr int ALIEN_ROW = 5;
-    constexpr int ALIEN_COL = 11;
+    //constexpr int ALIEN_ROW = 5;
+    //constexpr int ALIEN_COL = 11;
 
     constexpr int BLOCK_ROW = 4;
 
@@ -24,7 +25,7 @@ int main()
     Player player;
     Block block;
     BlockManager row;
-    //LaserManager laserManager;
+    LaserManager laserManager;
    //Alien alien;
    //AlienManager spawner;
     
@@ -36,7 +37,7 @@ int main()
         player.Update();
         //spawner.Update(laser,alien);
         row.Update(BLOCK_ROW);
-        //laserManager.Update();
+        laserManager.Update();
 
 
 
@@ -47,7 +48,7 @@ int main()
         player.Draw();
         //spawner.Draw(ALIEN_ROW,ALIEN_COL);
         row.Draw(block, BLOCK_ROW);
-       //laserManager.Draw();
+       laserManager.Draw();
         
         EndDrawing();
     }

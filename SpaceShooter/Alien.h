@@ -2,9 +2,7 @@
 #include "vector"
 #include "raylib.h"
 #include "Projectile.h"
-#include "Player.h"
 
-class Player;
 class Projectile;
 
 class Alien
@@ -20,7 +18,6 @@ private:
 		OCTOPUS,
 		CRAB
 	};
-	std::vector<Projectile>laser;
 	Vector2 position;
 	Color color;
 
@@ -35,6 +32,7 @@ public:
 	//void GetPosition();
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
+	std::vector<Projectile>beams;
 	Rectangle GetRect();
 };
 

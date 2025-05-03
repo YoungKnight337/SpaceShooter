@@ -25,7 +25,7 @@ void Block::Draw()
 
 void Block::Update()
 {
-	CheckCollision(laser);
+	CheckCollision();
 }
 
 void Block::CheckCollision()

@@ -12,7 +12,7 @@ LaserManager::~LaserManager()
 
 void LaserManager::Update()
 {
-	for(auto& Projectile : player.lasers)
+	for(auto& Projectile : Player().lasers)
 	{ 
 		Projectile.Update();
 	}
@@ -20,7 +20,7 @@ void LaserManager::Update()
 
 void LaserManager::Draw()
 {
-	for (auto& Projectile : player.lasers)
+	for (auto& Projectile : Player().lasers)
 	{
 		Projectile.Draw();
 	}

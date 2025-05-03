@@ -3,7 +3,6 @@
 #include "raylib.h"
 #include "Block.h"
 
-class Block;
 
 class BlockManager
 {
