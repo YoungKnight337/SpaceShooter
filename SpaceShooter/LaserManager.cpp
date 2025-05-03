@@ -25,11 +25,3 @@ void LaserManager::Draw()
 		Projectile.Draw();
 	}
 }
-
-void LaserManager::Destroy()
-{
-	for (auto& Projectile : player.lasers)
-	{
-		Projectile.Destroy();
-	}
-}
