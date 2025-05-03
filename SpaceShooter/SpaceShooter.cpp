@@ -3,9 +3,10 @@
 #include "Alien.h"
 #include "AlienManager.h"
 #include "Projectile.h"
+#include "LaserManager.h"
 #include "Block.h"
 #include "BlockManager.h"
-#include "LaserManager.h"
+
 
 int main()
 {
