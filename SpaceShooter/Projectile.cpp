@@ -6,14 +6,22 @@ Projectile::Projectile()
 
 }
 
-Projectile::Projectile(bool active, int speed, Vector2 position, Color color, type origin)
+Projectile::Projectile(bool active, int speed, Vector2 position, type origin)
 	//:active{ active }, speed{ speed }, position{ position }, color{color}
 {
 	this->active = active;
 	this->speed = speed;
 	this->position = position;
-	this->color = color;
 	this->origin = origin;
+	switch (origin)
+	{
+	case 0:
+		this->color = WHITE;
+		break;
+	case 1:
+		this->color = RED;
+		break;
+	}
 }
 
 Projectile::~Projectile()

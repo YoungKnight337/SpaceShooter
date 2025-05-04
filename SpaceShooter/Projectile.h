@@ -29,7 +29,7 @@ private:
 
 public:
 	Projectile();
-	Projectile(bool active, int speed, Vector2 position, Color color, type origin);
+	Projectile(bool active, int speed, Vector2 position, type origin);
 	~Projectile();
 	// void Projectile::Initialize(Player player)
 	void Draw();
