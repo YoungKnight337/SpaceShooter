@@ -10,8 +10,8 @@ private:
 public:
 	LaserManager();
 	~LaserManager();
-	void Update(Projectile& laser);
-	void Draw(Projectile& laser);
+	void Update();
+	void Draw();
 
 };
 
