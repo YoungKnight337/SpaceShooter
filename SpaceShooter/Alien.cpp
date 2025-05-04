@@ -26,19 +26,19 @@ void Alien::Draw()
 void  Alien::Update()
 {
 	CheckCollision();
+	Shoot();
 }
 
-void Alien::Shoot(Projectile& laser)
+void Alien::Shoot()
 {
-	// Consider the vextor data structure in "Alien.h"
 	// Timing seems to be random
 	// Make sure that no alien is in the way of line of fire
 	//	If No Alien
-	//		Open Fire
+	// if(GetTime())
+	//	beams.push_back(Projectile( true, 7,  position, RED));
+	//  lastFireTime = GetTime();
 	// Otherwise
-	//		Dont Shoot
-	// 
-	// Projectile( -, -, -, RED)
+	//Dont Shoot
 }
 
 void Alien::CheckCollision()

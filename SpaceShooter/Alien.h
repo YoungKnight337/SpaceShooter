@@ -27,7 +27,7 @@ public:
 	~Alien();
 	void Draw();
 	void Update();
-	void Shoot(Projectile& laser);
+	void Shoot();
 	void CheckCollision();
 	//void GetPosition();
 	int GetHeight() const { return height; };
