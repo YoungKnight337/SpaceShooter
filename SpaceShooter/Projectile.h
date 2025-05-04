@@ -19,8 +19,8 @@ private:
 	bool active = false;
 	enum type
 	{
-		PLAYER,
-		ENEMY
+		PLAYER = 0,
+		ENEMY = 1
 	};
 	type origin;
 	Color color;

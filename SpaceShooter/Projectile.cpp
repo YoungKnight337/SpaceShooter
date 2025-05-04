@@ -41,10 +41,16 @@ void Projectile::Update()
 void Projectile::Move()
 {
 	if (active) return;
-		if (origin == 0)
-			position.y += speed;
-		else
-			position.y -= speed;
+	switch (origin)
+	{
+	case 0:
+		position.y += speed;
+		break;
+	case 1:
+		position.y -= speed;
+		break;
+	}
+
 }
 void Projectile::Destroy()
 {

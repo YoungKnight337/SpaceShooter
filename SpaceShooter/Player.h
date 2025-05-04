@@ -3,7 +3,7 @@
 #include "raylib.h"
 #include "Projectile.h"
 
-class Projectile laser;
+class Projectile;
 
 class Player 
 {
