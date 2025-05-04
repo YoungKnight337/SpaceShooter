@@ -24,6 +24,7 @@ int main()
     
     Player player;
     Block block;
+    Projectile laser;
     BlockManager row;
     LaserManager laserManager;
    //Alien alien;
@@ -37,7 +38,7 @@ int main()
         player.Update();
         //spawner.Update(laser,alien);
         row.Update(BLOCK_ROW);
-        laserManager.Update();
+        laserManager.Update(laser);
 
 
 
@@ -48,7 +49,7 @@ int main()
         player.Draw();
         //spawner.Draw(ALIEN_ROW,ALIEN_COL);
         row.Draw(block, BLOCK_ROW);
-       laserManager.Draw();
+        laserManager.Draw(laser);
         
         EndDrawing();
     }

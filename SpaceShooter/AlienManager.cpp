@@ -27,8 +27,8 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 		for (int j = 0; j < b; j++)
 		{
 			if (i == 0)
-				Alien octpus (30, true, WHITE);
-				position.x = j * (alien.GetWidth() + 10) + j; 
+				Alien octopus(30, true, WHITE);
+				position.x = j * (alien.GetWidth() + 10) + j;
 				position.y = i * (alien.GetHeight() + 10) + i;
 			if (i == 1 || i == 2)
 				Alien squid (20, true, GREEN);

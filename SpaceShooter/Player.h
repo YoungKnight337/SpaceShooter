@@ -11,6 +11,7 @@ private:
 	int height = 35;
 	int width = 35;
 	int speed = 7;
+	int lives = 3;
 	bool active = true;
 	double lastFireTime = 0;
 

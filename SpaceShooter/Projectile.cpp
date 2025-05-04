@@ -20,46 +20,12 @@ Projectile::~Projectile()
 
 }
 
-/* void Projectile::Initialize(Player player)
-{
-
-	position.x = player.GetPosition().x + player.GetRect().width / 4;
-	position.y = player.GetPosition().y;
-	
-
-		//player.GetPosition().x + player.GetRect().width / 4;
-		//position.y = player.GetPosition().y;
-		
-		/*if (PLAYER)
-		{
-			position.x = player.GetPosition().x + player.GetRect().width / 4;
-			position.y = player.GetPosition().y;
-		}
-		/*if (ENEMY)
-		{
-			position.x = alien.GetRect().x + alien.GetRect().width / 4;
-			position.y = alien.GetRect().y + alien.GetRect().height;
-		}
-		
-	
-
-}
-*/
 
 void Projectile::Draw()
 {
-	if (active == true)
+	if (active)
 	{
 		DrawRectangle(position.x, position.y, width, height, color);
-		/*if (PLAYER)
-		{
-			
-		}
-		/*if (ENEMY)
-		{
-			DrawRectangle(alien.GetRect().x, alien.GetRect().y, width, height, RED);
-		}
-		*/
 	}
 
 }
@@ -73,7 +39,7 @@ void Projectile::Update()
 
 void Projectile::Move()
 {
-	if(active == true)
+	if(active)
 	{ 
 		position.y += speed;
 		//static_cast<int>(speed_y); //Move Up

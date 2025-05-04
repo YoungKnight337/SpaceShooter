@@ -19,7 +19,7 @@ Block::~Block()
 
 void Block::Draw()
 {
-	if(active == true)
+	if(active)
 		DrawRectangle(position.x, position.y, width, height, color);
 }
 

@@ -27,7 +27,7 @@ void Player::Draw()
 	Vector2 p3 = { position.x - width / 2, position.y - height / 2 };
 
 
-	if(active == true)
+	if(active)
 		DrawTriangle(p1, p2, p3, color);
 }
 
@@ -44,7 +44,7 @@ void Player::Update()
 
 	LimitMovement();
 	CheckCollision();
-	//Reset();
+	Reset();
 }
 
 
@@ -76,6 +76,7 @@ void Player::CheckCollision()
 	if (CheckCollisionRecs(GetRect(), Projectile().GetRect()))
 	{
 		active = false;
+		lives--;
 	}
 
 }
@@ -87,6 +88,7 @@ void Player::Reset()
 		position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 		position.y = static_cast<float>(GetScreenHeight()) - 100.f;
 		active = true;
+		lasers.clear();
 	}
 
 }
