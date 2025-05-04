@@ -27,15 +27,15 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 		for (int j = 0; j < b; j++)
 		{
 			if (i == 0)
-				Alien octopus(30, true, WHITE);
+				Alien octopus(30, true, WHITE, 1);
 				position.x = j * (alien.GetWidth() + 10) + j;
 				position.y = i * (alien.GetHeight() + 10) + i;
 			if (i == 1 || i == 2)
-				Alien squid (20, true, GREEN);
+				Alien squid (20, true, GREEN, 0);
 				position.x = j * (alien.GetWidth() + 10) + j;
 				position.y = i * (alien.GetHeight() + 10) + i;
 			if (i == 3)
-				Alien crab (10, true, BLUE);
+				Alien alien (10, true, BLUE, 1);
 				position.x = j * (alien.GetWidth() + 10) + j ;
 				position.y = i * (alien.GetHeight() + 10) + i;
 			

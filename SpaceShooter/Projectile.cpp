@@ -6,13 +6,14 @@ Projectile::Projectile()
 
 }
 
-Projectile::Projectile(bool active, int speed, Vector2 position, Color color)
+Projectile::Projectile(bool active, int speed, Vector2 position, Color color, type origin)
 	//:active{ active }, speed{ speed }, position{ position }, color{color}
 {
 	this->active = active;
 	this->speed = speed;
 	this->position = position;
 	this->color = color;
+	this->origin = origin;
 }
 
 Projectile::~Projectile()
@@ -27,7 +28,7 @@ void Projectile::Draw()
 	{
 		DrawRectangle(position.x, position.y, width, height, color);
 	}
-
+	
 }
 
 void Projectile::Update()
@@ -39,15 +40,11 @@ void Projectile::Update()
 
 void Projectile::Move()
 {
-	if(active)
-	{ 
-		position.y += speed;
-		//static_cast<int>(speed_y); //Move Up
-		//if(PLAYER)
-		/*if (ENEMY)
-			position.y -= static_cast<int>(speed_y); //Move Down
-		*/
-	}
+	if (active) return;
+		if (origin == 0)
+			position.y += speed;
+		else
+			position.y -= speed;
 }
 void Projectile::Destroy()
 {

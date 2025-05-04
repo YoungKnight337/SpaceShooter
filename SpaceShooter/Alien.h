@@ -4,6 +4,12 @@
 #include "Projectile.h"
 
 class Projectile;
+enum type
+{
+	SQUID = 0,
+	OCTOPUS =1,
+	CRAB = 2
+};
 
 class Alien
 {
@@ -12,18 +18,13 @@ private:
 	int width = 20;
 	int height = 20;
 	bool active;
-	enum types
-	{
-		SQUID,
-		OCTOPUS,
-		CRAB
-	};
+	type alienType;
 	Vector2 position;
 	Color color;
 
 public:
 	Alien();
-	Alien(int value, bool active, Color color);
+	Alien(int value, bool active, Color color, type alienType);
 	~Alien();
 	void Draw();
 	void Update();

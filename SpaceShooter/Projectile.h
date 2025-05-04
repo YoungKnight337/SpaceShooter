@@ -8,6 +8,12 @@ class Player;
 class Alien;
 class Block;
 
+enum type
+{
+	PLAYER = 0,
+	ENEMY = 1
+};
+
 class Projectile
 {
 private:
@@ -15,13 +21,14 @@ private:
 	int height = 15;
 	int speed;
 	bool active = false;
+	type origin;
 	Color color;
 	Vector2 position;
 
 
 public:
 	Projectile();
-	Projectile(bool active, int speed, Vector2 position, Color color);
+	Projectile(bool active, int speed, Vector2 position, Color color, type origin);
 	~Projectile();
 	// void Projectile::Initialize(Player player)
 	void Draw();
@@ -29,12 +36,6 @@ public:
 	void Destroy();
 	void Move();
 	bool CheckStatus() const { return active; }
-	/*enum type
-	{
-		ENEMY = 1,
-		PLAYER = 2
-	};
-	*/
 	Rectangle GetRect();
 
 };

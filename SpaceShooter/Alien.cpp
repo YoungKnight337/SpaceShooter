@@ -1,11 +1,11 @@
 #include "Alien.h"
 
 Alien::Alien()
-	:value{ }, active{true}, color{}
+	:value{ }, active{ true }, color{}, alienType{}
 {
 
 }
-Alien::Alien(int value, bool active, Color color)
+Alien::Alien(int value, bool active, Color color, type alienType)
 	:value{value}, active{ active }, color{ color }
 {
 
