@@ -6,8 +6,8 @@
 class Projectile;
 enum type
 {
-	SQUID = 0,
-	OCTOPUS =1,
+	OCTOPUS = 0,
+	SQUID =1,
 	CRAB = 2
 };
 
@@ -24,7 +24,7 @@ private:
 
 public:
 	Alien();
-	Alien(int value, bool active, Color color, type alienType);
+	Alien(bool active, type alienType);
 	~Alien();
 	void Draw();
 	void Update();

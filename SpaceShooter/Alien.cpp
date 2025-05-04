@@ -1,13 +1,30 @@
 #include "Alien.h"
 
 Alien::Alien()
-	:value{ }, active{ true }, color{}, alienType{}
+	//:value{ }, active{ true }, color{}, alienType{}
 {
 
 }
-Alien::Alien(int value, bool active, Color color, type alienType)
-	:value{value}, active{ active }, color{ color }
+Alien::Alien(bool active, type alienType)
+	//:value{value}, active{ active }, color{ color }
 {
+	this->active = active;
+	this->alienType = alienType;
+	switch (alienType)
+	{
+	case 0:
+		color = WHITE;
+		value = 30;
+		break;
+	case 1:
+		color = GREEN;
+		value = 20;
+		break;
+	case 2:
+		color = BLUE;
+		value = 10;
+		break;
+	}
 
 }
 
@@ -35,7 +52,7 @@ void Alien::Shoot()
 	// Make sure that no alien is in the way of line of fire
 	//	If No Alien
 	// if(GetTime())
-	//	beams.push_back(Projectile( true, 7,  position, RED));
+	//	beams.push_back(Projectile( true, 7,  position, RED, 1));
 	//  lastFireTime = GetTime();
 	// Otherwise
 	//Dont Shoot

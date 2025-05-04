@@ -8,11 +8,7 @@ class Player;
 class Alien;
 class Block;
 
-enum type
-{
-	PLAYER = 0,
-	ENEMY = 1
-};
+
 
 class Projectile
 {
@@ -21,6 +17,11 @@ private:
 	int height = 15;
 	int speed;
 	bool active = false;
+	enum type
+	{
+		PLAYER,
+		ENEMY
+	};
 	type origin;
 	Color color;
 	Vector2 position;
