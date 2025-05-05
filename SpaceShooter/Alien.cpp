@@ -50,20 +50,18 @@ void Alien::Shoot()
 {
 	// Timing seems to be random
 	// Make sure that no alien is in the way of line of fire
-	//	If No Alien
+	//	If no Alien
 	// if(GetTime())
-	//	beams.push_back(Projectile( true, 7,  position, RED, 1));
+	//	beams.push_back(Projectile(true, 7,  position, origin::ENEMY));
 	//  lastFireTime = GetTime();
-	// Otherwise
-	//Dont Shoot
 }
 
 void Alien::CheckCollision()
 {
 	if (!active) return;
-	if (CheckCollisionRecs(GetRect(), Projectile().GetRect()))
+	if (CheckCollisionRecs(GetRect(),Projectile().GetRect()))
 	{
-		active == false;
+		active = false;
 	}
 }
 

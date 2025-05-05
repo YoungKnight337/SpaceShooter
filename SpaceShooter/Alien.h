@@ -34,6 +34,7 @@ public:
 	//void GetPosition();
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
+	int GetValue() const { return value; };
 	std::vector<Projectile>beams;
 	Rectangle GetRect();
 };

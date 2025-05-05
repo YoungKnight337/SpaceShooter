@@ -28,7 +28,7 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 		{
 			if (i == 0)
 				Alien octopus(true, type::OCTOPUS);
-				position.x = j * (alien.GetWidth() + 10) + j;
+				position.x = j * (alien .GetWidth() + 10) + j;
 				position.y = i * (alien.GetHeight() + 10) + i;
 			if (i == 1 || i == 2)
 				Alien squid (true, type::SQUID);
