@@ -15,10 +15,10 @@ Projectile::Projectile(bool active, int speed, Vector2 position, type origin)
 	this->origin = origin;
 	switch (origin)
 	{
-	case 0:
+	case type::PLAYER:
 		this->color = WHITE;
 		break;
-	case 1:
+	case type::ENEMY:
 		this->color = RED;
 		break;
 	}
@@ -51,10 +51,10 @@ void Projectile::Move()
 	if (active) return;
 	switch (origin)
 	{
-	case 0:
+	case type::PLAYER:
 		position.y += speed;
 		break;
-	case 1:
+	case type::ENEMY:
 		position.y -= speed;
 		break;
 	}

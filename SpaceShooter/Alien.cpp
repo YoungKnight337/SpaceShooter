@@ -12,15 +12,15 @@ Alien::Alien(bool active, type alienType)
 	this->alienType = alienType;
 	switch (alienType)
 	{
-	case 0:
+	case type::OCTOPUS:
 		color = WHITE;
 		value = 30;
 		break;
-	case 1:
+	case type::SQUID:
 		color = GREEN;
 		value = 20;
 		break;
-	case 2:
+	case type::CRAB:
 		color = BLUE;
 		value = 10;
 		break;

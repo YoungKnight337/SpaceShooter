@@ -17,7 +17,7 @@ private:
 	int height = 15;
 	int speed;
 	bool active = false;
-	enum type
+	enum class type
 	{
 		PLAYER = 0,
 		ENEMY = 1

@@ -4,11 +4,12 @@
 #include "Projectile.h"
 
 class Projectile;
-enum type
+
+enum class type
 {
-	OCTOPUS = 0,
-	SQUID =1,
-	CRAB = 2
+	OCTOPUS,
+	SQUID,
+	CRAB
 };
 
 class Alien
