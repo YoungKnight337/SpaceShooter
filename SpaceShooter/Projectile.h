@@ -8,6 +8,11 @@ class Player;
 class Alien;
 class Block;
 
+enum class origin
+{
+	PLAYER = 0,
+	ENEMY = 1
+};
 
 
 class Projectile
@@ -17,19 +22,14 @@ private:
 	int height = 15;
 	int speed;
 	bool active = false;
-	enum class type
-	{
-		PLAYER = 0,
-		ENEMY = 1
-	};
-	type origin;
+	origin shooter;
 	Color color;
 	Vector2 position;
 
 
 public:
 	Projectile();
-	Projectile(bool active, int speed, Vector2 position, type origin);
+	Projectile(bool active, int speed, Vector2 position, origin shooter);
 	~Projectile();
 	// void Projectile::Initialize(Player player)
 	void Draw();
