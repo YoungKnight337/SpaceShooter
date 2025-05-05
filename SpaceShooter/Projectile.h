@@ -21,7 +21,7 @@ private:
 	int width = 4;
 	int height = 15;
 	int speed;
-	bool active = false;
+	bool active = true;
 	origin shooter;
 	Color color;
 	Vector2 position;

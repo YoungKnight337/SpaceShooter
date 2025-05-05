@@ -16,6 +16,13 @@ void LaserManager::Update()
 	{ 
 		Projectile.Update();
 	}
+
+	/*
+		for(aut& Projectile : Alien().beams)
+		{
+			Projectile.Update();
+		}
+	*/
 }
 
 void LaserManager::Draw()
@@ -24,4 +31,10 @@ void LaserManager::Draw()
 	{
 		Projectile.Draw();
 	}
+	/*
+		for (auto& Projectile : Alien().lasers)
+		{
+			Projectile.Draw();
+		}
+	*/
 }
