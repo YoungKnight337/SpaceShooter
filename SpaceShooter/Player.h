@@ -12,8 +12,8 @@ private:
 	int width = 35;
 	int speed = 7;
 	int lives = 3;
+	double lastFireTime;
 	bool active = true;
-	double lastFireTime = 0;
 
 	Vector2 position;
 	Color color = WHITE;

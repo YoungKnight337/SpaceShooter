@@ -44,7 +44,6 @@ void Player::Update()
 
 	LimitMovement();
 	CheckCollision();
-	Reset();
 }
 
 
@@ -63,6 +62,7 @@ void Player::LimitMovement()
 //Logic based from 3eyesTien
 void Player::Shoot() 
 {
+
 	if (GetTime() - lastFireTime >= 0.35)
 	{
 		lasers.push_back(Projectile(true, 7, { position.x + width / 4 , position.y }, origin::PLAYER));
@@ -77,6 +77,7 @@ void Player::CheckCollision()
 	{
 		active = false;
 		lives--;
+		Reset();
 	}
 
 }
