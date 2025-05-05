@@ -22,10 +22,9 @@ private:
 public:	
 	std::vector<Projectile> lasers;
 	Player();
-	//Player(Vector2 position, bool active);
 	~Player();
 	void Draw();
-	void Update(); //Projectile& laser
+	void Update();
 	void Shoot();
 	void CheckCollision();
 	void LimitMovement();

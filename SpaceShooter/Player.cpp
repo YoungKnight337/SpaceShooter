@@ -31,7 +31,6 @@ void Player::Draw()
 		DrawTriangle(p1, p2, p3, color);
 }
 
-//Projectile& laser
 void Player::Update()
 {
 	if (!active) return;
