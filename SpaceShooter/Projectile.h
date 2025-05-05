@@ -14,7 +14,6 @@ enum class origin
 	ENEMY = 1
 };
 
-
 class Projectile
 {
 private:

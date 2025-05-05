@@ -8,11 +8,12 @@ class BlockManager
 {
 private:
 	std::vector<Block> blocks;
+	Block block;
 public:
 	BlockManager();
 	~BlockManager();
-	void Initialize(Block& block, int a);
-	void Draw(Block& block, int a);
+	void Initialize(int a);
+	void Draw(int a);
 	void Update(int a);
 	
 };

@@ -2,7 +2,6 @@
 #include "Player.h"
 //#include "Alien.h"
 //#include "AlienManager.h"
-#include "Block.h"
 #include "BlockManager.h"
 #include "LaserManager.h"
 
@@ -23,15 +22,13 @@ int main()
 
     
     Player player;
-    Block block;
-    Projectile laser;
     BlockManager row;
     LaserManager laserManager;
    //Alien alien;
    //AlienManager spawner;
     
 
-    row.Initialize(block, BLOCK_ROW);
+    row.Initialize(BLOCK_ROW);
     while (WindowShouldClose()==false)
     {
         //Update
@@ -40,15 +37,13 @@ int main()
         row.Update(BLOCK_ROW);
         laserManager.Update();
 
-
-
         BeginDrawing();
         ClearBackground(BLACK);
 
         //Draw
         player.Draw();
         //spawner.Draw(ALIEN_ROW,ALIEN_COL);
-        row.Draw(block, BLOCK_ROW);
+        row.Draw(BLOCK_ROW);
         laserManager.Draw();
         
         EndDrawing();
