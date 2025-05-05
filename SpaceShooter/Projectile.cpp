@@ -48,7 +48,7 @@ void Projectile::Update()
 
 void Projectile::Move()
 {
-	if (active) return;
+	if (!active) return;
 	switch (shooter)
 	{
 	case origin::PLAYER:
