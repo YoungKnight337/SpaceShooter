@@ -27,7 +27,7 @@ int main()
    //Alien alien;
    //AlienManager spawner;
     
-
+    //spawner.Initialize(alien, ALIEN_ROW, ALIEN_COL);
     row.Initialize(BLOCK_ROW);
     while (WindowShouldClose()==false)
     {
