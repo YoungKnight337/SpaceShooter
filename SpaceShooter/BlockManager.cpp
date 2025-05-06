@@ -12,8 +12,6 @@ BlockManager::~BlockManager()
 
 void BlockManager::Initialize( int a)
 {
-	//float offset = 0.0f;
-
 	for (int i = 0; i < a; i++)
 	{
 		block.position.y = 500;
