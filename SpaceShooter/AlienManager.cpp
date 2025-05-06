@@ -56,7 +56,7 @@ void AlienManager::Draw(int a, int b)
 	}
 }
 
-void AlienManager::Update(Alien& alien)
+void AlienManager::Update()
 {
 
 		for (std::vector<Alien>& alien_row : aliens)
@@ -66,7 +66,7 @@ void AlienManager::Update(Alien& alien)
 				alien.Update();
 			}
 		}
-		MoveAliens(alien);
+		MoveAliens();
 }
 
 void AlienManager::Move()
@@ -77,7 +77,7 @@ void AlienManager::Move()
 		position.x -= speed;
 }
 
-void AlienManager::MoveAliens(Alien& alien)
+void AlienManager::MoveAliens()
 {
 	for (auto& alien : aliens)
 	{

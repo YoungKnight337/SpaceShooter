@@ -33,7 +33,7 @@ int main()
     {
         //Update
         player.Update();
-        //spawner.Update(laser,alien);
+        //spawner.Update();
         row.Update(BLOCK_ROW);
         laserManager.Update();
 
