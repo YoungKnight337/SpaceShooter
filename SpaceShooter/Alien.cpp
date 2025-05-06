@@ -43,17 +43,17 @@ void Alien::Draw()
 void  Alien::Update()
 {
 	CheckCollision();
-	Shoot();
+	//Shoot();
 }
 
 void Alien::Shoot()
 {
 	// Timing seems to be random
 	// Make sure that no alien is in the way of line of fire
-	//	If no Alien
-	// if(GetTime())
-	//	beams.push_back(Projectile(true, 7,  position, origin::ENEMY));
-	//  lastFireTime = GetTime();
+	double lastFireTime = 0.0;
+	if(GetTime())
+		beams.push_back(Projectile(true, 7,  position, origin::ENEMY));
+		lastFireTime = GetTime();
 }
 
 void Alien::CheckCollision()

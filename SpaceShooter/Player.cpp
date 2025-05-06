@@ -65,7 +65,7 @@ void Player::Shoot()
 
 	if (GetTime() - lastFireTime >= 0.35)
 	{
-		lasers.push_back(Projectile(true, 7, { position.x + width /2 - 2, position.y }, origin::PLAYER));
+		lasers.push_back(Projectile(true, -7, { position.x + width /2 - 2, position.y }, origin::PLAYER));
 		lastFireTime = GetTime();
 	}
 }

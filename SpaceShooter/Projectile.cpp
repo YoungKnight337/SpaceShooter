@@ -14,10 +14,10 @@ Projectile::Projectile(bool active, int speed, Vector2 position, origin shooter)
 	switch (shooter)
 	{
 	case origin::PLAYER:
-		this->color = WHITE;
+		this -> color = WHITE;
 		break;
 	case origin::ENEMY:
-		this->color = RED;
+		this -> color = RED;
 		break;
 	}
 }
@@ -46,7 +46,6 @@ void Projectile::Update()
 
 void Projectile::Move()
 {
-	if (!active) return;
 	switch (shooter)
 	{
 	case origin::PLAYER:
@@ -58,6 +57,7 @@ void Projectile::Move()
 	}
 
 }
+
 void Projectile::Destroy()
 {
 	if (!active) return;
@@ -79,7 +79,6 @@ void Projectile::Destroy()
 	}
 
 }
-
 
 
 Rectangle Projectile::GetRect()
