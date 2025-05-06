@@ -12,7 +12,6 @@ private:
 	int width = 35;
 	int speed = 7;
 	int lives = 3;
-	double lastFireTime = 0.0;
 	bool active = true;
 
 	Vector2 position;

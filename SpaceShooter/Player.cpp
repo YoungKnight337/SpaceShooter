@@ -61,6 +61,7 @@ void Player::LimitMovement()
 //Logic based from 3eyesTien
 void Player::Shoot() 
 {
+	double lastFireTime = 0.0;
 
 	if (GetTime() - lastFireTime >= 0.35)
 	{
