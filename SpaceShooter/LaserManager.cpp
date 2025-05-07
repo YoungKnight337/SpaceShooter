@@ -22,6 +22,8 @@ void LaserManager::Update(Player& player)
 			Projectile.Update();
 		}
 	*/
+
+	//DeleteLasers()
 }
 
 void LaserManager::Draw(Player& player)

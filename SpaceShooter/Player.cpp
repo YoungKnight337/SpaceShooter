@@ -63,7 +63,7 @@ void Player::Shoot()
 {
 	double lastFireTime = 0.0;
 
-	if (GetTime() - lastFireTime >= 0.35)
+	if (GetTime() - lastFireTime >= 0.25)
 	{
 		lasers.push_back(Projectile(true, -7, {position.x, position.y}, origin::PLAYER));
 		lastFireTime = GetTime();

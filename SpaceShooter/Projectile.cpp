@@ -27,7 +27,6 @@ Projectile::~Projectile()
 
 }
 
-
 void Projectile::Draw()
 {
 	if (active)
@@ -42,7 +41,6 @@ void Projectile::Update(Player& player)
 	Move();
 	//Destroy(player);
 }
-
 
 void Projectile::Move()
 {
@@ -83,7 +81,6 @@ void Projectile::Destroy(Player& player)
 	}
 
 }
-
 
 Rectangle Projectile::GetRect()
 {
