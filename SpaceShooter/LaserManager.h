@@ -10,13 +10,12 @@ class Alien;
 class LaserManager
 {
 private:
-	Player player;
-	Alien alien;
+	
 public:
 	LaserManager();
 	~LaserManager();
-	void Update();
-	void Draw();
+	void Update(Player& player);
+	void Draw(Player& player);
 	//void DeleteLasers();
 
 };

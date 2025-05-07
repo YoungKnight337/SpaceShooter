@@ -26,15 +26,13 @@ private:
 	Color color;
 	Vector2 position;
 
-
 public:
 	Projectile();
 	Projectile(bool active, int speed, Vector2 position, origin shooter);
 	~Projectile();
-	// void Projectile::Initialize(Player player)
 	void Draw();
-	void Update();
-	void Destroy();
+	void Update(Player& player);
+	void Destroy(Player& player);
 	void Move();
 	bool CheckStatus() const { return active; }
 	Rectangle GetRect();

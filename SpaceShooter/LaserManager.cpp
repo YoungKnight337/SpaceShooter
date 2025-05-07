@@ -10,13 +10,12 @@ LaserManager::~LaserManager()
 
 }
 
-void LaserManager::Update()
+void LaserManager::Update(Player& player)
 {
 	for(auto& Projectile : player.lasers)
 	{ 
-		Projectile.Update();
+		Projectile.Update(player);
 	}
-
 	/*
 		for(auto& Projectile : alien.beams)
 		{
@@ -25,7 +24,7 @@ void LaserManager::Update()
 	*/
 }
 
-void LaserManager::Draw()
+void LaserManager::Draw(Player& player)
 {
 	for (auto& Projectile : player.lasers)
 	{

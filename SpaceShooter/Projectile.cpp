@@ -37,10 +37,10 @@ void Projectile::Draw()
 	
 }
 
-void Projectile::Update()
+void Projectile::Update(Player& player)
 {
 	Move();
-	Destroy();
+	//Destroy(player);
 }
 
 
@@ -58,10 +58,10 @@ void Projectile::Move()
 
 }
 
-void Projectile::Destroy()
+void Projectile::Destroy(Player& player)
 {
 	if (!active) return;
-	if (CheckCollisionRecs(GetRect(), Player().GetRect()))
+	if (CheckCollisionRecs(GetRect(), player.GetRect()))
 	{
 		active = false;
 		std::cout << "Player hit" << std::endl;
