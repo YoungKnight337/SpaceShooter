@@ -69,7 +69,7 @@ void Projectile::Destroy(Player& player)
 		active = false;
 		std::cout << "Alien hit" << std::endl;
 	}
-	else if(CheckCollisionRecs(GetRect(), Block().GetRect()))
+	else if(CheckCollisionRecs(GetRect(),Block().GetRect()))
 	{ 
 		active = false;
 		std::cout << "Bunker hit" << std::endl;
