@@ -39,7 +39,7 @@ void Projectile::Draw()
 void Projectile::Update(Player& player)
 {
 	Move();
-	//Destroy(player);
+	Destroy(player);
 }
 
 void Projectile::Move()
