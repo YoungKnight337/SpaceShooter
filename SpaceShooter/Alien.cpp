@@ -54,6 +54,7 @@ void Alien::Shoot()
 	if(GetTime())
 		beams.push_back(Projectile(true, -7, {position.x, position.y}, origin::ENEMY));
 		lastFireTime = GetTime();
+		std::cout << "Alien shooting" << std::endl;
 }
 
 void Alien::CheckCollision()

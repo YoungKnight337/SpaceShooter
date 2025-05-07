@@ -90,6 +90,7 @@ void Player::Reset()
 		position.y = static_cast<float>(GetScreenHeight()) - 100.f;
 		active = true;
 		lasers.clear();
+		std::cout << "Player Reset" << std::endl;
 	}
 
 }
