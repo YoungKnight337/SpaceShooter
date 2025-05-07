@@ -78,6 +78,7 @@ void Player::CheckCollision()
 		active = false;
 		lives--;
 		Reset();
+		std::cout << "Player hit" << std::endl;
 	}
 }
 

@@ -34,6 +34,7 @@ void Block::CheckCollision()
 	if (CheckCollisionRecs(GetRect(),	Projectile().GetRect()))
 	{
 		health -= 10;
+		std::cout << "Bunker hit" << std::endl;
 	}
 	if (health <= 0)
 	{

@@ -62,17 +62,15 @@ void Projectile::Destroy(Player& player)
 	if (CheckCollisionRecs(GetRect(), player.GetRect()))
 	{
 		active = false;
-		std::cout << "Player hit" << std::endl;
 	}
 	else if (CheckCollisionRecs(GetRect(), Alien().GetRect()))
 	{
 		active = false;
-		std::cout << "Alien hit" << std::endl;
 	}
 	else if(CheckCollisionRecs(GetRect(),Block().GetRect()))
 	{ 
 		active = false;
-		std::cout << "Bunker hit" << std::endl;
+		
 	}
 	else if (position.y > GetScreenHeight() || position.y <= 0)
 	{

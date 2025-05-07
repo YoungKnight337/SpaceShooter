@@ -62,6 +62,7 @@ void Alien::CheckCollision()
 	if (CheckCollisionRecs(GetRect(),Projectile().GetRect()))
 	{
 		active = false;
+		std::cout << "Alien hit" << std::endl;
 	}
 }
 
