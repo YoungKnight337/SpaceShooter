@@ -23,7 +23,7 @@ void LaserManager::Update(Player& player)
 		}
 	*/
 
-	DeleteLasers(player)
+	DeleteLasers(player);
 }
 
 void LaserManager::Draw(Player& player)
