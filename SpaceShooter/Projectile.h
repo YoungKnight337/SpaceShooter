@@ -21,7 +21,6 @@ private:
 	int width = 4;
 	int height = 15;
 	int speed;
-	bool active;
 	origin shooter;
 	Color color;
 	Vector2 position;
@@ -30,6 +29,7 @@ public:
 	Projectile();
 	Projectile(bool active, int speed, Vector2 position, origin shooter);
 	~Projectile();
+	bool active;
 	void Draw();
 	void Update(Player& player);
 	void Destroy(Player& player);
