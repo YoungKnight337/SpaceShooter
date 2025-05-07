@@ -16,7 +16,7 @@ public:
 	~LaserManager();
 	void Update(Player& player);
 	void Draw(Player& player);
-	//void DeleteLasers();
+	void DeleteLasers(Player& player);
 
 };
 

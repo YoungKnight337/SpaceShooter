@@ -23,7 +23,7 @@ void LaserManager::Update(Player& player)
 		}
 	*/
 
-	//DeleteLasers()
+	DeleteLasers(player)
 }
 
 void LaserManager::Draw(Player& player)
@@ -40,10 +40,10 @@ void LaserManager::Draw(Player& player)
 	*/
 }
 
-/*
-void LaserManager::DeleteLasers()
+
+void LaserManager::DeleteLasers(Player& player)
 {
-	for (auto it = player.lasers.begin(); i != player.lasers.end(); )
+	for (auto it = player.lasers.begin(); it != player.lasers.end(); )
 	{
 		if (!it->active)
 		{
@@ -55,4 +55,4 @@ void LaserManager::DeleteLasers()
 		}
 	}
 }
-*/
+
