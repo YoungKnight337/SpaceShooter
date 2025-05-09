@@ -58,15 +58,14 @@ void AlienManager::Draw(int a, int b)
 
 void AlienManager::Update()
 {
-
-		for (std::vector<Alien>& alien_row : aliens)
+	for (std::vector<Alien>& alien_row : aliens)
+	{
+		for (Alien& alien : alien_row)
 		{
-			for (Alien& alien : alien_row)
-			{
-				alien.Update();
-			}
+			alien.Update();
 		}
-		MoveAliens();
+	}
+	MoveAliens();
 }
 
 void AlienManager::Move()

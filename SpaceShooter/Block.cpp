@@ -31,8 +31,9 @@ void Block::Update()
 void Block::CheckCollision()
 {
 	if (!active) return;
-	if (CheckCollisionRecs(GetRect(),	Projectile().GetRect()))
+	if (CheckCollisionRecs(GetRect(),	.GetRect()))
 	{
+		color = RED;
 		health -= 10;
 		std::cout << "Bunker hit" << std::endl;
 	}
