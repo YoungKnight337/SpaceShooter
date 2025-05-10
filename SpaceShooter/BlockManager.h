@@ -14,7 +14,7 @@ public:
 	~BlockManager();
 	void Initialize(int a);
 	void Draw(int a);
-	void Update(int a);
+	void Update(int a, Player& player);
 	void CheckCollision(Player& player);
 	void DeleteBlocks();
 	

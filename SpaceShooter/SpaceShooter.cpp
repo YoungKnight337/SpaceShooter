@@ -34,7 +34,7 @@ int main()
         //Update
         player.Update();
         //spawner.Update();
-        row.Update(BLOCK_ROW);
+        row.Update(BLOCK_ROW, player);
         laserManager.Update(player);
 
         BeginDrawing();

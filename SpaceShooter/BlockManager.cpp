@@ -30,12 +30,13 @@ void BlockManager::Draw(int a)
 		}
 }
 
-void BlockManager::Update(int a)
+void BlockManager::Update(int a, Player& player)
 {
 	for (Block& block : blocks)
 	{
 		block.Update();
 	}
+	CheckCollision(player);
 }
 
 void BlockManager::CheckCollision(Player& player)
@@ -62,7 +63,7 @@ void BlockManager::DeleteBlocks()
 {
 	for (auto it = blocks.begin(); it != blocks.end(); )
 	{
-		if (it->active == false)
+		if (it->GetState() == false)
 		{
 			it = blocks.erase(it);
 		}
