@@ -7,23 +7,27 @@ class Projectile;
 class Block
 {
 private:
-	int health;
+	int health = 100;
 	int width = 60;
 	int height = 60;
+	bool active;
 	Color color = GREEN;
 	
 
 public:
-	bool active;
 	Vector2 position;
 	Block();
-	Block(int health,bool active, Vector2 position);
+	Block(bool active, Vector2 position);
 	~Block();
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	void Draw();
 	void Update();
 	void CheckCollision();
+	bool GetState() { return active; };
+	int GetHealth() { return health; };
+	Color GetColor() const { return color; };
+
 	Rectangle GetRect();
 };
 

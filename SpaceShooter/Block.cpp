@@ -1,13 +1,13 @@
 #include "Block.h"
 
 Block::Block()
-	:health(100), active{ true }, position{position.x, position.y}
+	:active{ true }, position{position.x, position.y}
 {
 
 }
 
-Block::Block(int health, bool active, Vector2 position)
-	:health(health), active{ active }, position {position}
+Block::Block(bool active, Vector2 position)
+	:active{ active }, position {position}
 {
 
 }
