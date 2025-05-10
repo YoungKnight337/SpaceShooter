@@ -38,3 +38,37 @@ void BlockManager::Update(int a)
 	}
 }
 
+void BlockManager::CheckCollision(Player& player)
+{
+	for (auto laser : player.lasers)
+	{
+		for (auto& block : blocks)
+		{
+			if (CheckCollisionRecs(block.GetRect(), laser.GetRect()))
+			{
+				block.color = RED;
+				block.health -= 10;
+				std::cout << "Bunker hit" << std::endl;
+			}
+			if (block.health <= 0)
+			{
+				block.active = false;
+			}
+		}
+	}
+}
+
+void BlockManager::DeleteBlocks()
+{
+	for (auto it = blocks.begin(); it != blocks.end(); )
+	{
+		if (it->active == false)
+		{
+			it = blocks.erase(it);
+		}
+		else
+		{ 
+			++it;
+		}
+	}
+}

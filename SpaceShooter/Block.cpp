@@ -31,7 +31,7 @@ void Block::Update()
 void Block::CheckCollision()
 {
 	if (!active) return;
-	if (CheckCollisionRecs(GetRect(),	.GetRect()))
+	if (CheckCollisionRecs(GetRect(),	Projectile().GetRect()))
 	{
 		color = RED;
 		health -= 10;

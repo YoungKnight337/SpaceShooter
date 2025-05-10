@@ -10,11 +10,11 @@ private:
 	int health;
 	int width = 60;
 	int height = 60;
-	bool active;
 	Color color = GREEN;
 	
 
 public:
+	bool active;
 	Vector2 position;
 	Block();
 	Block(int health,bool active, Vector2 position);

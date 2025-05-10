@@ -52,7 +52,7 @@ void Alien::Shoot()
 	// Make sure that no alien is in the way of line of fire
 	double lastFireTime = 0.0;
 	if(GetTime())
-		beams.push_back(Projectile(true, -7, {position.x, position.y}, origin::ENEMY));
+		beams.push_back(Projectile(true, 7, {position.x, position.y}, origin::ENEMY));
 		lastFireTime = GetTime();
 		std::cout << "Alien shooting" << std::endl;
 }

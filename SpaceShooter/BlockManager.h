@@ -15,6 +15,8 @@ public:
 	void Initialize(int a);
 	void Draw(int a);
 	void Update(int a);
+	void CheckCollision(Player& player);
+	void DeleteBlocks();
 	
 };
 
