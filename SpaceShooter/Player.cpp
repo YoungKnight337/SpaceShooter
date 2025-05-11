@@ -26,7 +26,6 @@ void Player::Draw()
 	Vector2 p2 = { position.x + width / 2, position.y - height / 2 };
 	Vector2 p3 = { position.x - width / 2, position.y - height / 2 };
 
-
 	if(active)
 		DrawTriangle(p1, p2, p3, color);
 }

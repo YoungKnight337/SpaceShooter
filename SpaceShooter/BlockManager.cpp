@@ -12,8 +12,7 @@ BlockManager::~BlockManager()
 
 void BlockManager::Initialize(int a)
 {
-	//Vector2 position;
-	Block block;
+	
 	for (int i = 0; i < a; i++)
 	{
 		block.position.y = 500;
