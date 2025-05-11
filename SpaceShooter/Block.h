@@ -13,7 +13,6 @@ private:
 	bool active;
 	Color color = GREEN;
 	
-
 public:
 	Vector2 position;
 	Block();
@@ -22,9 +21,8 @@ public:
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	void Draw();
-	void Update();
-	void CheckCollision();
-	
+	//void Update();
+	//void CheckCollision();
 	bool GetState() { return active; };
 	int GetHealth() { return health; };
 	Color GetColor() { return color; };
