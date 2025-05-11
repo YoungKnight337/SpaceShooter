@@ -8,7 +8,6 @@ class BlockManager
 {
 private:
 	std::vector<Block> blocks;
-	Block block;
 public:
 	BlockManager();
 	~BlockManager();
