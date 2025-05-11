@@ -41,17 +41,17 @@ void BlockManager::CheckCollision(Player& player)
 	for (auto laser : player.lasers)
 	{
 		auto it = blocks.begin();
-		while(it != blocks.end() && it -> GetState() == true)
+		while (it != blocks.end() && it->GetState() == true)
+		{
 			if (CheckCollisionRecs(block.GetRect(), laser.GetRect()))
 			{
-				block.GetColor() = RED;
-				block.GetHealth() -= 10; //must be modifiable lvalue
-				std::cout << "Bunker hit" << std::endl;
+				block.TakeDamage();
 			}
 			if (block.GetHealth() <= 0)
 			{
-				block.GetState() = false; //must be modifiable lvalue
+				block.Deactivate();
 			}
+		}
 		
 	}
 }
