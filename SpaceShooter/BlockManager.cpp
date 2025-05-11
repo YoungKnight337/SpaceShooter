@@ -32,11 +32,8 @@ void BlockManager::Draw(int a)
 
 void BlockManager::Update(int a, Player& player)
 {
-	for (Block& block : blocks)
-	{
-		block.Update();
-	}
 	CheckCollision(player);
+	DeleteBlocks();
 }
 
 void BlockManager::CheckCollision(Player& player)
