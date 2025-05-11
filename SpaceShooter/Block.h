@@ -24,8 +24,9 @@ public:
 	void Draw();
 	void Update();
 	void CheckCollision();
+	
 	bool GetState() { return active; };
-	int GetHealth() { return health; };
+	int GetHealth() const { return health; };
 	Color GetColor() const { return color; };
 
 	Rectangle GetRect();

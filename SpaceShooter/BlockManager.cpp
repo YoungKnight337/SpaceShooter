@@ -24,10 +24,10 @@ void BlockManager::Initialize(int a)
 
 void BlockManager::Draw(int a)
 {
-		for (Block block : blocks)
-		{
-			block.Draw();
-		}
+	for (Block block : blocks)
+	{
+		block.Draw();
+	}
 }
 
 void BlockManager::Update(int a, Player& player)
@@ -43,8 +43,8 @@ void BlockManager::CheckCollision(Player& player)
 {
 	for (auto laser : player.lasers)
 	{
-		for (auto& block : blocks)
-		{
+		auto it = blocks.begin();
+		while(it != blocks.end() && it -> GetState() == true)
 			if (CheckCollisionRecs(block.GetRect(), laser.GetRect()))
 			{
 				block.GetColor() = RED;
@@ -55,7 +55,7 @@ void BlockManager::CheckCollision(Player& player)
 			{
 				block.GetState() = false;
 			}
-		}
+		
 	}
 }
 
