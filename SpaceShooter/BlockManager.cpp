@@ -24,7 +24,7 @@ void BlockManager::Initialize(int a)
 
 void BlockManager::Draw(int a)
 {
-	for (Block block : blocks)
+	for (Block& block : blocks)
 	{
 		block.Draw();
 	}
@@ -43,13 +43,13 @@ void BlockManager::CheckCollision(Player& player)
 		auto it = blocks.begin();
 		while (it != blocks.end() && it->GetState() == true)
 		{
-			if (CheckCollisionRecs(block.GetRect(), laser.GetRect()))
+			if (CheckCollisionRecs(it->GetRect(), laser.GetRect()))
 			{
-				block.TakeDamage();
+				it->TakeDamage();
 			}
-			if (block.GetHealth() <= 0)
+			if (it->GetHealth() <= 0)
 			{
-				block.Deactivate();
+				it->Deactivate();
 			}
 		}
 		
