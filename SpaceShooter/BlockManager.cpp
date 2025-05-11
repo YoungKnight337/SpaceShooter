@@ -48,7 +48,7 @@ void BlockManager::CheckCollision(Player& player)
 			if (CheckCollisionRecs(block.GetRect(), laser.GetRect()))
 			{
 				block.GetColor() = RED;
-				block.GetHealth() -= 10;
+				block.GetHealth() -= 10; 
 				std::cout << "Bunker hit" << std::endl;
 			}
 			if (block.GetHealth() <= 0)

@@ -23,6 +23,7 @@ void Block::Draw()
 		DrawRectangle(position.x, position.y, width, height, color);
 }
 
+/*
 void Block::Update()
 {
 	CheckCollision();
@@ -43,7 +44,7 @@ void Block::CheckCollision()
 	}
 
 }
-
+*/
 
 Rectangle Block::GetRect() 
 {

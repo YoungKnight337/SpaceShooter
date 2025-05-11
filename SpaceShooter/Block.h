@@ -26,8 +26,8 @@ public:
 	void CheckCollision();
 	
 	bool GetState() { return active; };
-	int GetHealth() const { return health; };
-	Color GetColor() const { return color; };
+	int GetHealth() { return health; };
+	Color GetColor() { return color; };
 
 	Rectangle GetRect();
 };
