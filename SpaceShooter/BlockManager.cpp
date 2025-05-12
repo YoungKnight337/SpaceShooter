@@ -12,13 +12,13 @@ BlockManager::~BlockManager()
 
 void BlockManager::Initialize(int a)
 {
-	
 	for (int i = 0; i < a; i++)
 	{
 		block.position.y = 500;
 		block.position.x = i * (block.GetWidth() + 80) + 140;
 		blocks.push_back(block);
 	}
+
 }
 
 void BlockManager::Draw(int a)
