@@ -1,6 +1,5 @@
 #include "raylib.h"
 #include "Player.h"
-//#include "Alien.h"
 //#include "AlienManager.h"
 #include "BlockManager.h"
 #include "LaserManager.h"
@@ -24,11 +23,10 @@ int main()
     Player player;
     BlockManager row;
     LaserManager laserManager;
-   //Alien alien;
    //AlienManager spawner;
     
     //spawner.Initialize(alien, ALIEN_ROW, ALIEN_COL);
-    row.Initialize(BLOCK_ROW);
+    row.Initialize(BLOCK_ROW, 4);
     while (WindowShouldClose()==false)
     {
         //Update

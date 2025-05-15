@@ -29,6 +29,7 @@ void Block::Update()
 	CheckCollision();
 }
 */
+
 void Block::TakeDamage()
 {
 	color = RED;

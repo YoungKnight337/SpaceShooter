@@ -10,15 +10,15 @@ BlockManager::~BlockManager()
 
 }
 
-void BlockManager::Initialize(int a)
+void BlockManager::Initialize(int a, int b)
 {
 	for (int i = 0; i < a; i++)
 	{
+		Block block;
 		block.position.y = 500;
 		block.position.x = i * (block.GetWidth() + 80) + 140;
 		blocks.push_back(block);
 	}
-
 }
 
 void BlockManager::Draw(int a)
