@@ -25,14 +25,15 @@ int main()
     LaserManager laserManager;
    //AlienManager spawner;
     
-    //spawner.Initialize(alien, ALIEN_ROW, ALIEN_COL);
+    //spawner.Initialize(ALIEN_ROW, ALIEN_COL);
     row.Initialize(BLOCK_ROW);
+
     while (WindowShouldClose()==false)
     {
         //Update
         player.Update();
         //spawner.Update();
-        row.Update(BLOCK_ROW, player);
+        row.Update(player);
         laserManager.Update(player);
 
         BeginDrawing();

@@ -30,19 +30,23 @@ void Block::Update()
 }
 */
 
-void Block::TakeDamage()
+void Block::TakeDamage(Projectile& laser)
 {
-	color = RED;
-	health -= 10;
-	std::cout << "Bunker hit" << std::endl;
-
+	if(CheckCollisionRecs(GetRect(),laser.GetRect()))
+	{
+		color = RED;
+		health -= 10;
+		std::cout << "Bunker hit" << std::endl;
+	}
+	if (health <= 0)
+		active = false;
 }
 
-void Block::Deactivate()
+/*void Block::Deactivate()
 {
 	active = false;
 }
-
+*/
 
 Rectangle Block::GetRect() 
 {

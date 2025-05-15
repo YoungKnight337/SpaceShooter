@@ -14,7 +14,6 @@ void BlockManager::Initialize(int a)
 {
 	for (int i = 0; i < a; i++)
 	{
-		Block block;
 		block.position.y = 500;
 		block.position.x = i * (block.GetWidth() + 80) + 140;
 		blocks.push_back(block);
@@ -29,7 +28,8 @@ void BlockManager::Draw(int a)
 	}
 }
 
-void BlockManager::Update(int a, Player& player)
+
+void BlockManager::Update(Player& player)
 {
 	CheckCollision(player);
 	DeleteBlocks();
@@ -42,16 +42,8 @@ void BlockManager::CheckCollision(Player& player)
 		auto it = blocks.begin();
 		while (it != blocks.end() && it->GetState() == true)
 		{
-			if (CheckCollisionRecs(it->GetRect(), laser.GetRect()))
-			{
-				it->TakeDamage();
-			}
-			if (it->GetHealth() <= 0)
-			{
-				it->Deactivate();
-			}
+			it->TakeDamage(laser);
 		}
-		
 	}
 }
 
