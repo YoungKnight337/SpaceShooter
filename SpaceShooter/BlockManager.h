@@ -11,7 +11,7 @@ private:
 public:
 	BlockManager();
 	~BlockManager();
-	void Initialize(int a, int b);
+	void Initialize(int a);
 	void Draw(int a);
 	void Update(int a, Player& player);
 	void CheckCollision(Player& player);

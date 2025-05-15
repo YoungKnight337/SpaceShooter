@@ -10,7 +10,7 @@ BlockManager::~BlockManager()
 
 }
 
-void BlockManager::Initialize(int a, int b)
+void BlockManager::Initialize(int a)
 {
 	for (int i = 0; i < a; i++)
 	{
