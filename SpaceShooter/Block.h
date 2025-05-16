@@ -20,9 +20,6 @@ public:
 	~Block();
 	void Draw();
 	void TakeDamage(Projectile& laser);
-	//void Deactivate();
-	//void Update();
-	//void CheckCollision();
 	Vector2 position;
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
