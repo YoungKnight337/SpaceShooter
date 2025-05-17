@@ -14,11 +14,8 @@ void BlockManager::Initialize(int a)
 {
 	for (int i = 0; i < a; i++)
 	{
-		for (Block& block : blocks) 
-		{
-			block.position.y = 500;
-			block.position.x = i * (block.GetWidth() + 80) + 140;
-		}
+		block.position.y = 500;
+		block.position.x = i * (block.GetWidth() + 80) + 140;
 		blocks.push_back(block);
 	}
 }
@@ -44,12 +41,15 @@ void BlockManager::CheckCollision(Player& player)
 		auto it = blocks.begin();
 		while (it != blocks.end() && it->GetState() == true)
 		{
-			it->SetHealth(it->GetHealth()-10);
-			it->SetColor(RED);
-		}
-		if (it->GetHealth() <= 0)
-		{
-			it->SetState(false);
+			if(CheckCollisionRecs(block.GetRect(), laser.GetRect()))
+			{ 
+				block.SetHealth(block.GetHealth() - 10);
+				block.SetColor(RED);
+			}
+			if (block.GetHealth() <= 0)
+			{
+				block.SetState(false);
+			}
 		}
 	}
 }

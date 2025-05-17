@@ -24,11 +24,11 @@ public:
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	int GetHealth() { return health; };
-	int SetHealth(int health) { this->health = health; };
-	bool SetState(bool active) { this->active = active; };
+	int SetHealth(int health) { return this->health = health; };
+	bool SetState(bool active) { return this->active = active; };
 	bool GetState() { return active; };
 	Color GetColor() const { return color; };
-	Color SetColor(Color color) { this->color = color; };
+	Color SetColor(Color color) { return this->color = color; };
 
 	Rectangle GetRect();
 };
