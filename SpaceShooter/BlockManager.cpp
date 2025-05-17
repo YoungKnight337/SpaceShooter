@@ -41,15 +41,7 @@ void BlockManager::CheckCollision(Player& player)
 		auto it = blocks.begin();
 		while (it != blocks.end() && it->GetState() == true)
 		{
-			if(CheckCollisionRecs(block.GetRect(), laser.GetRect()))
-			{ 
-				block.SetHealth(block.GetHealth() - 10);
-				block.SetColor(RED);
-			}
-			if (block.GetHealth() <= 0)
-			{
-				block.SetState(false);
-			}
+			it->TakeDamage(laser);
 		}
 	}
 }

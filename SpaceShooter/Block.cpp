@@ -23,14 +23,8 @@ void Block::Draw()
 		DrawRectangle(position.x, position.y, width, height, color);
 }
 
-/*
-void Block::Update()
-{
-	CheckCollision();
-}
-*/
 
-/* void Block::TakeDamage(Projectile& laser)
+void Block::TakeDamage(Projectile& laser)
 {
 	if(CheckCollisionRecs(GetRect(),laser.GetRect()))
 	{
@@ -41,13 +35,6 @@ void Block::Update()
 	if (health <= 0)
 		active = false;
 }
-*/
-
-/*void Block::Deactivate()
-{
-	active = false;
-}
-*/
 
 Rectangle Block::GetRect() 
 {
