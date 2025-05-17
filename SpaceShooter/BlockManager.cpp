@@ -14,8 +14,11 @@ void BlockManager::Initialize(int a)
 {
 	for (int i = 0; i < a; i++)
 	{
-		block.position.y = 500;
-		block.position.x = i * (block.GetWidth() + 80) + 140;
+		for (Block& block : blocks) 
+		{
+			block.position.y = 500;
+			block.position.x = i * (block.GetWidth() + 80) + 140;
+		}
 		blocks.push_back(block);
 	}
 }
@@ -27,7 +30,6 @@ void BlockManager::Draw(int a)
 		block.Draw();
 	}
 }
-
 
 void BlockManager::Update(Player& player)
 {
@@ -42,7 +44,12 @@ void BlockManager::CheckCollision(Player& player)
 		auto it = blocks.begin();
 		while (it != blocks.end() && it->GetState() == true)
 		{
-			it->TakeDamage(laser);
+			it->SetHealth(it->GetHealth()-10);
+			it->SetColor(RED);
+		}
+		if (it->GetHealth() <= 0)
+		{
+			it->SetState(false);
 		}
 	}
 }

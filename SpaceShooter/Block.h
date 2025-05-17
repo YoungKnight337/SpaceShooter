@@ -19,14 +19,17 @@ public:
 	Block(bool active, Vector2 position);
 	~Block();
 	void Draw();
-	void TakeDamage(Projectile& laser);
+	//void TakeDamage(Projectile& laser);
 	Vector2 position;
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	int GetHealth() { return health; };
-	//int SetHealth() { this->health = health; };
-	//bool SetState(bool active) { this->active = active; };
+	int SetHealth(int health) { this->health = health; };
+	bool SetState(bool active) { this->active = active; };
 	bool GetState() { return active; };
+	Color GetColor() const { return color; };
+	Color SetColor(Color color) { this->color = color; };
+
 	Rectangle GetRect();
 };
 

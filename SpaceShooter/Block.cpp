@@ -30,7 +30,7 @@ void Block::Update()
 }
 */
 
-void Block::TakeDamage(Projectile& laser)
+/* void Block::TakeDamage(Projectile& laser)
 {
 	if(CheckCollisionRecs(GetRect(),laser.GetRect()))
 	{
@@ -41,6 +41,7 @@ void Block::TakeDamage(Projectile& laser)
 	if (health <= 0)
 		active = false;
 }
+*/
 
 /*void Block::Deactivate()
 {
