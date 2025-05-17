@@ -20,6 +20,7 @@ public:
 	~Block();
 	Vector2 position;
 	Color GetColor() const { return color; }
+	Rectangle GetRect();
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	int GetHealth() { return health; };
@@ -29,7 +30,5 @@ public:
 	//int SetHealth(int health) { return this->health = health; };
 	//bool SetState(bool active) { return this->active = active; };;
 	//Color SetColor(Color color) { return this->color = color; };
-
-	Rectangle GetRect();
 };
 
