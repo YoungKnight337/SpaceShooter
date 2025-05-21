@@ -39,7 +39,7 @@ void Projectile::Draw()
 void Projectile::Update(Player& player)
 {
 	Move();
-	Destroy(player);
+	Destroy(player, block);
 }
 
 void Projectile::Move()
@@ -56,7 +56,7 @@ void Projectile::Move()
 
 }
 
-void Projectile::Destroy(Player& player)
+void Projectile::Destroy(Player& player, Block& block)
 {
 	if (!active) return;
 	if (CheckCollisionRecs(GetRect(), player.GetRect()))
@@ -69,7 +69,7 @@ void Projectile::Destroy(Player& player)
 		active = false;
 		std::cout << "Laser Destroyed" << std::endl;
 	}
-	else if(CheckCollisionRecs(GetRect(),Block().GetRect()))
+	else if(CheckCollisionRecs(GetRect(),block.GetRect()))
 	{ 
 		active = false;
 		std::cout << "Laser Destroyed" << std::endl;

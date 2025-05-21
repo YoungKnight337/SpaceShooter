@@ -41,6 +41,7 @@ void LaserManager::Draw(Player& player)
 }
 
 
+
 void LaserManager::DeleteLasers(Player& player)
 {
 	for (auto it = player.lasers.begin(); it != player.lasers.end(); )

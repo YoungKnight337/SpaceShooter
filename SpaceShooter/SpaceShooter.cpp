@@ -33,8 +33,8 @@ int main()
         //Update
         player.Update();
         //spawner.Update();
-        row.Update(player);
         laserManager.Update(player);
+        row.Update(player);
 
         BeginDrawing();
         ClearBackground(BLACK);
