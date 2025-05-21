@@ -36,10 +36,9 @@ void Projectile::Draw()
 	
 }
 
-void Projectile::Update(Player& player)
+void Projectile::Update()
 {
 	Move();
-	Destroy(player, block);
 }
 
 void Projectile::Move()

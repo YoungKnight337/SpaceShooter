@@ -10,11 +10,11 @@ LaserManager::~LaserManager()
 
 }
 
-void LaserManager::Update(Player& player)
+void LaserManager::Update(Player& player, BlockManager& blockmanager)
 {
 	for(auto& Projectile : player.lasers)
 	{ 
-		Projectile.Update(player);
+		Projectile.Update();
 	}
 	/*
 		for(auto& Projectile : alien.beams)
@@ -22,10 +22,23 @@ void LaserManager::Update(Player& player)
 			Projectile.Update();
 		}
 	*/
-
+	CheckCollision(player, blockmanager);
 	DeleteLasers(player);
 }
 
+void LaserManager::CheckCollision(Player& player, BlockManager& blockmanager)
+{
+	for (auto& Block: blockmanager.blocks)
+	{
+		for (auto& Projectile: player.lasers)
+		{
+			if (CheckCollisionRecs(Projectile.GetRect(), Block.GetRect()))
+			{
+				Projectile.active = false;
+			}
+		}
+	}
+}
 void LaserManager::Draw(Player& player)
 {
 	for (auto& Projectile : player.lasers)

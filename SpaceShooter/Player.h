@@ -17,9 +17,7 @@ private:
 	Vector2 position;
 	Color color = WHITE;
 	
-
 public:	
-	std::vector<Projectile> lasers;
 	Player();
 	~Player();
 	void Draw();
@@ -30,6 +28,7 @@ public:
 	void Reset();
 	Vector2 GetPosition() { return position; }
 	Rectangle GetRect();
+	std::vector<Projectile> lasers;
 	
 };
 

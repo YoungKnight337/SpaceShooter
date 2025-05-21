@@ -31,7 +31,7 @@ public:
 	~Projectile();
 	bool active;
 	void Draw();
-	void Update(Player& player);
+	void Update();
 	void Destroy(Player& player, Block& block);
 	void Move();
 	bool CheckStatus() const { return active; }
