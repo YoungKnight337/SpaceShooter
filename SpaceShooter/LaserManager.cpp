@@ -28,19 +28,16 @@ void LaserManager::Update(Player& player, BlockManager& blockmanager)
 
 void LaserManager::CheckCollision(Player& player, BlockManager& blockmanager)
 {
-	for (auto& Block : blockmanager.blocks)
+	for (auto& Projectile : player.lasers)
 	{
-		for (auto& Projectile : player.lasers)
+		for (auto& Block : blockmanager.blocks)
 		{
 			if (CheckCollisionRecs(Projectile.GetRect(), Block.GetRect()))
 			{
 				Projectile.Destroy();
 			}
 		}
-	}
 
-	for (auto& Projectile : player.lasers)
-	{
 		if (Projectile.GetRect().y > GetScreenHeight() || Projectile.GetRect().y <= 0)
 		{
 			Projectile.Destroy();
@@ -61,8 +58,6 @@ void LaserManager::Draw(Player& player)
 		}
 	*/
 }
-
-
 
 void LaserManager::DeleteLasers(Player& player)
 {
