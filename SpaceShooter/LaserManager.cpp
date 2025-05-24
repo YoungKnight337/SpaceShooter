@@ -31,11 +31,8 @@ void LaserManager::CheckCollision(Player& player, BlockManager& blockmanager)
 	for (auto& Block: blockmanager.blocks)
 	{
 		for (auto& Projectile: player.lasers)
-		{
-			if (CheckCollisionRecs(Projectile.GetRect(), Block.GetRect()))
-			{
-				Projectile.active = false;
-			}
+		{	
+			Projectile.Destroy(player, Block);
 		}
 	}
 }

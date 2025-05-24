@@ -55,6 +55,7 @@ void Projectile::Move()
 
 }
 
+
 void Projectile::Destroy(Player& player, Block& block)
 {
 	if (!active) return;
