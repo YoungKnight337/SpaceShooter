@@ -32,7 +32,7 @@ public:
 	bool active;
 	void Draw();
 	void Update();
-	void Destroy(Player& player, Block& block);
+	void Destroy();
 	void Move();
 	bool CheckStatus() const { return active; }
 	Rectangle GetRect();

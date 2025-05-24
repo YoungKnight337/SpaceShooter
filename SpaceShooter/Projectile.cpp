@@ -56,31 +56,11 @@ void Projectile::Move()
 }
 
 
-void Projectile::Destroy(Player& player, Block& block)
+void Projectile::Destroy()
 {
-	if (!active) return;
-	if (CheckCollisionRecs(GetRect(), player.GetRect()))
-	{
-		active = false;
-		std::cout << "Laser Destroyed" << std::endl;
-	}
-	else if (CheckCollisionRecs(GetRect(), Alien().GetRect()))
-	{
-		active = false;
-		std::cout << "Laser Destroyed" << std::endl;
-	}
-	else if(CheckCollisionRecs(GetRect(),block.GetRect()))
-	{ 
-		active = false;
-		std::cout << "Laser Destroyed" << std::endl;
-		
-	}
-	else if (position.y > GetScreenHeight() || position.y <= 0)
-	{
-		active = false;
-		std::cout << "Laser Destroyed" << std::endl;
-	}
-
+	active = false;
+	std::cout << "Laser Destroyed" << std::endl;
+	//(position.y > GetScreenHeight() || position.y <= 0)
 }
 
 Rectangle Projectile::GetRect()
