@@ -67,6 +67,8 @@ void Player::Shoot()
 		lasers.push_back(Projectile(true, -7, {position.x - 3, position.y - 25 }, origin::PLAYER));
 		lastFireTime = GetTime();
 	}
+
+	std::cout << "Player::Shoot()";
 }
 
 //SCREW IT USING RECTANGLE COLLDIER
@@ -79,6 +81,7 @@ void Player::CheckCollision()
 		Reset();
 		std::cout << "Player hit" << std::endl;
 	}
+	std::cout << "Player::CheckCollision()";
 }
 
 void Player::Reset()
