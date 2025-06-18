@@ -54,6 +54,7 @@ void AlienManager::Draw(int a, int b)
 			alien.Draw();
 		}
 	}
+	std::cout << "AlienManager::Draw()\n";
 }
 
 void AlienManager::Update()
@@ -66,6 +67,7 @@ void AlienManager::Update()
 		}
 	}
 	MoveAliens();
+	std::cout << "AlienManager::Update()\n";
 }
 
 void AlienManager::Move()
@@ -74,6 +76,7 @@ void AlienManager::Move()
 		position.x += speed;
 	if (position.x >= GetScreenWidth())
 		position.x -= speed;
+	std::cout << "AlienManager::Move()\n";
 }
 
 void AlienManager::MoveAliens()
@@ -86,6 +89,7 @@ void AlienManager::MoveAliens()
 			position.y -= 4;
 		}
 	}
+	std::cout << "AlienManager::MoveAliens()\n";
 }
 
 
