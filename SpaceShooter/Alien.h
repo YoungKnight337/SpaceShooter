@@ -1,6 +1,8 @@
 #pragma once
 #include "vector"
 #include "raylib.h"
+#include "cstdlib"
+#include "ctime"
 #include "Projectile.h"
 
 class Projectile;
