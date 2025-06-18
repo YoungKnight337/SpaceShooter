@@ -33,7 +33,6 @@ public:
 	void Update();
 	void Shoot();
 	void CheckCollision();
-	//void GetPosition();
 	int GetHeight() const { return height; };
 	int GetWidth() const { return width; };
 	int GetValue() const { return value; };
