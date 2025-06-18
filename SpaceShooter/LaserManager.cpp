@@ -24,7 +24,7 @@ void LaserManager::Update(Player& player, BlockManager& blockmanager)
 	*/
 	CheckCollision(player, blockmanager);
 	DeleteLasers(player);
-	std::cout << "LaserManager::Update()";
+	std::cout << "LaserManager::Update()\n";
 }
 
 void LaserManager::CheckCollision(Player& player, BlockManager& blockmanager)
@@ -44,7 +44,7 @@ void LaserManager::CheckCollision(Player& player, BlockManager& blockmanager)
 			Projectile.Destroy();
 		}
 	}
-	std::cout << "LaserManager::CollisionCheck()";
+	std::cout << "LaserManager::CollisionCheck()\n";
 }
 
 void LaserManager::Draw(Player& player)
@@ -54,12 +54,12 @@ void LaserManager::Draw(Player& player)
 		Projectile.Draw();
 	}
 	/*
-		for (auto& Projectile : alien.lasers)
+		for (auto& Projectile : alien.beams)
 		{
 			Projectile.Draw();
 		}
 	*/
-	std::cout << "LaserManager::Draw()";
+	std::cout << "LaserManager::Draw()\n";
 }
 
 void LaserManager::DeleteLasers(Player& player)
@@ -76,6 +76,6 @@ void LaserManager::DeleteLasers(Player& player)
 		}
 	}
 
-	std::cout << "LaserManager::DeleteLasers()";
+	std::cout << "LaserManager::DeleteLasers()\n";
 }
 
