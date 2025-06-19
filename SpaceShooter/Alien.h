@@ -1,7 +1,7 @@
 #pragma once
 #include "vector"
 #include "raylib.h"
-#include "cstdlib"
+#include "random"
 #include "ctime"
 #include "Projectile.h"
 
