@@ -48,7 +48,7 @@ void  Alien::Update()
 
 void Alien::Shoot()
 { 
-	std::uniform_real_distribution<int>(2, 6);
+	std::uniform_real_distribution<double>(2.0, 6.0);
 	// Timing seems to be random
 	// Make sure that no alien is in the way of line of fire
 	double lastFireTime = 0.0;
