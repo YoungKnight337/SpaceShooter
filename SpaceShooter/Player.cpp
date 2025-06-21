@@ -68,7 +68,7 @@ void Player::Shoot()
 		lastFireTime = GetTime();
 	}
 
-	std::cout << "Player::Shoot()";
+	std::cout << "Player::Shoot()" << std::endl;
 }
 
 //SCREW IT USING RECTANGLE COLLDIER
@@ -81,7 +81,7 @@ void Player::CheckCollision()
 		Reset();
 		std::cout << "Player hit" << std::endl;
 	}
-	std::cout << "Player::CheckCollision()";
+	std::cout << "Player::CheckCollision()" << std::endl;
 }
 
 void Player::Reset()
