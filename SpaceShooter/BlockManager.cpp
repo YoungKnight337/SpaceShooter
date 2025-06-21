@@ -18,7 +18,7 @@ void BlockManager::Initialize(int a)
 		block.position.x = i * (block.GetWidth() + 80) + 140;
 		blocks.push_back(block);
 	}
-	std::cout << "BlockManager::Initialize()\n"
+	std::cout << "BlockManager::Initialize()" << std::endl;
 }
 
 void BlockManager::Draw(int a)
@@ -28,7 +28,7 @@ void BlockManager::Draw(int a)
 		block.Draw();
 	}
 
-	std::cout << "BlockManager::Draw()\n";
+	std::cout << "BlockManager::Draw()" << std::endl;
 }
 
 void BlockManager::Update(Player& player)
@@ -47,7 +47,8 @@ void BlockManager::CheckCollision(Player& player)
 			it->TakeDamage(laser);
 		}
 	}
-	std::cout << "BlockManager::CollisionCheck()\n";
+	
+	std::cout << "BlockManager::CollisionCheck()" << std::endl;
 }
 
 void BlockManager::DeleteBlocks()
@@ -64,5 +65,5 @@ void BlockManager::DeleteBlocks()
 		}
 	}
 
-	std::cout << "BlockManager::DeleteBlocks()\n";
+	std::cout << "BlockManager::DeleteBlocks()" << std::endl;
 }
