@@ -71,7 +71,6 @@ void Player::Shoot()
 	std::cout << "Player::Shoot()" << std::endl;
 }
 
-//SCREW IT USING RECTANGLE COLLDIER
 void Player::CheckCollision()
 {
 	if (CheckCollisionRecs(GetRect(), Projectile().GetRect()))
