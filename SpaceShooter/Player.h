@@ -9,9 +9,9 @@ class Player
 {
 private:
 	int height = 35;
-	int width = 35;
-	int speed = 7;
-	int lives = 3;
+	int width  = 35;
+	int speed  = 7;
+	int lives  = 3;
 	bool active = true;
 
 	Vector2 position;

@@ -52,11 +52,11 @@ void LaserManager::Draw(Player& player)
 	{
 		Projectile.Draw();
 	}
-	/*
-		for (auto& Projectile : alien.beams)
-		{
-			Projectile.Draw();
-		}
+
+	/*for (auto& Projectile : alien.beams)
+	{
+		Projectile.Draw();
+	}
 	*/
 	std::cout << "LaserManager::Draw()" << std::endl;
 }
