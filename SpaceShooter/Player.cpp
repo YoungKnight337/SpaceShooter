@@ -28,6 +28,7 @@ void Player::Draw()
 
 	if(active)
 		DrawTriangle(p1, p2, p3, color);
+	std::cout << "Player::Draw()\n";
 }
 
 void Player::Update()
@@ -50,10 +51,12 @@ void Player::LimitMovement()
 	if (position.x <= 0)
 	{
 		position.x = 0;
+		std::cout << "Player::LimitMovement()\n";
 	}
 	if (position.x + width >= GetScreenWidth())
 	{
 		position.x = GetScreenWidth() - width;
+		std::cout << "Player::LimitMovement()\n";
 	}
 }
 
