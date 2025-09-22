@@ -71,7 +71,7 @@ void Player::Shoot()
 		lastFireTime = GetTime();
 	}
 
-	std::cout << "Player::Shoot()" << std::endl;
+	std::cout << "Player::Shoot()\n" << std::endl;
 }
 
 void Player::CheckCollision()
@@ -83,7 +83,7 @@ void Player::CheckCollision()
 		Reset();
 		std::cout << "Player hit" << std::endl;
 	}
-	std::cout << "Player::CheckCollision()" << std::endl;
+	std::cout << "Player::CheckCollision()\n" << std::endl;
 }
 
 void Player::Reset()
@@ -93,7 +93,7 @@ void Player::Reset()
 		position.x = static_cast<float>(GetScreenWidth()) / 2.f;
 		position.y = static_cast<float>(GetScreenHeight()) - 100.f;
 		lasers.clear();
-		std::cout << "Player Reset" << std::endl;
+		std::cout << "Player Reset\n" << std::endl;
 	}
 
 }
