@@ -61,6 +61,7 @@ void LaserManager::Draw(Player& player)
 	std::cout << "LaserManager::Draw()" << std::endl;
 }
 
+//Where the game likely crashes
 void LaserManager::DeleteLasers(Player& player)
 {
 	for (auto it = player.lasers.begin(); it != player.lasers.end(); )
