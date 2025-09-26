@@ -13,7 +13,6 @@ Player::~Player()
 
 }
 
-
 void Player::Draw()
 {
 	//Triangle Formula 1
