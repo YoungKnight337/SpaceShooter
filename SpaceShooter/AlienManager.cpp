@@ -48,6 +48,7 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 
 void AlienManager::Draw(int a, int b)
 {
+	//for(size_t i =0; i < rows; i++)
 	for (std::vector<Alien> alien_row : aliens)
 	{
 		for(Alien alien: alien_row)
@@ -60,8 +61,10 @@ void AlienManager::Draw(int a, int b)
 
 void AlienManager::Update()
 {
+	//for(size_t i =0; i < rows; i++)
 	for (std::vector<Alien>& alien_row : aliens)
 	{
+		//for(size_t j = 0; j <cols ; j++)
 		for (Alien& alien : alien_row)
 		{
 			alien.Update();
