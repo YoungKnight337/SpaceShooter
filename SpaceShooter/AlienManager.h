@@ -12,6 +12,7 @@ class AlienManager
 private:
 	float speed;
 	Vector2 position;
+	//int Alien[ ][ ] 
 	std::vector<std::vector<Alien>>aliens;
 
 public:
