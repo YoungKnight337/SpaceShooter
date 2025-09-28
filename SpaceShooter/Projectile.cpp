@@ -60,7 +60,8 @@ void Projectile::Destroy()
 {
 	active = false;
 	std::cout << "Laser Destroyed" << std::endl;
-	//(position.y > GetScreenHeight() || position.y <= 0)
+	//if(position.y > GetScreenHeight() || position.y <= 0)
+	//	active = false;
 }
 
 Rectangle Projectile::GetRect()
