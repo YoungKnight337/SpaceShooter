@@ -26,9 +26,9 @@ public:
 	int SetHealth(int health) { return this->health = health; };
 	int GetHealth() { return health; };
 	bool GetState() { return active; };
+	bool SetState(bool active) { return this->active = active; };
 	void Draw();
 	void TakeDamage(Projectile& laser);
-	//bool SetState(bool active) { return this->active = active; };;
 	//Color SetColor(Color color) { return this->color = color; };
 };
 
