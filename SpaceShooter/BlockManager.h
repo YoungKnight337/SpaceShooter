@@ -16,6 +16,7 @@ public:
 	void Update(Player& player);
 	void CheckCollision(Player& player);
 	void DeleteBlocks();
+	//Block blocks[4];
 	std::vector<Block> blocks;
 };
 
