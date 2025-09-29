@@ -7,6 +7,7 @@
 class BlockManager
 {
 private:
+	const int BLOCK_ROW = 4;
 	Block block;
 public:
 	BlockManager();
@@ -16,7 +17,7 @@ public:
 	void Update(Player& player);
 	void CheckCollision(Player& player);
 	void DeleteBlocks();
-	//Block blocks[4];
+	//Block blocks[BLOCK_ROW];
 	std::vector<Block> blocks;
 };
 
