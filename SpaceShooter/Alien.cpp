@@ -1,12 +1,10 @@
 #include "Alien.h"
 
 Alien::Alien()
-	//:value{ }, active{ true }, color{}, alienType{}
 {
 
 }
 Alien::Alien(bool active, type alienType)
-	//:value{value}, active{ active }, color{ color }
 {
 	this->active = active;
 	this->alienType = alienType;
