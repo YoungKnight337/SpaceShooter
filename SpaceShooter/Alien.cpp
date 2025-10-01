@@ -4,6 +4,7 @@ Alien::Alien()
 {
 
 }
+
 Alien::Alien(bool active, type alienType)
 {
 	this->active = active;
