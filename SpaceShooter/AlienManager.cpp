@@ -85,6 +85,7 @@ void AlienManager::Move()
 
 void AlienManager::MoveAliens()
 {
+	//for(size_t i = 0; i < rows; i++)
 	for (auto& alien : aliens)
 	{
 		Move();
