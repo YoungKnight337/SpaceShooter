@@ -6,12 +6,6 @@ AlienManager::AlienManager()
 
 }
 
-AlienManager::AlienManager(float speed, Vector2 position)
-	:speed{speed}, position{position.x, position.y}
-{
-
-}
-
 AlienManager::~AlienManager()
 {
 
