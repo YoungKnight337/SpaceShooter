@@ -15,10 +15,10 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 {
 	std::vector<Alien>alien_row;
 
-	//for(size_t i = 0; i < rows; i++)
+	//for(int i = 0; i < rows; i++)
 	for (int i = 0; i < a; i++)
 	{
-		//for(size_t j = 0; j < cols; j++)
+		//for(int j = 0; j < cols; j++)
 		for (int j = 0; j < b; j++)
 		{
 			if (i == 0)
