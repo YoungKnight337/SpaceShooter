@@ -12,8 +12,8 @@ class AlienManager
 private:
 	float speed = 2.0f;
 	Vector2 position;
-	//const size_t cols = 11;
-	//const size_t rows = 5;
+	int cols = 11;
+	int rows = 5;
 	//int** Alien[N]
 	Alien aliens[11][5];
 	std::vector<std::vector<Alien>>aliens;
