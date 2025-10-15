@@ -3,11 +3,12 @@
 #include "raylib.h"
 #include "Block.h"
 
+class Block;
 
 class BlockManager
 {
 private:
-	const int BLOCK_ROW = 4;
+	int BLOCK_ROW = 4;
 	Block block;
 public:
 	BlockManager();
@@ -17,7 +18,7 @@ public:
 	void Update(Player& player);
 	void CheckCollision(Player& player);
 	void DeleteBlocks();
-	//Block blocks[BLOCK_ROW];
+	Block blocks[BLOCK_ROW];
 	std::vector<Block> blocks;
 };
 
