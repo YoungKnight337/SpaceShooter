@@ -17,8 +17,8 @@ private:
 public:
 	AlienManager();
 	~AlienManager();
-	void Initialize(Alien &alien, int a, int b); //void Initialize(size_t a, size_t b);
-	void Draw(int a, int b); //void Draw(size_r a, size_t b);
+	void Initialize(Alien &alien, int a, int b); 
+	void Draw(int a, int b); 
 	void Update();
 	void Move();
 	void MoveAliens();
