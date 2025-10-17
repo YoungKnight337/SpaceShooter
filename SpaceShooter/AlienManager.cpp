@@ -15,10 +15,8 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 {
 	std::vector<Alien>alien_row;
 	//Alien alien[11];
-	//for(int i = 0; i < rows; i++)
 	for (int i = 0; i < a; i++)
 	{
-		//for(int j = 0; j < cols; j++)
 		for (int j = 0; j < b; j++)
 		{
 			if (i == 0)
@@ -42,7 +40,6 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 
 void AlienManager::Draw(int a, int b)
 {
-	//for(size_t i =0; i < rows; i++)
 	for (std::vector<Alien> alien_row : aliens)
 	{
 		for(Alien alien: alien_row)
@@ -55,10 +52,8 @@ void AlienManager::Draw(int a, int b)
 
 void AlienManager::Update()
 {
-	//for(size_t i =0; i < rows; i++)
 	for (std::vector<Alien>& alien_row : aliens)
 	{
-		//for(size_t j = 0; j <cols ; j++)
 		for (Alien& alien : alien_row)
 		{
 			alien.Update();
@@ -79,7 +74,6 @@ void AlienManager::Move()
 
 void AlienManager::MoveAliens()
 {
-	//for(size_t i = 0; i < rows; i++)
 	for (auto& alien : aliens)
 	{
 		Move();
