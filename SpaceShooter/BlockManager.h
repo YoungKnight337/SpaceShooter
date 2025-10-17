@@ -18,7 +18,7 @@ public:
 	void Update(Player& player);
 	void CheckCollision(Player& player);
 	void DeleteBlocks();
-	//Block* blocks = new Block[BLOCK_ROW];
 	std::vector<Block> blocks;
+	//Block* blocks = new Block[BLOCK_ROW];
 };
 
