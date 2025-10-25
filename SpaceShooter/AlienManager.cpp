@@ -13,6 +13,8 @@ AlienManager::~AlienManager()
 
 void AlienManager::Initialize(Alien& alien, int a, int b)
 {
+	int a_width  = (alien.GetWidth() + 10);
+	int a_height = (alien.GetHeight() + 10);
 	std::vector<Alien>alien_row;
 
 	for (int i = 0; i < a; i++)
@@ -21,16 +23,16 @@ void AlienManager::Initialize(Alien& alien, int a, int b)
 		{
 			if (i == 0)
 				Alien octopus(true, type::OCTOPUS);
-				position.x = j * (alien.GetWidth() + 10) + j;
-				position.y = i * (alien.GetHeight() + 10) + i;
+				position.x = j * a_width + j;
+				position.y = i * a_height + i;
 			if (i == 1 || i == 2)
 				Alien squid (true, type::SQUID);
-				position.x = j * (alien.GetWidth() + 10) + j;
-				position.y = i * (alien.GetHeight() + 10) + i;
+				position.x = j * a_width + j;
+				position.y = i * a_height + i;
 			if (i == 3)
 				Alien crab (true, type::CRAB);
-				position.x = j * (alien.GetWidth() + 10) + j;
-				position.y = i * (alien.GetHeight() + 10) + i;
+				position.x = j * a_width + j;
+				position.y = i * a_height + i;
 			
 			alien_row.push_back(alien);
 		}
