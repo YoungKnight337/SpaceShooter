@@ -28,7 +28,6 @@ Alien::Alien(bool active, type alienType)
 
 Alien::~Alien()
 {
-
 }
 
 void Alien::Draw()
