@@ -2,12 +2,10 @@
 
 LaserManager::LaserManager()
 {
-
 }
 
 LaserManager::~LaserManager()
 {
-
 }
 
 void LaserManager::Update(Player& player, BlockManager& blockmanager)

@@ -3,18 +3,15 @@
 Block::Block()
 	:active{ true }, position{position.x, position.y}
 {
-
 }
 
 Block::Block(bool active, Vector2 position)
 	:active{ active }, position {position}
 {
-
 }
 
 Block::~Block()
 {
-
 }
 
 void Block::Draw()

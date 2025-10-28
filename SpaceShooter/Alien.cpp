@@ -2,7 +2,6 @@
 
 Alien::Alien()
 {
-
 }
 
 Alien::Alien(bool active, type alienType)

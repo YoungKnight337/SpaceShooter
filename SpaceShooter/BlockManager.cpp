@@ -2,12 +2,10 @@
 
 BlockManager::BlockManager()
 {
-
 }
 
 BlockManager::~BlockManager()
 {
-
 }
 
 void BlockManager::Initialize(int a)
