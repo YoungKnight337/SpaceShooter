@@ -3,12 +3,10 @@
 AlienManager::AlienManager()
 	:speed{ 2.0f }, position{ position.x, position.y }
 {
-
 }
 
 AlienManager::~AlienManager()
 {
-
 }
 
 void AlienManager::Initialize(Alien& alien, int a, int b)
